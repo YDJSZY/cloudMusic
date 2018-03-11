@@ -1,0 +1,22 @@
+<ion-header>
+    <div class="header" style="height: 50px;padding:10px;box-sizing:border-box;background: red;width: 100%;display: flex;justify-content: space-between;align-items:center">
+        <div>
+            <ion-icon style="font-size: 30px;color: #ffffff;" text-left name="ios-microphone-outline"></ion-icon>
+        </div>
+        <div style="background: #ffffff;text-align: center;flex:1;border-radius: 15px;color:#969696;margin: 0 15px;padding: 5px 0">
+            <ion-icon name="search" style="font-size: 18px"></ion-icon>
+            搜索音乐, 视频, 电台
+        </div>
+        <div>
+            <ion-icon style="font-size: 35px;color: #ffffff" name="list"></ion-icon>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content padding>
+    <ion-tabs tabsPlacement="top">
+        <ion-tab [root]="musicTab" tabTitle="音乐"></ion-tab>
+        <ion-tab [root]="hobbyTab" tabTitle="视频"></ion-tab>
+        <ion-tab [root]="radioTab" tabTitle="电台"></ion-tab>
+    </ion-tabs>
+</ion-content>
