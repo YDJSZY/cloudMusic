@@ -1,11 +1,11 @@
 /**
  * Created by luwenwei on 18/3/10.
  */
-import { Component,OnInit } from '@angular/core';
-import { MusicPage } from './tabs/music/music.component';
-import { RadioPage } from './tabs/radio/radio.component';
-import { VideosPage } from './tabs/videos/videos.component';
+import { Component,OnInit,ViewChild } from '@angular/core';
 import { HttpService } from '../../providers/httpService';
+import { NavController, NavParams } from 'ionic-angular';
+import { MoreMusicListPage } from './tabs/music/moreMusicList.component';
+import { DiscoverRootPage} from './root';
 
 @Component({
     selector:'discover-music',
@@ -15,9 +15,8 @@ import { HttpService } from '../../providers/httpService';
 export class DiscoverMusicPage implements OnInit{
     // this tells the tabs component which Pages
     // should be each tab's root Page
-    musicTab = MusicPage;
-    hobbyTab = VideosPage;
-    radioTab = RadioPage;
+    @ViewChild('myNav') nav: NavController
+    rootPage: any =  DiscoverRootPage
     constructor(private http:HttpService) {
         this.http = http;
     }

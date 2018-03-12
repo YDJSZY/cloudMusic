@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { DiscoverMusicPage } from '../discoverMusic/discoverMusic.component';
 import { MyMusicPage } from '../myMusic/myMusic.component';
 @Component({
+    selector:'tabMain',
     templateUrl: 'tabs.html'
 })
 export class TabsPage {

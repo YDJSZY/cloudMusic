@@ -2,7 +2,7 @@
  * Created by luwenwei on 18/3/10.
  */
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, App, ViewController } from 'ionic-angular';
 import { HttpService } from '../../../../providers/httpService';
 import { MoreMusicListPage } from './moreMusicList.component';
 
@@ -18,7 +18,7 @@ export class MusicPage implements OnInit{
     banners: Array<any>=[]
     introMusicList: Array<any>=[]
     singlePlayList: Array<any>=[]
-    constructor(public nav: NavController,private http: HttpService) {
+    constructor(public nav: NavController,public appCtrl:App,public viewCtrl:ViewController,private http: HttpService) {
         this.http = http;
     }
 
@@ -36,11 +36,12 @@ export class MusicPage implements OnInit{
         let singlePlayPromise = this.http.getData({url:"personalized/privatecontent"});
         singlePlayPromise.then(function (res):any{
             this.singlePlayList = res.result;
-            console.log(this.singlePlayList)
         }.bind(this)).catch((e)=>{console.error(e)});
     }
 
     checkMoreMusicList() {
+        //this.viewCtrl.dismiss();
+        //this.appCtrl.getRootNav().push(MoreMusicListPage);
         this.nav.push(MoreMusicListPage);
     }
 }

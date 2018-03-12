@@ -14,9 +14,5 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-tabs tabsPlacement="top">
-        <ion-tab [root]="musicTab" tabTitle="音乐"></ion-tab>
-        <ion-tab [root]="hobbyTab" tabTitle="视频"></ion-tab>
-        <ion-tab [root]="radioTab" tabTitle="电台"></ion-tab>
-    </ion-tabs>
+    <ion-nav #myNav [root]="rootPage"></ion-nav>
 </ion-content>
