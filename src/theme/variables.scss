@@ -86,13 +86,14 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
 .block-header{
     padding: 15px 0;
 }
 
 .l-red{
     display: inline-block;
-    height:15px;
+    height:16px;
     width:2px;
     background: red;
     vertical-align: text-bottom;
@@ -102,6 +103,7 @@ $colors: (
     color: #731111;
     display: inline-block;
     padding: 0 2px;
+    font-size: 16px;
 }
 
 .left-direct{
@@ -116,9 +118,18 @@ $colors: (
 }
 
 .square-list-item{
-    margin-right: 5px;
+    margin-right: 4px;
     display: inline-block;
     vertical-align: text-top;
+    position: relative;
+}
+
+.square-list-item-des{
+    padding: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .noMarginRight{

@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
@@ -36,6 +35,7 @@
 		F589DE221621416D93D9EF69 /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0747F99BDE3E4F298C3CE61A /* GCDWebServerStreamedResponse.m */; };
 		FE1F87EE51F442419CC4EE57 /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 486C3D8946EA463BBC40E9DC /* GCDWebServerConnection.m */; };
 		FE5776B41F164618A7843C0C /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6660DE8439C343D1A2028DB8 /* CDVDevice.m */; };
+		21A545126D70413CB83B75FB /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4283220D069C44A2952EA765 /* CDVStatusBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +127,8 @@
 		F35E5D5A2FFB4165AB3A3393 /* GCDWebServerErrorResponse.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerErrorResponse.m; path = "cordova-plugin-ionic-webview/GCDWebServerErrorResponse.m"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ydjs/config.xml; sourceTree = "<group>"; };
 		FA3F66B8E5EC4F3490A35272 /* GCDWebServerPrivate.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GCDWebServerPrivate.h; path = "cordova-plugin-ionic-webview/GCDWebServerPrivate.h"; sourceTree = "<group>"; };
+		4283220D069C44A2952EA765 /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		308981A71EC44ABE8CE377A7 /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +279,8 @@
 				DF297F54A57E49E68D00EC6B /* GCDWebServerStreamedResponse.h */,
 				F0C34714C1B74295B29B8453 /* CDVIonicKeyboard.m */,
 				BDD851421D794E77894D3119 /* CDVIonicKeyboard.h */,
+				4283220D069C44A2952EA765 /* CDVStatusBar.m */,
+				308981A71EC44ABE8CE377A7 /* CDVStatusBar.h */,
 			);
 			name = Plugins;
 			path = ydjs/Plugins;
@@ -424,6 +428,7 @@
 				A06D968A22664E52828A28B1 /* GCDWebServerFileResponse.m in Sources */,
 				F589DE221621416D93D9EF69 /* GCDWebServerStreamedResponse.m in Sources */,
 				83272AE0F00C49429A0AB524 /* CDVIonicKeyboard.m in Sources */,
+				21A545126D70413CB83B75FB /* CDVStatusBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

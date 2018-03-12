@@ -3821,7 +3821,7 @@ ion-icon::before {
 
 .l-red {
   display: inline-block;
-  height: 15px;
+  height: 16px;
   width: 2px;
   background: red;
   vertical-align: text-bottom;
@@ -3831,6 +3831,7 @@ ion-icon::before {
   color: #731111;
   display: inline-block;
   padding: 0 2px;
+  font-size: 16px;
 }
 
 .left-direct {
@@ -3845,9 +3846,18 @@ ion-icon::before {
 }
 
 .square-list-item {
-  margin-right: 5px;
+  margin-right: 4px;
   display: inline-block;
   vertical-align: text-top;
+  position: relative;
+}
+
+.square-list-item-des {
+  padding: 5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .noMarginRight {
@@ -25717,6 +25727,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.scroll-content {
+  margin-top: 65px !important;
+}
+
 ion-header.custom-view::after {
   background-image: none;
 }
@@ -25789,4 +25803,11 @@ ion-header.custom-view::after {
 
 .intro-list .intro-item .intro-icon ion-icon {
   font-size: 28px;
+}
+
+.music-list-content .play-count {
+  color: #ffffff;
+  position: absolute;
+  top: 2px;
+  right: 3px;
 }

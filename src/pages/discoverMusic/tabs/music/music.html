@@ -1,7 +1,7 @@
 <ion-content padding="0" class="custom-view">
-    <ion-slides loop="true" pager autoplay="2000" style="width:100%;height:100px">
-        <ion-slide style="width:100%;height:100px" *ngFor="let banner of banners" *ngIf="banner.length">
-            <img [src]="banner.pic" data-src="banner.pic" *ngIf="banner.pic" style="width: 100%;height: 100%;"/>
+    <ion-slides loop="true" pager autoplay="2000" style="width:100%;height:130px" *ngIf="banners.length">
+        <ion-slide style="width:100%;height:130px" *ngFor="let banner of banners">
+            <img [src]="banner.pic" style="width: 100%;height: 130px;"/>
         </ion-slide>
     </ion-slides>
     <div class="intro-list">
@@ -31,15 +31,40 @@
         </div>
     </div>
     <div class="intro-music-list">
-        <header class="block-header">
+        <header class="block-header" (click)="checkMoreMusicList()">
             <span class="l-red"></span>
             <span class="block-title">推荐歌单</span>
             <span class="left-direct"></span>
         </header>
         <section class="music-list-content">
-            <div *ngFor="let list of introMusicList;let $index=index" *ngIf="introMusicList.length" class="square-list-item" [ngClass]="{'noMarginRight': ($index+1) % 2 == 0}" style="width: calc((100% - 5px) / 2);">
-                <img [src]="list.picUrl" *ngIf="list.picUrl" style="width: 100%;height: 100%;"/>
-                <span style="padding: 5px;display: block">{{list.name}}</span>
+            <div *ngFor="let list of introMusicList;let $index=index" class="square-list-item" [ngClass]="{'noMarginRight': ($index+1) % 2 == 0}" style="width: calc((100% - 4px) / 2);">
+                <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
+                <span class="square-list-item-des">{{list.name}}</span>
+                <div class="play-count">
+                    <ion-icon name="ios-headset-outline"></ion-icon>
+                    <span>{{list.playcount | splitThousand}}</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="intro-music-list">
+        <header class="block-header">
+            <span class="l-red"></span>
+            <span class="block-title">独家放送</span>
+            <span class="left-direct"></span>
+        </header>
+        <section class="music-list-content">
+            <div class="square-list-item" *ngFor="let list of singlePlayList;let $index=index" [ngClass]="{'noMarginRight': ($index+1) % 2 == 0}" style="width: calc((100% - 4px) / 2);">
+                <ng-container *ngIf="$index < 2">
+                    <img [src]="list.sPicUrl" style="width: 100%;height: 100%;"/>
+                    <span class="square-list-item-des">{{list.name}}</span>
+                </ng-container>
+            </div>
+            <div *ngFor="let list of singlePlayList;let $index=index">
+                <ng-container *ngIf="$index == 2">
+                    <img [src]="list.picUrl" style="width: 100%;"/>
+                    <span class="square-list-item-des">{{list.name}}</span>
+                </ng-container>
             </div>
         </section>
     </div>

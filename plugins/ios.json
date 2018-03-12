@@ -21,6 +21,9 @@
     },
     "cordova-plugin-ionic-keyboard": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "lwwzy1314@163.com"
     }
   },
   "dependent_plugins": {}
