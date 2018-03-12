@@ -25,4 +25,10 @@ export class DiscoverMusicPage implements OnInit{
         let loginPromise = this.http.getData({url:"login/cellphone/",params:{phone:"18649685236",password:"1314520ZY"}});
         loginPromise.then(()=>{}).catch((e)=>{console.error(e)})
     }
+
+    checkMoreMusicList() {
+        //this.viewCtrl.dismiss();
+        //this.appCtrl.getRootNav().push(MoreMusicListPage);
+        this.nav.push(MoreMusicListPage);
+    }
 }
