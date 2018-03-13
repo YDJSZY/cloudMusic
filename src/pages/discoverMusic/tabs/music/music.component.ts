@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, App, ViewController } from 'ionic-angular';
 import { HttpService } from '../../../../providers/httpService';
 import { MoreMusicListPage } from './moreMusicList.component';
+import { RootViewCoverService } from '../../provider/eventEmitService';
 
 @Component({
     selector:'music',
@@ -18,7 +19,13 @@ export class MusicPage implements OnInit{
     banners: Array<any>=[]
     introMusicList: Array<any>=[]
     singlePlayList: Array<any>=[]
-    constructor(public nav: NavController,public appCtrl:App,public viewCtrl:ViewController,private http: HttpService) {
+    constructor(
+        public nav: NavController,
+        public appCtrl:App,
+        public viewCtrl:ViewController,
+        private http: HttpService,
+        private rootViewCoverService:RootViewCoverService
+    ) {
         this.http = http;
     }
 
@@ -37,11 +44,10 @@ export class MusicPage implements OnInit{
         singlePlayPromise.then(function (res):any{
             this.singlePlayList = res.result;
         }.bind(this)).catch((e)=>{console.error(e)});
+
     }
 
     checkMoreMusicList() {
-        //this.viewCtrl.dismiss();
-        //this.appCtrl.getRootNav().push(MoreMusicListPage);
-        this.nav.push(MoreMusicListPage);
+        this.rootViewCoverService.rootViewCover.emit(MoreMusicListPage);
     }
 }

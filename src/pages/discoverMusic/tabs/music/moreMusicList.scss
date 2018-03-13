@@ -1,0 +1,97 @@
+.toolbar-background {
+    background-color: #d43c33 !important;
+}
+
+.more-music-list-header .toolbar-title{
+    color: #ffffff !important;
+}
+
+.more-music-list-header .show-back-button{
+    color: #ffffff !important;
+}
+
+.scroll-content {
+    padding: 0px !important;
+}
+
+.high-quality-music-list{
+    display: flex;
+    width:100%;
+    padding: 10px;
+    background: #000000;
+    opacity: 0.83;
+}
+
+.high-quality-music-list .img{
+    flex:1;
+    margin-right: 10px;
+}
+
+.high-quality-music-list .description{
+    flex:1;
+    color: #ffffff;
+}
+
+.high-quality-music-list .description p{
+    margin: 5px;
+}
+
+.high-quality-music-list .description .title{
+    font-size: 16px;
+}
+
+.high-quality-music-list .description .desc-p{
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.high-quality-music-list .description .sm-title{
+    font-size: 12px;
+    color: #ffffff;
+    opacity: 0.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.all-music-list{
+    padding: 20px 10px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-music-list .all-btn{
+    flex:1;
+}
+
+.all-music-list .all-btn .check-all-list{
+    width:100%;
+    height:auto;
+    padding: 5px 10px;
+    color: #4a2d2d;
+    border-radius: 15px;
+    background: #ffffff;
+    border:1px solid #dddddd;
+}
+
+.all-music-list .title-select{
+    flex: 2;
+    text-align: right;
+}
+
+.all-music-list .title-select span{
+    color: #656565;
+    padding: 0 10px;
+    border-right: 1px solid #dddddd;
+}
+
+.all-music-list .title-select span:last-child{
+    padding-right: 0;
+    border-right:0;
+}

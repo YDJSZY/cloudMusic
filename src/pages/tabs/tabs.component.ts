@@ -11,8 +11,8 @@ import { MyMusicPage } from '../myMusic/myMusic.component';
 export class TabsPage {
     // this tells the tabs component which Pages
     // should be each tab's root Page
-    tab1Root = DiscoverMusicPage;
-    tab2Root = MyMusicPage;
+    tab1Root:any = DiscoverMusicPage;
+    tab2Root:any = MyMusicPage;
     constructor() {
 
     }
