@@ -1,0 +1,64 @@
+.all-music-list-panel{
+    .all-music-list-select{
+        background: #ffffff;
+        border: 1px solid #d43c33;
+        padding: 10px 0;
+        text-align: center;
+        color: #4a2d2d;
+        margin: 5px;
+        position: relative;
+        .check-img{
+            position: absolute;
+            bottom: -3px;
+            right: -3px;
+            background: url("/assets/imgs/check-triangle@32.png") no-repeat;
+            width:32px;
+            height: 32px;
+            background-size: 30px 30px;
+        }
+    }
+
+    .language-list{
+        background: #ffffff;
+        display: flex;
+        margin: 10px 0;
+        .language-title{
+            padding: 15px;
+            flex: 1;
+            text-align: center;
+            border-right: 1px solid #dddddd;
+        }
+        .language-type{
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            span{
+                padding: 10px 12px;
+                text-align: center;
+            }
+            .up{
+                flex: 1;
+                display: flex;
+                .language{
+                    flex: 1;
+                    border-bottom: 1px solid #dddddd;
+                    border-right: 1px solid #dddddd;
+                }
+                .language:last-child{
+                    border-right: none;
+                }
+            }
+            .down{
+                flex: 1;
+                display: flex;
+                .language{
+                    flex: 1;
+                    border-right: 1px solid #dddddd;
+                }
+                .language:last-child{
+                    border-right: none;
+                }
+            }
+        }
+    }
+}

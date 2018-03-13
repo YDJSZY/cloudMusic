@@ -25727,10 +25727,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-.scroll-content {
-  margin-top: 65px !important;
-}
-
+/*
+.scroll-content{
+    margin-top: 65px !important;
+}*/
 .toolbar-background {
   background-color: #d43c33 !important;
 }
@@ -25932,4 +25932,111 @@ ion-header.custom-view::after {
   position: absolute;
   top: 2px;
   right: 3px;
+}
+
+.all-music-list-panel .all-music-list-select {
+  background: #ffffff;
+  border: 1px solid #d43c33;
+  padding: 10px 0;
+  text-align: center;
+  color: #4a2d2d;
+  margin: 5px;
+  position: relative;
+}
+
+.all-music-list-panel .all-music-list-select .check-img {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  background: url("/assets/imgs/check-triangle@32.png") no-repeat;
+  width: 32px;
+  height: 32px;
+  background-size: 30px 30px;
+}
+
+.all-music-list-panel .language-list {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.all-music-list-panel .language-list .language-title {
+  padding: 15px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #dddddd;
+}
+
+.all-music-list-panel .language-list .language-type {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.all-music-list-panel .language-list .language-type span {
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.all-music-list-panel .language-list .language-type .up {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.all-music-list-panel .language-list .language-type .up .language {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-bottom: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+
+.all-music-list-panel .language-list .language-type .up .language:last-child {
+  border-right: none;
+}
+
+.all-music-list-panel .language-list .language-type .down {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.all-music-list-panel .language-list .language-type .down .language {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-right: 1px solid #dddddd;
+}
+
+.all-music-list-panel .language-list .language-type .down .language:last-child {
+  border-right: none;
 }

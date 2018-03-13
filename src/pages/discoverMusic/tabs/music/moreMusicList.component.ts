@@ -1,6 +1,7 @@
 import { Component,ViewChild,OnInit } from '@angular/core';
-import { LoadingController } from 'ionic-angular';
+import { LoadingController,ModalController } from 'ionic-angular';
 import { HttpService } from '../../../../providers/httpService';
+import { AllMusicListTypePage } from './allMusicListType/allMusicListType';
 
 @Component({
     templateUrl: 'moreMusicList.html',
@@ -13,7 +14,11 @@ export class MoreMusicListPage implements OnInit{
     infiniteScroll:any
     btnTitle:string="全部歌单"
 
-    constructor(public loadingCtrl:LoadingController,private http:HttpService) {
+    constructor(
+        public loadingCtrl:LoadingController,
+        public modalCtrl:ModalController,
+        private http:HttpService,
+    ) {
     }
 
     ngOnInit() {
@@ -59,5 +64,10 @@ export class MoreMusicListPage implements OnInit{
         setTimeout(()=>{
             this.getPage(this.currentPage);
         },1000)
+    }
+
+    checkAllMusicListType() {
+        let modal = this.modalCtrl.create(AllMusicListTypePage);
+        modal.present();
     }
 }

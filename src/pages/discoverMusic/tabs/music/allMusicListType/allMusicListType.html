@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <span style="color: #ffffff;">筛选歌单</span>
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="hideModal()">
+                <span style="color: #ffffff;" showWhen="ios">取消</span>
+                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="all-music-list-panel" style="background: #eee">
+    <div class="all-music-list-select">
+        全部歌单
+            <span class="check-img">
+            </span>
+    </div>
+    <div class="language-list">
+        <div class="language-title">
+            <ion-icon name="ios-globe-outline" style="font-size: 28px"></ion-icon>
+            <span style="display: block">语种</span>
+        </div>
+        <div class="language-type">
+            <div class="up">
+                <span class="language">华语</span>
+                <span class="language">欧美</span>
+                <span class="language">日语</span>
+            </div>
+            <div class="down">
+                <span class="language">韩语</span>
+                <span class="language">粤语</span>
+                <span class="language">小语种</span>
+            </div>
+        </div>
+    </div>
+</ion-content>
