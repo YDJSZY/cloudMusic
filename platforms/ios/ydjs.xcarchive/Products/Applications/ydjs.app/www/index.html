@@ -20,6 +20,13 @@
 
   <!-- cordova.js required for cordova apps (remove if not needed) -->
   <script src="cordova.js"></script>
+  <script>
+    window.onload = function () {
+        var w = document.documentElement.clientWidth;
+        var r = (w / 320)*12;
+        //document.getElementsByTagName("html")[0].style.fontSize = r + "px";
+    }
+  </script>
 
   <!-- un-comment this code to enable service worker
   <script>
