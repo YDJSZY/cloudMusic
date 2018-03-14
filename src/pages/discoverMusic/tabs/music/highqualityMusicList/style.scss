@@ -1,0 +1,54 @@
+.high-quality-music-list-content{
+    .select-music-type{
+        background: #ffffff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        color:$grayBlack;
+        border-bottom:1px solid #dddddd;
+        margin-bottom: 2px;
+        left:0;
+        width:100%;
+    }
+    .hq-music-list-content{
+        .music-list-block{
+            display: flex;
+            margin-bottom: 2px;
+            .left-block{
+                line-height: 0;
+                flex: 1.1;
+                img{
+                    display: block;/*解决img在div下底部多出3px的问题*/
+                }
+            }
+            .right-block{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                flex: 2;
+                padding: 2px 8px;
+                border-bottom: 1px solid #dddddd;
+                p{
+                    padding: 2px 0;
+                    margin: 0;
+                }
+                p.title{
+                    color: $grayBlack;
+                    font-size: 15px;
+                }
+                p.creator{
+                    color: $gray;
+                    font-size: 12px;
+                }
+                p.description{
+                    color: $gray;
+                    font-size: 12px;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}

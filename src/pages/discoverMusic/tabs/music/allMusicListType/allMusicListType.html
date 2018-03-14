@@ -12,26 +12,47 @@
     </ion-toolbar>
 </ion-header>
 <ion-content class="all-music-list-panel" style="background: #eee">
-    <div class="all-music-list-select">
+    <div class="all-music-list-select" (click)="selectMusicList({name:'全部歌单',str:'all'})">
         全部歌单
-            <span class="check-img">
-            </span>
+        <span class="check-icon" *ngIf="currentSelect === 'all'">
+            <i class="iconfont icon-pa_checked01"></i>
+        </span>
     </div>
-    <div class="language-list">
+    <div class="language-list" *ngFor="let item of musicListType">
         <div class="language-title">
-            <ion-icon name="ios-globe-outline" style="font-size: 28px"></ion-icon>
-            <span style="display: block">语种</span>
+            <ion-icon name="{{item.iconName}}" style="font-size: 28px"></ion-icon>
+            <span style="display: block">{{item.title}}</span>
         </div>
         <div class="language-type">
             <div class="up">
-                <span class="language">华语</span>
-                <span class="language">欧美</span>
-                <span class="language">日语</span>
+                <ng-container *ngFor="let language of item.list;let $index = index">
+                    <ng-container *ngIf="$index < 3">
+                        <span class="language" (click)="selectMusicList(language)">
+                            {{language.name}}
+                            <span *ngIf="language.hot">
+                                <i class="iconfont icon-hot" style="position: absolute;top: -2px;right: -2px;display: block;font-size: 32px;color: #d81e06;"></i>
+                            </span>
+                            <span class="check-icon" *ngIf="currentSelect === language.str">
+                                <i class="iconfont icon-pa_checked01"></i>
+                            </span>
+                        </span>
+                    </ng-container>
+                </ng-container>
             </div>
             <div class="down">
-                <span class="language">韩语</span>
-                <span class="language">粤语</span>
-                <span class="language">小语种</span>
+                <ng-container *ngFor="let language of item.list;let $index = index">
+                    <ng-container *ngIf="$index >= 3">
+                        <span class="language" (click)="selectMusicList(language)">
+                            {{language.name}}
+                            <span *ngIf="language.hot">
+                                <i class="iconfont icon-hot" style="position: absolute;top: -2px;right: -2px;display: block;font-size: 32px;color: #d81e06;"></i>
+                            </span>
+                            <span class="check-icon" *ngIf="currentSelect === language.str">
+                                <i class="iconfont icon-pa_checked01"></i>
+                            </span>
+                        </span>
+                    </ng-container>
+                </ng-container>
             </div>
         </div>
     </div>

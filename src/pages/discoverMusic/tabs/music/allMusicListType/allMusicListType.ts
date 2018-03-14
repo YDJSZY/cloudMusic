@@ -2,15 +2,49 @@
  * Created by luwenwei on 18/3/13.
  */
 import { Component,OnInit } from '@angular/core';
-import { ViewController } from 'ionic-angular';
+import { ViewController,NavParams } from 'ionic-angular';
 
 @Component({
     templateUrl: 'allMusicListType.html',
     styleUrls:['/style.scss']
 })
 export class AllMusicListTypePage implements OnInit{
-    constructor(private viewCtrl:ViewController){
-        
+    currentSelect:string='all'
+    musicListType:Array<any>=[
+        {
+            title:"语种",
+            iconName:"ios-globe-outline",
+            list:[
+                {
+                    name:"华语",
+                    str:"chinese",
+                    hot:true
+                },
+                {
+                    name:"欧美",
+                    str:"europe_and_america"
+                },
+                {
+                    name:"日语",
+                    str:"japanese"
+                },
+                {
+                    name:"韩语",
+                    str:"korean"
+                },
+                {
+                    name:"粤语",
+                    str:"cantonese"
+                },
+                {
+                    name:"小语种",
+                    str:"rare"
+                }
+            ]
+        }
+    ]
+    constructor(private viewCtrl:ViewController,private navParams:NavParams){
+        this.currentSelect = navParams.get("str")
     }
 
     ngOnInit() {
@@ -19,5 +53,10 @@ export class AllMusicListTypePage implements OnInit{
 
     hideModal() {
         this.viewCtrl.dismiss();
+    }
+
+    selectMusicList(type) {
+        this.currentSelect = type.str;
+        this.viewCtrl.dismiss(type);
     }
 }

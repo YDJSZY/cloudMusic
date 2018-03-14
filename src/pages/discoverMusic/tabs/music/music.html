@@ -1,37 +1,39 @@
 <ion-content class="custom-view">
-    <ion-slides loop="true" pager autoplay="2000" style="width:100%;height:130px" *ngIf="banners.length">
-        <ion-slide style="width:100%;height:130px" *ngFor="let banner of banners">
-            <img [src]="banner.pic" style="width: 100%;height: 130px;"/>
-        </ion-slide>
-    </ion-slides>
+    <div class="banner" style="width:100%;">
+        <ion-slides loop="true" pager autoplay="2000" *ngIf="banners.length">
+            <ion-slide style="width:100%;height:100%" *ngFor="let banner of banners">
+                <img [src]="banner.pic" style="width: 100%;height: 100%"/>
+            </ion-slide>
+        </ion-slides>
+    </div>
     <div class="intro-list">
         <div class="intro-item">
-            <span class="intro-icon">
+            <div class="intro-icon">
                 <ion-icon name="md-radio"></ion-icon>
-            </span>
+            </div>
             <span class="intro-text">私人FM</span>
         </div>
         <div class="intro-item">
-            <span class="intro-icon">
+            <div class="intro-icon">
                 <ion-icon name="md-calendar"></ion-icon>
-            </span>
+            </div>
             <span class="intro-text">每日推荐</span>
         </div>
         <div class="intro-item">
-            <span class="intro-icon">
+            <div class="intro-icon">
                 <ion-icon name="ios-musical-notes-outline"></ion-icon>
-            </span>
+            </div>
             <span class="intro-text">歌单</span>
         </div>
         <div class="intro-item">
-            <span class="intro-icon">
+            <div class="intro-icon">
                 <ion-icon name="list"></ion-icon>
-            </span>
+            </div>
             <span class="intro-text">排行榜</span>
         </div>
     </div>
     <div class="intro-music-list">
-        <header class="block-header" (click)="checkMoreMusicList()">
+        <header class="block-header" tappable (click)="checkMoreMusicList()">
             <span class="l-red"></span>
             <span class="block-title">推荐歌单</span>
             <span class="left-direct"></span>

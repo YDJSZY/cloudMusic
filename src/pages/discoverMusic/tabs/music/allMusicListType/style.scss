@@ -1,3 +1,15 @@
+.check-icon{
+    position: absolute;
+    bottom: 0;
+    right: -1px;
+    width:32px;
+    height: 32px;
+    .iconfont{
+        font-size: 32px;
+        color: #d81e06;
+    }
+}
+
 .all-music-list-panel{
     .all-music-list-select{
         background: #ffffff;
@@ -7,22 +19,18 @@
         color: #4a2d2d;
         margin: 5px;
         position: relative;
-        .check-img{
-            position: absolute;
-            bottom: -3px;
-            right: -3px;
-            background: url("/assets/imgs/check-triangle@32.png") no-repeat;
-            width:32px;
-            height: 32px;
-            background-size: 30px 30px;
-        }
     }
 
     .language-list{
         background: #ffffff;
         display: flex;
         margin: 10px 0;
+        .language{
+            color:$grayBlack;
+            position: relative;
+        }
         .language-title{
+            color:$gray;
             padding: 15px;
             flex: 1;
             text-align: center;
@@ -32,7 +40,7 @@
             flex: 3;
             display: flex;
             flex-direction: column;
-            span{
+            span.language{
                 padding: 10px 12px;
                 text-align: center;
             }
@@ -62,3 +70,4 @@
         }
     }
 }
+

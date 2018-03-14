@@ -11,7 +11,7 @@ $font-path: "../assets/fonts";
 // http://ionicframework.com/docs/theming/rtl-support/
 $app-direction: ltr;
 
-
+@import "../assets/icon/iconfont.css";
 @import "ionic.globals";
 
 
@@ -38,8 +38,12 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  gray:#7d7878
 );
+
+$gray:#7d7878;
+$grayBlack:#402424;
 
 
 // App iOS Variables

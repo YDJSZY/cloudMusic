@@ -12,7 +12,7 @@
 </ion-header>
 
 <ion-content padding>
-    <div class="high-quality-music-list">
+    <div class="high-quality-music-list" tappable (click)="openHighqualityMusic()">
         <div class="img">
             <img src="http://p3.music.126.net/24fqC-mF6U_ZA3KQWiusqA==/3265549538017736.jpg" />
         </div>
@@ -28,14 +28,14 @@
     <div class="all-music-list">
         <div class="all-btn">
             <button class="check-all-list" (click)="checkAllMusicListType()">
-                <span style="margin-right: 5px;font-size: 14px">{{btnTitle}}</span>
+                <span style="margin-right: 5px;font-size: 14px">{{currentSelectMusicListType.name}}</span>
                 <ion-icon name="ios-arrow-forward-outline" style="color: #969696;font-size: 16px;vertical-align: text-bottom"></ion-icon>
             </button>
         </div>
         <div class="title-select">
-            <span (click)="changeMusicType('欧美')">欧美</span>
-            <span (click)="changeMusicType('影视原生')">影视原生</span>
-            <span (click)="changeMusicType('轻音乐')">轻音乐</span>
+            <span (click)="changeMusicType({name:'欧美',str:'europe_and_america'})">欧美</span>
+            <span (click)="changeMusicType({name:'影视原生',str:'tv_music'})">影视原生</span>
+            <span (click)="changeMusicType({name:'轻音乐',str:'purity_music'})">轻音乐</span>
         </div>
     </div>
     <section class="music-list-content">

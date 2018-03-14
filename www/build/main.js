@@ -1,36 +1,5 @@
 webpackJsonp([0],{
 
-/***/ 100:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RootViewCoverService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var RootViewCoverService = (function () {
-    function RootViewCoverService() {
-        this.rootViewCover = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
-    }
-    RootViewCoverService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [])
-    ], RootViewCoverService);
-    return RootViewCoverService;
-}());
-
-//# sourceMappingURL=eventEmitService.js.map
-
-/***/ }),
-
 /***/ 113:
 /***/ (function(module, exports) {
 
@@ -72,7 +41,7 @@ webpackEmptyAsyncContext.id = 155;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__discoverMusic_discoverMusic_component__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__myMusic_myMusic_component__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__myMusic_myMusic_component__ = __webpack_require__(209);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -97,7 +66,7 @@ var TabsPage = (function () {
     }
     TabsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'tabMain',template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/tabs/tabs.html"*/'<ion-tabs name="rootTabs">\n    <ion-tab [root]="tab1Root" tabTitle="发现音乐" tabIcon="home"></ion-tab>\n    <ion-tab [root]="tab2Root" tabTitle="我的音乐" tabIcon="ios-musical-notes-outline"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/tabs/tabs.html"*/
+            selector: 'tabMain',template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/tabs/tabs.html"*/'<ion-tabs name="rootTabs">\n    <ion-tab [root]="tab1Root" tabTitle="发现音乐" tabIcon="home"></ion-tab>\n    <ion-tab [root]="tab2Root" tabTitle="我的音乐" tabIcon="ios-musical-notes-outline"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -114,10 +83,10 @@ var TabsPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DiscoverMusicPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_httpService__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_httpService__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__root__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__provider_eventEmitService__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__provider_eventEmitService__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -159,7 +128,7 @@ var DiscoverMusicPage = (function () {
     ], DiscoverMusicPage.prototype, "nav", void 0);
     DiscoverMusicPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'discover-music',template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/discoverMusic.html"*/'<ion-nav #discoverMusicNav [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/discoverMusic.html"*/,
+            selector: 'discover-music',template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/discoverMusic.html"*/'<ion-nav #discoverMusicNav [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/discoverMusic.html"*/,
             providers: [__WEBPACK_IMPORTED_MODULE_1__providers_httpService__["a" /* HttpService */]]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_httpService__["a" /* HttpService */], __WEBPACK_IMPORTED_MODULE_4__provider_eventEmitService__["a" /* RootViewCoverService */]])
@@ -178,10 +147,10 @@ var DiscoverMusicPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DiscoverRootPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tabs_music_music_component__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_radio_radio_component__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_videos_videos_component__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_httpService__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_radio_radio_component__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_videos_videos_component__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_httpService__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -212,7 +181,7 @@ var DiscoverRootPage = (function () {
         this.http = http;
     }
     DiscoverRootPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/root.html"*/'<ion-header>\n    <ion-toolbar>\n        <ion-buttons start>\n            <button ion-button icon-only>\n                <ion-icon name="ios-microphone-outline" style="font-size: 30px;color: #ffffff;"></ion-icon>\n            </button>\n        </ion-buttons>\n        <div center style="background: #ffffff;text-align: center;flex:1;border-radius: 15px;color:#969696;margin: 0 15px;padding: 6px 0">\n            <ion-icon name="search" style="font-size: 18px"></ion-icon>\n            <span>搜索音乐, 视频, 电台</span>\n        </div>\n        <ion-buttons end>\n            <button ion-button icon-only color="royal">\n                <ion-icon style="font-size: 35px;color: #ffffff;" name="list"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n<ion-content>\n    <ion-tabs tabsPlacement="top" name="discoverMusicTabs">\n        <ion-tab [root]="musicTab" tabTitle="音乐"></ion-tab>\n        <ion-tab [root]="hobbyTab" tabTitle="视频"></ion-tab>\n        <ion-tab [root]="radioTab" tabTitle="电台"></ion-tab>\n    </ion-tabs>\n</ion-content>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/root.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/root.html"*/'<ion-header>\n    <ion-toolbar>\n        <ion-buttons start>\n            <button ion-button icon-only>\n                <ion-icon name="ios-microphone-outline" style="font-size: 30px;color: #ffffff;"></ion-icon>\n            </button>\n        </ion-buttons>\n        <div center style="background: #ffffff;text-align: center;flex:1;border-radius: 15px;color:#969696;margin: 0 15px;padding: 6px 0">\n            <ion-icon name="search" style="font-size: 18px"></ion-icon>\n            <span>搜索音乐, 视频, 电台</span>\n        </div>\n        <ion-buttons end>\n            <button ion-button icon-only color="royal">\n                <ion-icon style="font-size: 35px;color: #ffffff;" name="list"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n<ion-content>\n    <ion-tabs tabsPlacement="top" name="discoverMusicTabs">\n        <ion-tab [root]="musicTab" tabTitle="音乐"></ion-tab>\n        <ion-tab [root]="hobbyTab" tabTitle="视频"></ion-tab>\n        <ion-tab [root]="radioTab" tabTitle="电台"></ion-tab>\n    </ion-tabs>\n</ion-content>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/root.html"*/,
             providers: [__WEBPACK_IMPORTED_MODULE_4__providers_httpService__["a" /* HttpService */]]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__providers_httpService__["a" /* HttpService */]])
@@ -230,10 +199,10 @@ var DiscoverRootPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MusicPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_httpService__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__moreMusicList_component__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__provider_eventEmitService__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_httpService__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__moreMusicList_moreMusicList_component__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__provider_eventEmitService__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -280,17 +249,17 @@ var MusicPage = (function () {
         }.bind(this)).catch(function (e) { console.error(e); });
     };
     MusicPage.prototype.checkMoreMusicList = function () {
-        this.rootViewCoverService.rootViewCover.emit(__WEBPACK_IMPORTED_MODULE_3__moreMusicList_component__["a" /* MoreMusicListPage */]);
+        this.rootViewCoverService.rootViewCover.emit(__WEBPACK_IMPORTED_MODULE_3__moreMusicList_moreMusicList_component__["a" /* MoreMusicListPage */]);
     };
     MusicPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'music',template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/tabs/music/music.html"*/'<ion-content class="custom-view">\n    <ion-slides loop="true" pager autoplay="2000" style="width:100%;height:130px" *ngIf="banners.length">\n        <ion-slide style="width:100%;height:130px" *ngFor="let banner of banners">\n            <img [src]="banner.pic" style="width: 100%;height: 130px;"/>\n        </ion-slide>\n    </ion-slides>\n    <div class="intro-list">\n        <div class="intro-item">\n            <span class="intro-icon">\n                <ion-icon name="md-radio"></ion-icon>\n            </span>\n            <span class="intro-text">私人FM</span>\n        </div>\n        <div class="intro-item">\n            <span class="intro-icon">\n                <ion-icon name="md-calendar"></ion-icon>\n            </span>\n            <span class="intro-text">每日推荐</span>\n        </div>\n        <div class="intro-item">\n            <span class="intro-icon">\n                <ion-icon name="ios-musical-notes-outline"></ion-icon>\n            </span>\n            <span class="intro-text">歌单</span>\n        </div>\n        <div class="intro-item">\n            <span class="intro-icon">\n                <ion-icon name="list"></ion-icon>\n            </span>\n            <span class="intro-text">排行榜</span>\n        </div>\n    </div>\n    <div class="intro-music-list">\n        <header class="block-header" (click)="checkMoreMusicList()">\n            <span class="l-red"></span>\n            <span class="block-title">推荐歌单</span>\n            <span class="left-direct"></span>\n        </header>\n        <section class="music-list-content">\n            <div *ngFor="let list of introMusicList;let $index=index" class="square-list-item" [ngClass]="{\'noMarginRight\': ($index+1) % 2 == 0}" style="width: calc((100% - 4px) / 2);">\n                <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>\n                <span class="square-list-item-des">{{list.name}}</span>\n                <div class="play-count">\n                    <ion-icon name="ios-headset-outline"></ion-icon>\n                    <span>{{list.playcount | splitThousand}}</span>\n                </div>\n            </div>\n        </section>\n    </div>\n    <div class="intro-music-list">\n        <header class="block-header">\n            <span class="l-red"></span>\n            <span class="block-title">独家放送</span>\n            <span class="left-direct"></span>\n        </header>\n        <section class="music-list-content">\n            <div class="square-list-item" *ngFor="let list of singlePlayList;let $index=index" [ngClass]="{\'noMarginRight\': ($index+1) % 2 == 0}" style="width: calc((100% - 4px) / 2);">\n                <ng-container *ngIf="$index < 2">\n                    <img [src]="list.sPicUrl" style="width: 100%;height: 100%;"/>\n                    <span class="square-list-item-des">{{list.name}}</span>\n                </ng-container>\n            </div>\n            <div *ngFor="let list of singlePlayList;let $index=index">\n                <ng-container *ngIf="$index == 2">\n                    <img [src]="list.picUrl" style="width: 100%;"/>\n                    <span class="square-list-item-des">{{list.name}}</span>\n                </ng-container>\n            </div>\n        </section>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/tabs/music/music.html"*/,
+            selector: 'music',template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/tabs/music/music.html"*/'<ion-content class="custom-view">\n    <div class="banner" style="width:100%;">\n        <ion-slides loop="true" pager autoplay="2000" *ngIf="banners.length">\n            <ion-slide style="width:100%;height:100%" *ngFor="let banner of banners">\n                <img [src]="banner.pic" style="width: 100%;height: 100%"/>\n            </ion-slide>\n        </ion-slides>\n    </div>\n    <div class="intro-list">\n        <div class="intro-item">\n            <div class="intro-icon">\n                <ion-icon name="md-radio"></ion-icon>\n            </div>\n            <span class="intro-text">私人FM</span>\n        </div>\n        <div class="intro-item">\n            <div class="intro-icon">\n                <ion-icon name="md-calendar"></ion-icon>\n            </div>\n            <span class="intro-text">每日推荐</span>\n        </div>\n        <div class="intro-item">\n            <div class="intro-icon">\n                <ion-icon name="ios-musical-notes-outline"></ion-icon>\n            </div>\n            <span class="intro-text">歌单</span>\n        </div>\n        <div class="intro-item">\n            <div class="intro-icon">\n                <ion-icon name="list"></ion-icon>\n            </div>\n            <span class="intro-text">排行榜</span>\n        </div>\n    </div>\n    <div class="intro-music-list">\n        <header class="block-header" tappable (click)="checkMoreMusicList()">\n            <span class="l-red"></span>\n            <span class="block-title">推荐歌单</span>\n            <span class="left-direct"></span>\n        </header>\n        <section class="music-list-content">\n            <div *ngFor="let list of introMusicList;let $index=index" class="square-list-item" [ngClass]="{\'noMarginRight\': ($index+1) % 2 == 0}" style="width: calc((100% - 4px) / 2);">\n                <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>\n                <span class="square-list-item-des">{{list.name}}</span>\n                <div class="play-count">\n                    <ion-icon name="ios-headset-outline"></ion-icon>\n                    <span>{{list.playcount | splitThousand}}</span>\n                </div>\n            </div>\n        </section>\n    </div>\n    <div class="intro-music-list">\n        <header class="block-header">\n            <span class="l-red"></span>\n            <span class="block-title">独家放送</span>\n            <span class="left-direct"></span>\n        </header>\n        <section class="music-list-content">\n            <div class="square-list-item" *ngFor="let list of singlePlayList;let $index=index" [ngClass]="{\'noMarginRight\': ($index+1) % 2 == 0}" style="width: calc((100% - 4px) / 2);">\n                <ng-container *ngIf="$index < 2">\n                    <img [src]="list.sPicUrl" style="width: 100%;height: 100%;"/>\n                    <span class="square-list-item-des">{{list.name}}</span>\n                </ng-container>\n            </div>\n            <div *ngFor="let list of singlePlayList;let $index=index">\n                <ng-container *ngIf="$index == 2">\n                    <img [src]="list.picUrl" style="width: 100%;"/>\n                    <span class="square-list-item-des">{{list.name}}</span>\n                </ng-container>\n            </div>\n        </section>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/tabs/music/music.html"*/,
             providers: [__WEBPACK_IMPORTED_MODULE_2__providers_httpService__["a" /* HttpService */]],
             styleUrls: ['/music.scss']
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_httpService__["a" /* HttpService */],
             __WEBPACK_IMPORTED_MODULE_4__provider_eventEmitService__["a" /* RootViewCoverService */]])
     ], MusicPage);
@@ -307,9 +276,11 @@ var MusicPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MoreMusicListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_httpService__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_httpService__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__allMusicListType_allMusicListType__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__provider_eventEmitService__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__highqualityMusicList_highqualityMusicList__ = __webpack_require__(206);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -323,30 +294,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var MoreMusicListPage = (function () {
-    function MoreMusicListPage(loadingCtrl, modalCtrl, http) {
+    function MoreMusicListPage(loadingCtrl, modalCtrl, http, rootViewCoverService) {
         this.loadingCtrl = loadingCtrl;
         this.modalCtrl = modalCtrl;
         this.http = http;
+        this.rootViewCoverService = rootViewCoverService;
         this.introMusicList = [];
         this.allMusicList = [];
         this.currentPage = 0;
-        this.btnTitle = "全部歌单";
+        this.currentSelectMusicListType = { name: '全部歌单', str: 'all' };
     }
     MoreMusicListPage.prototype.ngOnInit = function () {
         this.musicListNav.setBackButtonText("");
         this.loadMusicList();
     };
-    MoreMusicListPage.prototype.changeMusicType = function (type) {
-        this.btnTitle = type;
-    };
-    MoreMusicListPage.prototype.loadMusicList = function () {
+    MoreMusicListPage.prototype.loadMusicList = function (tag) {
+        if (tag === void 0) { tag = '全部'; }
+        this.currentPage = 0;
+        this.introMusicList = [];
         var loading = this.loadingCtrl.create({
             content: '正在加载歌单...',
             duration: 10000,
         });
         loading.present();
-        var musicListPromise = this.http.getData({ url: "personalized", params: { limit: "100" } });
+        var musicListPromise = this.http.getData({ url: "personalized", params: { limit: "100", tag: tag } });
         musicListPromise.then(function (res) {
             this.allMusicList = res.result;
             this.getPage(this.currentPage);
@@ -380,19 +354,34 @@ var MoreMusicListPage = (function () {
         }, 1000);
     };
     MoreMusicListPage.prototype.checkAllMusicListType = function () {
-        var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__allMusicListType_allMusicListType__["a" /* AllMusicListTypePage */]);
+        var _this = this;
+        var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__allMusicListType_allMusicListType__["a" /* AllMusicListTypePage */], this.currentSelectMusicListType);
+        modal.onDidDismiss(function (data) {
+            if (!data)
+                return;
+            _this.currentSelectMusicListType = data;
+            _this.loadMusicList(data.name);
+        });
         modal.present();
+    };
+    MoreMusicListPage.prototype.changeMusicType = function (type) {
+        this.currentSelectMusicListType = type;
+        this.loadMusicList(type.name);
+    };
+    MoreMusicListPage.prototype.openHighqualityMusic = function () {
+        this.rootViewCoverService.rootViewCover.emit(__WEBPACK_IMPORTED_MODULE_5__highqualityMusicList_highqualityMusicList__["a" /* HighqualityMusicListPage */]);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('musicListNav'),
         __metadata("design:type", Object)
     ], MoreMusicListPage.prototype, "musicListNav", void 0);
     MoreMusicListPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/tabs/music/moreMusicList.html"*/'<ion-header style="border-bottom: none" class="more-music-list-header">\n    <ion-navbar #musicListNav>\n        <ion-title>\n            歌单\n        </ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="openModal()">\n                <ion-icon name="list" style="font-size: 35px;color: #ffffff;"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <div class="high-quality-music-list">\n        <div class="img">\n            <img src="http://p3.music.126.net/24fqC-mF6U_ZA3KQWiusqA==/3265549538017736.jpg" />\n        </div>\n        <div class="description">\n            <p class="title">\n                精品歌单\n                <ion-icon name="ios-arrow-forward-outline" style="color: #ffffff;opacity: 0.5;vertical-align: text-bottom"></ion-icon>\n            </p>\n            <p class="desc-p">【再见乌托邦】中国大陆摇滚的崛起之路</p>\n            <p class="sm-title">中国大陆2000年之前发表的摇滚经典大盘点</p>\n        </div>\n    </div>\n    <div class="all-music-list">\n        <div class="all-btn">\n            <button class="check-all-list" (click)="checkAllMusicListType()">\n                <span style="margin-right: 5px;font-size: 14px">{{btnTitle}}</span>\n                <ion-icon name="ios-arrow-forward-outline" style="color: #969696;font-size: 16px;vertical-align: text-bottom"></ion-icon>\n            </button>\n        </div>\n        <div class="title-select">\n            <span (click)="changeMusicType(\'欧美\')">欧美</span>\n            <span (click)="changeMusicType(\'影视原生\')">影视原生</span>\n            <span (click)="changeMusicType(\'轻音乐\')">轻音乐</span>\n        </div>\n    </div>\n    <section class="music-list-content">\n        <div *ngFor="let list of introMusicList;let $index=index" class="square-list-item" [ngClass]="{\'noMarginRight\': ($index+1) % 2 == 0}" style="width: calc((100% - 4px) / 2);">\n            <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>\n            <span class="square-list-item-des">{{list.name}}</span>\n            <div class="play-count">\n                <ion-icon name="ios-headset-outline"></ion-icon>\n                <span>{{list.playCount | splitThousand}}</span>\n            </div>\n        </div>\n    </section>\n    <ion-infinite-scroll (ionInfinite)="loadMoreMusicList($event)">\n        <ion-infinite-scroll-content loadingText="加载中..." threshold="10px">\n\n        </ion-infinite-scroll-content>\n    </ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/tabs/music/moreMusicList.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/tabs/music/moreMusicList/moreMusicList.html"*/'<ion-header style="border-bottom: none" class="more-music-list-header">\n    <ion-navbar #musicListNav>\n        <ion-title>\n            歌单\n        </ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="openModal()">\n                <ion-icon name="list" style="font-size: 35px;color: #ffffff;"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <div class="high-quality-music-list" tappable (click)="openHighqualityMusic()">\n        <div class="img">\n            <img src="http://p3.music.126.net/24fqC-mF6U_ZA3KQWiusqA==/3265549538017736.jpg" />\n        </div>\n        <div class="description">\n            <p class="title">\n                精品歌单\n                <ion-icon name="ios-arrow-forward-outline" style="color: #ffffff;opacity: 0.5;vertical-align: text-bottom"></ion-icon>\n            </p>\n            <p class="desc-p">【再见乌托邦】中国大陆摇滚的崛起之路</p>\n            <p class="sm-title">中国大陆2000年之前发表的摇滚经典大盘点</p>\n        </div>\n    </div>\n    <div class="all-music-list">\n        <div class="all-btn">\n            <button class="check-all-list" (click)="checkAllMusicListType()">\n                <span style="margin-right: 5px;font-size: 14px">{{currentSelectMusicListType.name}}</span>\n                <ion-icon name="ios-arrow-forward-outline" style="color: #969696;font-size: 16px;vertical-align: text-bottom"></ion-icon>\n            </button>\n        </div>\n        <div class="title-select">\n            <span (click)="changeMusicType({name:\'欧美\',str:\'europe_and_america\'})">欧美</span>\n            <span (click)="changeMusicType({name:\'影视原生\',str:\'tv_music\'})">影视原生</span>\n            <span (click)="changeMusicType({name:\'轻音乐\',str:\'purity_music\'})">轻音乐</span>\n        </div>\n    </div>\n    <section class="music-list-content">\n        <div *ngFor="let list of introMusicList;let $index=index" class="square-list-item" [ngClass]="{\'noMarginRight\': ($index+1) % 2 == 0}" style="width: calc((100% - 4px) / 2);">\n            <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>\n            <span class="square-list-item-des">{{list.name}}</span>\n            <div class="play-count">\n                <ion-icon name="ios-headset-outline"></ion-icon>\n                <span>{{list.playCount | splitThousand}}</span>\n            </div>\n        </div>\n    </section>\n    <ion-infinite-scroll (ionInfinite)="loadMoreMusicList($event)">\n        <ion-infinite-scroll-content loadingText="加载中..." threshold="10px">\n\n        </ion-infinite-scroll-content>\n    </ion-infinite-scroll>\n</ion-content>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/tabs/music/moreMusicList/moreMusicList.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_httpService__["a" /* HttpService */]])
+            __WEBPACK_IMPORTED_MODULE_2__providers_httpService__["a" /* HttpService */],
+            __WEBPACK_IMPORTED_MODULE_4__provider_eventEmitService__["a" /* RootViewCoverService */]])
     ], MoreMusicListPage);
     return MoreMusicListPage;
 }());
@@ -407,7 +396,7 @@ var MoreMusicListPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AllMusicListTypePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -423,19 +412,59 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var AllMusicListTypePage = (function () {
-    function AllMusicListTypePage(viewCtrl) {
+    function AllMusicListTypePage(viewCtrl, navParams) {
         this.viewCtrl = viewCtrl;
+        this.navParams = navParams;
+        this.currentSelect = 'all';
+        this.musicListType = [
+            {
+                title: "语种",
+                iconName: "ios-globe-outline",
+                list: [
+                    {
+                        name: "华语",
+                        str: "chinese",
+                        hot: true
+                    },
+                    {
+                        name: "欧美",
+                        str: "europe_and_america"
+                    },
+                    {
+                        name: "日语",
+                        str: "japanese"
+                    },
+                    {
+                        name: "韩语",
+                        str: "korean"
+                    },
+                    {
+                        name: "粤语",
+                        str: "cantonese"
+                    },
+                    {
+                        name: "小语种",
+                        str: "rare"
+                    }
+                ]
+            }
+        ];
+        this.currentSelect = navParams.get("str");
     }
     AllMusicListTypePage.prototype.ngOnInit = function () {
     };
     AllMusicListTypePage.prototype.hideModal = function () {
         this.viewCtrl.dismiss();
     };
+    AllMusicListTypePage.prototype.selectMusicList = function (type) {
+        this.currentSelect = type.str;
+        this.viewCtrl.dismiss(type);
+    };
     AllMusicListTypePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/tabs/music/allMusicListType/allMusicListType.html"*/'<ion-header>\n    <ion-toolbar>\n        <ion-title>\n            <span style="color: #ffffff;">筛选歌单</span>\n        </ion-title>\n        <ion-buttons start>\n            <button ion-button (click)="hideModal()">\n                <span style="color: #ffffff;" showWhen="ios">取消</span>\n                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n<ion-content class="all-music-list-panel" style="background: #eee">\n    <div class="all-music-list-select">\n        全部歌单\n            <span class="check-img">\n            </span>\n    </div>\n    <div class="language-list">\n        <div class="language-title">\n            <ion-icon name="ios-globe-outline" style="font-size: 28px"></ion-icon>\n            <span style="display: block">语种</span>\n        </div>\n        <div class="language-type">\n            <div class="up">\n                <span class="language">华语</span>\n                <span class="language">欧美</span>\n                <span class="language">日语</span>\n            </div>\n            <div class="down">\n                <span class="language">韩语</span>\n                <span class="language">粤语</span>\n                <span class="language">小语种</span>\n            </div>\n        </div>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/tabs/music/allMusicListType/allMusicListType.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/tabs/music/allMusicListType/allMusicListType.html"*/'<ion-header>\n    <ion-toolbar>\n        <ion-title>\n            <span style="color: #ffffff;">筛选歌单</span>\n        </ion-title>\n        <ion-buttons start>\n            <button ion-button (click)="hideModal()">\n                <span style="color: #ffffff;" showWhen="ios">取消</span>\n                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n<ion-content class="all-music-list-panel" style="background: #eee">\n    <div class="all-music-list-select" (click)="selectMusicList({name:\'全部歌单\',str:\'all\'})">\n        全部歌单\n        <span class="check-icon" *ngIf="currentSelect === \'all\'">\n            <i class="iconfont icon-pa_checked01"></i>\n        </span>\n    </div>\n    <div class="language-list" *ngFor="let item of musicListType">\n        <div class="language-title">\n            <ion-icon name="{{item.iconName}}" style="font-size: 28px"></ion-icon>\n            <span style="display: block">{{item.title}}</span>\n        </div>\n        <div class="language-type">\n            <div class="up">\n                <ng-container *ngFor="let language of item.list;let $index = index">\n                    <ng-container *ngIf="$index < 3">\n                        <span class="language" (click)="selectMusicList(language)">\n                            {{language.name}}\n                            <span *ngIf="language.hot">\n                                <i class="iconfont icon-hot" style="position: absolute;top: -2px;right: -2px;display: block;font-size: 32px;color: #d81e06;"></i>\n                            </span>\n                            <span class="check-icon" *ngIf="currentSelect === language.str">\n                                <i class="iconfont icon-pa_checked01"></i>\n                            </span>\n                        </span>\n                    </ng-container>\n                </ng-container>\n            </div>\n            <div class="down">\n                <ng-container *ngFor="let language of item.list;let $index = index">\n                    <ng-container *ngIf="$index >= 3">\n                        <span class="language" (click)="selectMusicList(language)">\n                            {{language.name}}\n                            <span *ngIf="language.hot">\n                                <i class="iconfont icon-hot" style="position: absolute;top: -2px;right: -2px;display: block;font-size: 32px;color: #d81e06;"></i>\n                            </span>\n                            <span class="check-icon" *ngIf="currentSelect === language.str">\n                                <i class="iconfont icon-pa_checked01"></i>\n                            </span>\n                        </span>\n                    </ng-container>\n                </ng-container>\n            </div>\n        </div>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/tabs/music/allMusicListType/allMusicListType.html"*/,
             styleUrls: ['/style.scss']
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ViewController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], AllMusicListTypePage);
     return AllMusicListTypePage;
 }());
@@ -445,6 +474,69 @@ var AllMusicListTypePage = (function () {
 /***/ }),
 
 /***/ 206:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HighqualityMusicListPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_httpService__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var HighqualityMusicListPage = (function () {
+    function HighqualityMusicListPage(loadingCtrl, modalCtrl, http) {
+        this.loadingCtrl = loadingCtrl;
+        this.modalCtrl = modalCtrl;
+        this.http = http;
+        this.hqMusicList = [];
+    }
+    HighqualityMusicListPage.prototype.ngOnInit = function () {
+        this.highqualityMusicListNav.setBackButtonText("");
+        this.loadHighqualityMusic();
+    };
+    HighqualityMusicListPage.prototype.loadHighqualityMusic = function (tag) {
+        if (tag === void 0) { tag = '全部'; }
+        var loading = this.loadingCtrl.create({
+            content: '正在加载...',
+            duration: 10000,
+        });
+        loading.present();
+        var promise = this.http.getData({ url: "top/playlist/highquality", params: { limit: "10", tag: tag } });
+        promise.then(function (res) {
+            this.hqMusicList = res.playlists;
+            //this.getPage(this.currentPage);
+            loading.dismiss();
+        }.bind(this));
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('highqualityMusicListNav'),
+        __metadata("design:type", Object)
+    ], HighqualityMusicListPage.prototype, "highqualityMusicListNav", void 0);
+    HighqualityMusicListPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/tabs/music/highqualityMusicList/highqualityMusicList.html"*/'<ion-header style="border-bottom: none" class="more-music-list-header">\n    <ion-navbar #highqualityMusicListNav>\n        <ion-title>\n            精品歌单\n        </ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="openModal()">\n                <ion-icon name="list" style="font-size: 35px;color: #ffffff;"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding class="high-quality-music-list-content">\n    <div class="select-music-type">\n        <div class="all">\n            <span start>全部</span>\n        </div>\n        <div class="select-btn">\n            <span>\n                <ion-icon name="ios-funnel-outline" style="vertical-align: middle"></ion-icon>\n                筛选\n            </span>\n        </div>\n    </div>\n    <div class="hq-music-list-content">\n        <div class="music-list-block" *ngFor="let item of hqMusicList">\n            <div class="left-block">\n                <img src="{{item.coverImgUrl}}" />\n            </div>\n            <div class="right-block">\n                <p class="title">{{item.name}}</p>\n                <p class="creator">{{\'by\' + item.creator.nickname}}</p>\n                <p class="description">{{item.copywriter}}</p>\n            </div>\n        </div>\n    </div>\n</ion-content>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/tabs/music/highqualityMusicList/highqualityMusicList.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_httpService__["a" /* HttpService */]])
+    ], HighqualityMusicListPage);
+    return HighqualityMusicListPage;
+}());
+
+//# sourceMappingURL=highqualityMusicList.js.map
+
+/***/ }),
+
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -470,7 +562,7 @@ var RadioPage = (function () {
     }
     RadioPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'radio',template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/tabs/radio/radio.html"*/'<ion-header>\n\n</ion-header>\n\n<ion-content padding>\n    <h3>radio</h3>\n</ion-content>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/tabs/radio/radio.html"*/
+            selector: 'radio',template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/tabs/radio/radio.html"*/'<ion-header>\n\n</ion-header>\n\n<ion-content padding>\n    <h3>radio</h3>\n</ion-content>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/tabs/radio/radio.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], RadioPage);
@@ -481,7 +573,7 @@ var RadioPage = (function () {
 
 /***/ }),
 
-/***/ 207:
+/***/ 208:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -507,7 +599,7 @@ var VideosPage = (function () {
     }
     VideosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'videos',template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/tabs/videos/videos.html"*/'<ion-header>\n\n</ion-header>\n\n<ion-content padding>\n    <h3>{{12345 | splitThousand}}</h3>\n</ion-content>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/discoverMusic/tabs/videos/videos.html"*/
+            selector: 'videos',template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/tabs/videos/videos.html"*/'<ion-header>\n\n</ion-header>\n\n<ion-content padding>\n    <h3>{{12345 | splitThousand}}</h3>\n</ion-content>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/discoverMusic/tabs/videos/videos.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], VideosPage);
@@ -518,7 +610,7 @@ var VideosPage = (function () {
 
 /***/ }),
 
-/***/ 208:
+/***/ 209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -541,7 +633,7 @@ var MyMusicPage = (function () {
     }
     MyMusicPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'myMusic',template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/myMusic/myMusic.html"*/'<ion-header>\n\n</ion-header>\n\n<ion-content padding>\n    <h3>radio</h3>\n</ion-content>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/pages/myMusic/myMusic.html"*/
+            selector: 'myMusic',template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/myMusic/myMusic.html"*/'<ion-header>\n\n</ion-header>\n\n<ion-content padding>\n    <h3>radio</h3>\n</ion-content>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/pages/myMusic/myMusic.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], MyMusicPage);
@@ -552,13 +644,13 @@ var MyMusicPage = (function () {
 
 /***/ }),
 
-/***/ 209:
+/***/ 210:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pipes_pipes__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pipes_pipes__ = __webpack_require__(293);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -583,13 +675,13 @@ var SharedModule = (function () {
 
 /***/ }),
 
-/***/ 210:
+/***/ 211:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(233);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -597,19 +689,19 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 232:
+/***/ 233:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs_module__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs_module__ = __webpack_require__(290);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -659,13 +751,13 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 279:
+/***/ 280:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs_component__ = __webpack_require__(200);
@@ -710,9 +802,9 @@ var MyApp = (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/app/app.html"*/'<!--<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>-->\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/app/app.html"*/'<!--<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>-->\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
@@ -721,15 +813,15 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 289:
+/***/ 290:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_discoverMusic_discoverMusic_module__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_myMusic_myMusic_module__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_discoverMusic_discoverMusic_module__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_myMusic_myMusic_module__ = __webpack_require__(296);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tabs_component__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -759,19 +851,19 @@ var TabsModule = (function () {
 
 /***/ }),
 
-/***/ 290:
+/***/ 291:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DiscoverMusicModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tabs_music_music_module__ = __webpack_require__(291);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_radio_radio_module__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_videos_video_module__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tabs_music_music_module__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_radio_radio_module__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_videos_video_module__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__discoverMusic_component__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__root__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__provider_eventEmitService__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__provider_eventEmitService__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -804,17 +896,18 @@ var DiscoverMusicModule = (function () {
 
 /***/ }),
 
-/***/ 291:
+/***/ 292:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MusicModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sharedModule_sharedModule__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sharedModule_sharedModule__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__music_component__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__moreMusicList_component__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__allMusicListType_allMusicListType__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__moreMusicList_moreMusicList_component__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__highqualityMusicList_highqualityMusicList__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__allMusicListType_allMusicListType__ = __webpack_require__(205);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -827,13 +920,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var MusicModule = (function () {
     function MusicModule() {
     }
     MusicModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [__WEBPACK_IMPORTED_MODULE_2__music_component__["a" /* MusicPage */], __WEBPACK_IMPORTED_MODULE_4__moreMusicList_component__["a" /* MoreMusicListPage */], __WEBPACK_IMPORTED_MODULE_5__allMusicListType_allMusicListType__["a" /* AllMusicListTypePage */]],
-            entryComponents: [__WEBPACK_IMPORTED_MODULE_2__music_component__["a" /* MusicPage */], __WEBPACK_IMPORTED_MODULE_4__moreMusicList_component__["a" /* MoreMusicListPage */], __WEBPACK_IMPORTED_MODULE_5__allMusicListType_allMusicListType__["a" /* AllMusicListTypePage */]] /*入口组件*/,
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__music_component__["a" /* MusicPage */], __WEBPACK_IMPORTED_MODULE_4__moreMusicList_moreMusicList_component__["a" /* MoreMusicListPage */], __WEBPACK_IMPORTED_MODULE_6__allMusicListType_allMusicListType__["a" /* AllMusicListTypePage */], __WEBPACK_IMPORTED_MODULE_5__highqualityMusicList_highqualityMusicList__["a" /* HighqualityMusicListPage */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_2__music_component__["a" /* MusicPage */], __WEBPACK_IMPORTED_MODULE_4__moreMusicList_moreMusicList_component__["a" /* MoreMusicListPage */], __WEBPACK_IMPORTED_MODULE_6__allMusicListType_allMusicListType__["a" /* AllMusicListTypePage */], __WEBPACK_IMPORTED_MODULE_5__highqualityMusicList_highqualityMusicList__["a" /* HighqualityMusicListPage */]] /*入口组件*/,
             imports: [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */], __WEBPACK_IMPORTED_MODULE_1__sharedModule_sharedModule__["a" /* SharedModule */]]
         })
     ], MusicModule);
@@ -844,7 +938,7 @@ var MusicModule = (function () {
 
 /***/ }),
 
-/***/ 292:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -902,14 +996,14 @@ var SafeHtmlPipe = (function () {
 
 /***/ }),
 
-/***/ 293:
+/***/ 294:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RadioModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__radio_component__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__radio_component__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -937,15 +1031,15 @@ var RadioModule = (function () {
 
 /***/ }),
 
-/***/ 294:
+/***/ 295:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideoModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sharedModule_sharedModule__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__videos_component__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sharedModule_sharedModule__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__videos_component__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(11);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -973,14 +1067,14 @@ var VideoModule = (function () {
 
 /***/ }),
 
-/***/ 295:
+/***/ 296:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyMusicModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__myMusic_component__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__myMusic_component__ = __webpack_require__(209);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1007,14 +1101,14 @@ var MyMusicModule = (function () {
 
 /***/ }),
 
-/***/ 50:
+/***/ 41:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(289);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1031,7 +1125,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var apifiex = "http://192.168.1.2:8101/";
+var apifiex = "http://192.168.10.181:8101/";
 var HttpService = (function () {
     function HttpService(http) {
         this.http = http;
@@ -1052,7 +1146,38 @@ var HttpService = (function () {
 
 //# sourceMappingURL=httpService.js.map
 
+/***/ }),
+
+/***/ 51:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RootViewCoverService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RootViewCoverService = (function () {
+    function RootViewCoverService() {
+        this.rootViewCover = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+    }
+    RootViewCoverService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], RootViewCoverService);
+    return RootViewCoverService;
+}());
+
+//# sourceMappingURL=eventEmitService.js.map
+
 /***/ })
 
-},[210]);
+},[211]);
 //# sourceMappingURL=main.js.map

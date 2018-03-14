@@ -4,7 +4,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, App, ViewController } from 'ionic-angular';
 import { HttpService } from '../../../../providers/httpService';
-import { MoreMusicListPage } from './moreMusicList.component';
+import { MoreMusicListPage } from './moreMusicList/moreMusicList.component';
 import { RootViewCoverService } from '../../provider/eventEmitService';
 
 @Component({
