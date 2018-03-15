@@ -1,0 +1,29 @@
+.single-play-block{
+    .single-cover-img{
+        img{
+            width:100%;
+            display: block;
+        }
+        margin-bottom: 8px;
+    }
+    .single-description{
+        padding: 0 8px 8px 8px;
+        p{
+            margin: 0;
+            margin-bottom:4px;
+            padding: 0;
+            color: $grayBlack;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+        p.publish-date{
+            color:$gray
+        }
+    }
+}
+
+.single-play-block:last-child{
+    margin-bottom: 0;
+}

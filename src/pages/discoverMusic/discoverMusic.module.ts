@@ -3,7 +3,7 @@ import { MusicModule } from './tabs/music/music.module';
 import { RadioModule } from './tabs/radio/radio.module';
 import { VideoModule } from './tabs/videos/video.module'
 import { DiscoverMusicPage } from './discoverMusic.component';
-import { DiscoverRootPage } from './root'
+import { DiscoverRootPage } from './root/root.component'
 import { IonicModule } from 'ionic-angular';
 import { RootViewCoverService } from './provider/eventEmitService';
 

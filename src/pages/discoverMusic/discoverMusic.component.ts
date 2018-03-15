@@ -4,7 +4,7 @@
 import { Component,OnInit,ViewChild } from '@angular/core';
 import { HttpService } from '../../providers/httpService';
 import { NavController } from 'ionic-angular';
-import { DiscoverRootPage} from './root';
+import { DiscoverRootPage} from './root/root.component';
 import { RootViewCoverService } from './provider/eventEmitService';
 
 @Component({
@@ -22,15 +22,15 @@ export class DiscoverMusicPage implements OnInit{
     }
 
     ngOnInit() {
-        this.rootViewCoverService.rootViewCover.subscribe((component)=>{
-            this.currentViewFade(component)
+        this.rootViewCoverService.rootViewCover.subscribe((data)=>{
+            this.currentViewFade(data)
         })/*订阅覆盖当前组件事件，该服务必须是单例*/
 
         let loginPromise = this.http.getData({url:"login/cellphone/",params:{phone:"18649685236",password:"1314520ZY"}});
         loginPromise.then(()=>{}).catch((e)=>{console.error(e)});
     }
 
-    currentViewFade(component) {
-        this.nav.push(component);/*component组件会覆盖当前跟组件*/
+    currentViewFade(data) {
+        this.nav.push(data.component,data.params);/*component组件会覆盖当前跟组件*/
     }
 }

@@ -1,0 +1,25 @@
+<ion-header style="border-bottom: none" class="custom-header">
+    <ion-navbar #singlePlayNav>
+        <ion-title>
+            网易独家
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="list" style="font-size: 35px;color: #ffffff;"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ng-container *ngIf="singlePlayList.length !==0 ">
+        <div *ngFor="let item of singlePlayList" class="single-play-block">
+            <div class="single-cover-img">
+                <img src="{{item.picUrl}}" />
+            </div>
+            <div class="single-description">
+                <p>{{item.name}}</p>
+                <p class="publish-date">今天</p>
+            </div>
+        </div>
+    </ng-container>
+</ion-content>

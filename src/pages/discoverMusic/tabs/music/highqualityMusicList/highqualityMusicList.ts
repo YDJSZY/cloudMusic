@@ -8,7 +8,7 @@ import musicList from './musicList';
 export class HighqualityMusicListPage implements OnInit{
     @ViewChild('highqualityMusicListNav') highqualityMusicListNav
     hqMusicList:Array<any>=[]
-    currentMusicType:Object = {name:'全部',field:'all'}
+    currentMusicType = {name:'全部',field:'all'}
     constructor(
         public loadingCtrl:LoadingController,
         public alertCtrl:AlertController,

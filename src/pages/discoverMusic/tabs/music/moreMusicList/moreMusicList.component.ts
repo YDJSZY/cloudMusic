@@ -83,6 +83,6 @@ export class MoreMusicListPage implements OnInit{
     }
 
     openHighqualityMusic() {/*去精品歌单*/
-        this.rootViewCoverService.rootViewCover.emit(HighqualityMusicListPage);
+        this.rootViewCoverService.rootViewCover.emit({component:HighqualityMusicListPage});
     }
 }

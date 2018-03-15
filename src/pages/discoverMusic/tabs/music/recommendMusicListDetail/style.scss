@@ -1,0 +1,76 @@
+.recommend-music-header .toolbar-background{
+    background: #dddddd !important;
+}
+
+.recommend-music-header .show-back-button {
+    color: #ffffff !important;
+}
+
+.recommend-music-header .toolbar-title {
+    color: #ffffff !important;
+}
+
+.rcmd-music-list-content{
+    .music-list-info{
+        background: #dddddd;
+        width:100%;
+        padding: 15px 15px 0;
+        .info-up{
+            display: flex;
+            margin-bottom: 15px;
+            .cover-img{
+                flex:1;
+                position: relative;
+                display: block;
+                .play-count{
+                    display: block;
+                    position: absolute;
+                    top:2px;
+                    right:2px;
+                    color: #ffffff;
+                }
+            }
+            .music-list-des{
+                padding: 0 10px 0 15px;
+                flex: 1;
+                .music-list-title{
+                    font-size: 16px;
+                    color: #ffffff;
+                    margin: 0 0 15px;
+                }
+                .music-list-creator{
+                    .avatar-img{
+                        width:25px;
+                        height:25px;
+                        border-radius: 25px;
+                        display: inline-block;
+                        img{
+                            width:100%;
+                            height:100%;
+                            border-radius: 100%;
+                        }
+                    }
+                    .creator-name{
+                        vertical-align: super;
+                        color: #969696;
+                    }
+                }
+            }
+        }
+        .info-down{
+            display: flex;
+            justify-content: space-between;
+            color: #ffffff;
+            padding: 0 10px 2px;
+            .iconfont{
+                font-size: 16px;
+                margin-bottom: 2px;
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}

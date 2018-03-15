@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, App, ViewController } from 'ionic-angular';
 import { HttpService } from '../../../../providers/httpService';
 import { MoreMusicListPage } from './moreMusicList/moreMusicList.component';
+import { SinglePlayPage } from './singlePlay/singlePlay.component';
+import { RcmdMusicListDetailPage } from './recommendMusicListDetail/recommendMusicListDetail.component';
 import { RootViewCoverService } from '../../provider/eventEmitService';
 
 @Component({
@@ -48,6 +50,15 @@ export class MusicPage implements OnInit{
     }
 
     checkMoreMusicList() {
-        this.rootViewCoverService.rootViewCover.emit(MoreMusicListPage);
+        this.rootViewCoverService.rootViewCover.emit({component:MoreMusicListPage});
+    }
+
+    checkMoreSinglePlay() {
+        this.rootViewCoverService.rootViewCover.emit({component:SinglePlayPage});
+    }
+
+    musicListDetail(list) {
+        let obj = {id:list.id,avatarUrl:list.creator.avatarUrl,nickname:list.creator.nickname,name:list.name,picUrl:list.picUrl,playcount:list.playcount}
+        this.rootViewCoverService.rootViewCover.emit({component:RcmdMusicListDetailPage,params:{data:obj}});
     }
 }

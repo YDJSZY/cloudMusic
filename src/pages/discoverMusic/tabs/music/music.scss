@@ -35,8 +35,9 @@ ion-header {
     flex-direction: column;
 }
 
-.intro-list .intro-item span{
+.intro-list .intro-item .intro-text{
     display: block;
+    color: #733D30;
 }
 
 .intro-list .intro-item .intro-icon{
@@ -48,6 +49,10 @@ ion-header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5px;
+    ion-icon{
+        color:#733D30
+    }
 }
 
 .intro-list .intro-item .intro-icon ion-icon{
