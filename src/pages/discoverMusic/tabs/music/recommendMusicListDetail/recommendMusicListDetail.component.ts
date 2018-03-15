@@ -10,6 +10,7 @@ export class RcmdMusicListDetailPage implements OnInit{
     @ViewChild('rcmdMusicListNav') rcmdMusicListNav
     musicList:Array<any>=[]
     musicListInfo:any={}
+    loading:any
     constructor(
         private http:HttpService,
         private navCtrl:NavController,
