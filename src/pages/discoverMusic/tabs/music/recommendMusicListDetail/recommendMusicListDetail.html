@@ -52,15 +52,15 @@
         </div>
     </div>
     <ng-container *ngIf="musicList.length !==0 ">
+        <ion-list>
+            <ion-item *ngFor="let music of musicList.tracks;let $index = index">
+                <span item-start style="color: #969696;">{{$index+1}}</span>
+                <ion-label (click)="playMusic(music)">
+                    <span style="color: #402424">{{music.name}}</span>
+                    <p>{{music.artists[0].name + ' - ' + music.album.name}}</p>
+                </ion-label>
+                <i class="iconfont icon-more" style="font-size: 20px;color: #cccccc;" item-end></i>
+            </ion-item>
+        </ion-list>
     </ng-container>
-    <ion-list>
-        <ion-item *ngFor="let music of musicList.tracks;let $index = index">
-            <span item-start style="color: #969696;">{{$index+1}}</span>
-            <ion-label (click)="playMusic(music)">
-                <span style="color: #402424">{{music.name}}</span>
-                <p>{{music.artists[0].name + ' - ' + music.album.name}}</p>
-            </ion-label>
-            <i class="iconfont icon-more" style="font-size: 20px;color: #cccccc;" item-end></i>
-        </ion-item>
-    </ion-list>
 </ion-content>

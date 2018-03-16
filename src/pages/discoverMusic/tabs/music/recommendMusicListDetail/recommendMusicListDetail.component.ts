@@ -1,7 +1,8 @@
 import { Component,OnInit,ViewChild } from '@angular/core';
 import { HttpService } from '../../../../../providers/httpService';
 import { NavController,NavParams,LoadingController } from 'ionic-angular';
-
+import { RootViewCoverService } from '../../../provider/eventEmitService';
+import { PlayMusicPage } from '../../../../../components/playMusic/playMusic.component';
 @Component({
     templateUrl: 'recommendMusicListDetail.html',
     styleUrls:['/style.scss']
@@ -15,7 +16,8 @@ export class RcmdMusicListDetailPage implements OnInit{
         private http:HttpService,
         private navCtrl:NavController,
         private navParams:NavParams,
-        private loadingCtrl:LoadingController
+        private loadingCtrl:LoadingController,
+        private rootViewCoverService:RootViewCoverService
     ) {
 
     }
@@ -44,6 +46,6 @@ export class RcmdMusicListDetailPage implements OnInit{
     }
 
     playMusic(music) {
-        console.log(music)
+        this.rootViewCoverService.globalRootViewCover.emit({component:PlayMusicPage,params:{data:music}});
     }
 }

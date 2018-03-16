@@ -9,6 +9,29 @@
             margin: 0;
             padding: 0;
         }
+        .play-music-container{
+            width:100%;
+            padding-top: 100px;
+            position: relative;
+        }
+        .play-music-container .play-needle{
+            width:124px;
+            height:187px;
+            position: absolute;
+            top: 0px;
+            left: calc(50% - 20px);
+            -webkit-transform: translate(-50%,0);
+            -ms-transform: translate(-50%,0);
+            transform: translate(-50%,0);
+            z-index: 9;
+            transform-origin: left top;
+            -webkit-transform-origin: left top;
+            transform: rotate(-20deg);
+        }
+        .play-music-container .play-needle img{
+            width:100%;
+            height:100%;
+        }
         .play-music-main{
             margin: 0 auto;
             width: 260px;
@@ -88,14 +111,20 @@
     </style>
 </head>
 <body>
-<div class="play-music-main">
-    <div class="outside">
-        <img src="../../assets/imgs/play_disc.png" />
-        <div class="inside">
-            <img src="./te.jpg" />
-        </div>
+<header style="height: 50px;width: 100%;background: #000000"></header>
+<div class="play-music-container">
+    <div class="play-needle">
+        <img src="../../assets/imgs/play_needle.png" />
     </div>
-    <div class="play-handle"></div>
+    <div class="play-music-main">
+        <div class="outside">
+            <img src="../../assets/imgs/play_disc.png" />
+            <div class="inside">
+                <img src="./te.jpg" />
+            </div>
+        </div>
+        <div class="play-handle"></div>
+    </div>
 </div>
 </body>
 </html>
