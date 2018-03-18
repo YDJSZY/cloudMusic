@@ -1,0 +1,70 @@
+<ion-header style="border-bottom: none" class="recommend-music-header">
+    <ion-navbar #rcmdMusicListNav>
+        <ion-title>
+            歌单
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="list" style="font-size: 35px;color: #ffffff;"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="rcmd-music-list-content">
+    <div class="music-list-info">
+        <div class="info-up">
+            <div class="cover-img">
+                <img src="{{musicListInfo.picUrl}}"  />
+                <span class="play-count">
+                    <ion-icon name="ios-headset-outline"></ion-icon>
+                    {{musicListInfo.playcount}}
+                </span>
+            </div>
+            <div class="music-list-des">
+                <p class="music-list-title">{{musicListInfo.name}}</p>
+                <div class="music-list-creator">
+                    <div class="avatar-img">
+                        <ng-container *ngIf="musicList.creator">
+                            <img [src]="musicList.creator.avatarUrl" />
+                        </ng-container>
+                    </div>
+                    <ng-container *ngIf="musicList.creator">
+                        <span class="creator-name">
+                        {{musicList.creator.nickname}}
+                    </span>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+        <div class="info-down">
+            <div class="collect">
+                <i class="iconfont icon-foldercollect"></i>
+                <span>{{musicList.subscribedCount}}</span>
+            </div>
+            <div class="comment">
+                <i class="iconfont icon-comment"></i>
+                <span>{{musicList.commentCount}}</span>
+            </div>
+            <div class="share">
+                <i class="iconfont icon-share"></i>
+                <span>{{musicList.shareCount}}</span>
+            </div>
+            <div class="download">
+                <i class="iconfont icon-cloud-download"></i>
+                <span>下载</span>
+            </div>
+        </div>
+    </div>
+    <ng-container *ngIf="musicList.tracks">
+        <ion-list>
+            <ion-item *ngFor="let music of musicList.tracks;let $index = index">
+                <span item-start style="color: #969696;">{{$index+1}}</span>
+                <ion-label (click)="playMusic(music)">
+                    <span style="color: #402424">{{music.name}}</span>
+                    <p>{{music.artists[0].name + ' - ' + music.album.name}}</p>
+                </ion-label>
+                <i class="iconfont icon-more" style="font-size: 20px;color: #cccccc;" item-end></i>
+            </ion-item>
+        </ion-list>
+    </ng-container>
+</ion-content>

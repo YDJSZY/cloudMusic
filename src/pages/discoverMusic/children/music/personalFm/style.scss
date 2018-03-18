@@ -1,0 +1,43 @@
+.personal-fm-header .toolbar-background{
+    background: #000000 !important;
+    opacity: 0.4;
+}
+
+.personal-fm-header .show-back-button {
+    color: #ffffff !important;
+}
+
+.personal-fm-header .toolbar-title {
+    color: #ffffff !important;
+}
+
+.personal-fm-content .bg-img{
+    width: 100%;
+    height: 100%;
+    filter: blur(50px)
+}
+
+.personal-fm-content .album-cover{
+    width:100%;
+    padding: 20px;
+    position: absolute;
+    top:0;
+}
+
+.personal-fm-content .album-cover .album-cover-img{
+    border-radius: 5px;
+}
+
+.personal-fm-content .album-cover .album-des{
+    text-align: center;
+    width:100%;
+    margin-top: 15px;
+}
+
+.personal-fm-content .play-handle{
+    width:100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+
+}

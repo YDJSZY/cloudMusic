@@ -2,16 +2,16 @@ import {Component, ViewChild} from '@angular/core';
 import {Nav, Platform} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
-import {TabsPage} from '../pages/tabs/tabs.component';
 
 @Component({
-    templateUrl: 'app.html'
+    templateUrl: 'app.html',
+    styleUrls:['/app.scss'],
 })
 export class MyApp {
     @ViewChild(Nav)
     nav:Nav;
 
-    rootPage:any = TabsPage;
+    rootPage:any = 'tabs-page';
 
     pages:Array<{title:string, component:any}>;
 

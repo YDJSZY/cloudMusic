@@ -2,129 +2,145 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Title</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .play-music-container{
-            width:100%;
+        .main{
+            width:400px;
+            height: 400px;
+            margin: 100px auto;
+            border: 1px solid #dddddd;
             padding-top: 100px;
+            background: #656565;
+        }
+        .audio-container{
+            width:100%;
+        }
+        .audio-container .progress-line{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .audio-container .progress-line .played-time{
+            color: #ffffff;
+        }
+        .audio-container .progress-line .total-time{
+            color: #ffffff;
+            opacity: 0.8;
+        }
+        .audio-container .progress-line .play-line-container{
+            flex: 1;
+            margin: 0 15px 0 15px;
             position: relative;
         }
-        .play-music-container .play-needle{
-            width:124px;
-            height:187px;
+        .audio-container .progress-line .play-line-container .play-handle-dot{
+            width:20px;
+            height:20px;
+            border-radius: 20px;
+            background: #ffffff;
+            line-height: 15px;
+            text-align: center;
             position: absolute;
-            top: 0px;
-            left: calc(50% - 20px);
-            -webkit-transform: translate(-50%,0);
-            -ms-transform: translate(-50%,0);
-            transform: translate(-50%,0);
-            z-index: 9;
-            transform-origin: left top;
-            -webkit-transform-origin: left top;
-            transform: rotate(-20deg);
+            top:-10px;
+            left: -10px;
         }
-        .play-music-container .play-needle img{
-            width:100%;
-            height:100%;
+        .audio-container .progress-line .play-line-container .play-handle-dot .dot{
+            width:5px;
+            height: 5px;
+            display: inline-block;
+            background: #733D30;
+            border-radius: 5px;
         }
-        .play-music-main{
-            margin: 0 auto;
-            width: 260px;
-            height: 260px;
-            max-width: 356px;
-            max-height: 356px;
-            box-sizing: border-box;
-            padding: 10px;
-            background: #dddddd;
-            border-radius: 100%;
-        }
-        .play-music-main .outside{
-            position:relative;
-            width:100%;
-            height: 100%;
-            box-sizing: border-box;
-            border-radius: 100%;
-            animation:7s rotate-block linear;
-            animation-iteration-count:infinite;
-        }
-        .play-music-main .outside img{
-            width:100%;
-            height: 100%;
-            border-radius: 100%;
-        }
-        .play-music-main .inside{
+        .audio-container .progress-line .play-line-container .played-length-line{
+            height: 2px;
             position: absolute;
+            width:0px;
             top:0;
-            left: 0;
-            padding: 41px;
-            box-sizing: border-box;
+            background: #733D30;
+        }
+        .audio-container .progress-line .play-line-container .play-line{
             width:100%;
-            height: 100%;
-            border-radius: 100%;
-            background-size: 100% 100%;
-        }
-        .play-music-main .inside img{
-            width:100%;
-            height:100%;
-            border-radius: 100%;
-        }
-        .play-music-main .play-handle{
-
-        }
-        @keyframes rotate-block{
-            0%{
-                transform: rotate(0deg);
-            }
-            100%{
-                transform: rotate(360deg);
-            }
-        }
-        @media screen and (width: 375px){
-            .play-music-main{
-                width:300px;
-                height:300px;
-            }
-            .play-music-main .inside{
-                padding: 47px;
-            }
-        }
-        @media screen and (max-width: 320px){
-            .play-music-main{
-                width:260px;
-                height:260px;
-            }
-        }
-        @media screen and (min-width: 414px){
-            .play-music-main{
-                width:350px;
-                height:350px;
-            }
-            .play-music-main .inside{
-                padding: 55px;
-            }
+            height: 2px;
+            background: #ffffff;
+            opacity: 0.3;
         }
     </style>
 </head>
 <body>
-<header style="height: 50px;width: 100%;background: #000000"></header>
-<div class="play-music-container">
-    <div class="play-needle">
-        <img src="../../assets/imgs/play_needle.png" />
-    </div>
-    <div class="play-music-main">
-        <div class="outside">
-            <img src="../../assets/imgs/play_disc.png" />
-            <div class="inside">
-                <img src="./te.jpg" />
+<div class="main">
+    <div class="audio-container">
+        <audio id="wy_audio" src="http://music.163.com/song/media/outer/url?id=26672926.mp3"></audio>
+        <div class="progress-line">
+            <div class="played-time">00:00</div>
+            <div class="play-line-container">
+                <div class="play-line" id="playLine"></div>
+                <div class="played-length-line" id="playedLine"></div>
+                <div class="play-handle-dot" id="playHandleDot">
+                    <span class="dot"></span>
+                </div>
             </div>
+            <div class="total-time">04:00</div>
         </div>
-        <div class="play-handle"></div>
+        <button id="play">play</button>
+        <button id="paused">paused</button>
     </div>
 </div>
+<script>
+    window.onload = function () {
+        var playBtn = document.getElementById('play');
+        var playedLine = document.getElementById('playedLine');
+        var playHandleDot = document.getElementById('playHandleDot');
+        var pausedBtn = document.getElementById('paused');
+        var wy_audio = document.getElementById('wy_audio');
+        var playLineWidth = document.getElementById('playLine').offsetWidth;
+        var duration = wy_audio.duration;
+        /*wy_audio.oncanplay = function(){
+            duration = wy_audio.duration
+
+        };*/
+        var last = 0;
+
+        wy_audio.addEventListener('timeupdate',function(){
+            var currentTime = wy_audio.currentTime
+            var d = (currentTime/duration);/*当前播放时常占总时常的百分比*/
+            var l = Math.ceil(d * playLineWidth);
+            setProgress(l)
+        });
+
+        var setProgress = function (l) {
+            var f = l - last;
+            last = l;
+            var currentLeft = playHandleDot.offsetLeft;
+            var cruuentWidth = playedLine.offsetWidth;
+            playHandleDot.style.left = currentLeft+f+"px";
+            playedLine.style.width = cruuentWidth+f+"px";
+        }
+
+        var setMusicTotalTime = function (time) {
+            time = Math.floor(time)
+            var minutePart,secondPart;
+            if(time >= 60) {
+                var m = Math.floor(time / 60);
+                var s = time % 60;
+                m>=10 ? minutePart = m : minutePart = '0' + m;
+                console.log(minutePart)
+                s >= 10 ? secondPart = s : '0' + s
+            }else{
+                minutePart = '00';
+                time >= 10 ? secondPart = minutePart : '0' + minutePart
+            }
+            console.log(minutePart + ":" + secondPart)
+        }
+
+        setMusicTotalTime(duration);
+
+        play.onclick = function () {
+            wy_audio.play();
+        }
+
+        pausedBtn.onclick = function () {
+            wy_audio.pause();
+        }
+    }
+</script>
 </body>
 </html>

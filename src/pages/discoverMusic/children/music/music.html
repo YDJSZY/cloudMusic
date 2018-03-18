@@ -1,0 +1,73 @@
+<ion-content class="custom-view">
+    <div class="banner" style="width:100%;">
+        <ion-slides loop="true" pager autoplay="2000" *ngIf="banners.length">
+            <ion-slide style="width:100%;height:100%" *ngFor="let banner of banners">
+                <img [src]="banner.pic" style="width: 100%;height: 100%"/>
+            </ion-slide>
+        </ion-slides>
+    </div>
+    <div class="intro-list">
+        <div class="intro-item" tappable (click)="personalFm()">
+            <div class="intro-icon">
+                <ion-icon name="md-radio"></ion-icon>
+            </div>
+            <span class="intro-text">私人FM</span>
+        </div>
+        <div class="intro-item" tappable (click)="dayRecommendMusic()">
+            <div class="intro-icon">
+                <ion-icon name="md-calendar"></ion-icon>
+            </div>
+            <span class="intro-text">每日推荐</span>
+        </div>
+        <div class="intro-item" tappable (click)="checkMoreMusicList()">
+            <div class="intro-icon">
+                <ion-icon name="ios-musical-notes-outline"></ion-icon>
+            </div>
+            <span class="intro-text">歌单</span>
+        </div>
+        <div class="intro-item">
+            <div class="intro-icon">
+                <ion-icon name="list"></ion-icon>
+            </div>
+            <span class="intro-text">排行榜</span>
+        </div>
+    </div>
+    <div class="intro-music-list">
+        <header class="block-header" tappable (click)="checkMoreMusicList()">
+            <span class="l-red"></span>
+            <span class="block-title">推荐歌单</span>
+            <span class="left-direct"></span>
+        </header>
+        <section class="music-list-content">
+            <div *ngFor="let list of introMusicList;let $index=index" class="square-list-item" (click)="musicListDetail(list)" [ngClass]="{'noMarginRight': ($index+1) % 2 == 0}" style="width: calc((100% - 4px) / 2);">
+                <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
+                <span class="square-list-item-des">{{list.name}}</span>
+                <div class="play-count">
+                    <ion-icon name="ios-headset-outline"></ion-icon>
+                    <span>{{list.playcount | splitThousand}}</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="intro-music-list">
+        <header class="block-header" tappable (click)="checkMoreSinglePlay()">
+            <span class="l-red"></span>
+            <span class="block-title">独家放送</span>
+            <span class="left-direct"></span>
+        </header>
+        <section class="music-list-content">
+            <div class="square-list-item" *ngFor="let list of singlePlayList;let $index=index" [ngClass]="{'noMarginRight': ($index+1) % 2 == 0}" style="width: calc((100% - 4px) / 2);">
+                <ng-container *ngIf="$index < 2">
+                    <img [src]="list.sPicUrl" style="width: 100%;height: 100%;"/>
+                    <span class="square-list-item-des">{{list.name}}</span>
+                </ng-container>
+            </div>
+            <div *ngFor="let list of singlePlayList;let $index=index">
+                <ng-container *ngIf="$index == 2">
+                    <img [src]="list.picUrl" style="width: 100%;"/>
+                    <span class="square-list-item-des">{{list.name}}</span>
+                </ng-container>
+            </div>
+        </section>
+    </div>
+</ion-content>

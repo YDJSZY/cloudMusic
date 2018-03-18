@@ -1,4 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 /node_modules
 *.xml
-/platforms/*
+platforms/ios
+.sourcemaps
+/www/

@@ -1,0 +1,19 @@
+--prod	构建生产应用程序
+
+--aot	为此构建执行提前编译
+
+--minifyjs	为此构建Minify JS
+
+--minifycss	为此构建Minify CSS
+
+--optimizejs	对此构建执行JS优化
+
+--debug	创建Cordova调试版本
+
+--release	创建Cordova发行版
+
+--device	将Cordova构建部署到设备
+
+--emulator	将Cordova构建到仿真器
+
+--buildConfig	使用指定的Cordova构建配置

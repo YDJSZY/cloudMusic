@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { IonicModule } from 'ionic-angular';
-import { MyMusicPage } from './myMusic.component';
+import { MyMusicPage } from './myMusic';
+import {IonicPageModule} from 'ionic-angular';
 
 @NgModule({
     declarations:[MyMusicPage],
-    entryComponents:[MyMusicPage],/*入口组件*/
-    imports: [IonicModule]
+    imports: [
+        IonicPageModule.forChild(MyMusicPage)
+    ]
 })
 export class MyMusicModule { }

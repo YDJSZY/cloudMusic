@@ -6,14 +6,15 @@ import { HttpClientModule } from '@angular/common/http';
 import {MyApp} from './app.component';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
-import { TabsModule } from '../pages/tabs/tabs.module';
+import { RootViewCoverService } from '../pages/discoverMusic/provider/eventEmitService';
+import { SharedModule } from '../sharedModule/sharedModule'
 
 @NgModule({
     declarations: [
         MyApp
     ],
     imports: [
-        TabsModule,
+        SharedModule,
         HttpClientModule,
         BrowserModule,
         IonicModule.forRoot(MyApp),
@@ -23,11 +24,13 @@ import { TabsModule } from '../pages/tabs/tabs.module';
         MyApp
     ],
     providers: [
+        RootViewCoverService,
         HttpClientModule,
         StatusBar,
         SplashScreen,
         {provide: ErrorHandler, useClass: IonicErrorHandler}
-    ]
+    ],
+    exports:[SharedModule]
 })
 export class AppModule {
 }
