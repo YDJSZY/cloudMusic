@@ -23,7 +23,7 @@ webpackEmptyAsyncContext.id = 111;
 var map = {
 	"../components/playMusic/playMusic.module": [
 		279,
-		9
+		1
 	],
 	"../pages/discoverMusic/children/music/allMusicType/allMusicType.module": [
 		280,
@@ -31,7 +31,7 @@ var map = {
 	],
 	"../pages/discoverMusic/children/music/everyDayRecommendMusic/everyDayRecommendMusic.module": [
 		281,
-		8
+		9
 	],
 	"../pages/discoverMusic/children/music/highqualityMusicList/highqualityMusic.module": [
 		282,
@@ -39,38 +39,38 @@ var map = {
 	],
 	"../pages/discoverMusic/children/music/moreMusicList/moreMusicList.module": [
 		283,
-		7
+		8
 	],
 	"../pages/discoverMusic/children/music/moreSinglePlay/moreSinglePlay.module": [
 		284,
-		6
+		7
 	],
 	"../pages/discoverMusic/children/music/music.module": [
 		285,
-		5
+		6
 	],
 	"../pages/discoverMusic/children/music/personalFm/personalFm.module": [
 		286,
-		4
+		5
 	],
 	"../pages/discoverMusic/children/music/recommendMusicListDetail/recommendMusicListDetail.module": [
 		287,
-		3
+		4
 	],
 	"../pages/discoverMusic/discoverMusic.module": [
 		288,
-		2
+		3
 	],
 	"../pages/discoverMusic/root/root.module": [
-		291,
-		1
+		289,
+		2
 	],
 	"../pages/discoverMusic/search/search.module": [
-		289,
+		290,
 		12
 	],
 	"../pages/myMusic/myMusic.module": [
-		290,
+		291,
 		11
 	],
 	"../pages/tabs/tabs.module": [
@@ -231,9 +231,9 @@ var AppModule = (function () {
                         { loadChildren: '../pages/discoverMusic/children/music/personalFm/personalFm.module#PersonalFmModule', name: 'personal-fm-page', segment: 'personalFm', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/music/recommendMusicListDetail/recommendMusicListDetail.module#RecommendMusicListDetailModule', name: 'recd-music-list-page', segment: 'recommendMusicListDetail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/discoverMusic.module#DiscoverMusicModule', name: 'discover-music-page', segment: 'discoverMusic', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/root/root.module#DiscoverRootPageModule', name: 'discover-root-page', segment: 'root', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/search/search.module#SearchModule', name: 'search-page', segment: 'search', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/myMusic/myMusic.module#MyMusicModule', name: 'my-music-page', segment: 'myMusic', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/discoverMusic/root/root.module#DiscoverRootPageModule', name: 'discover-root-page', segment: 'root', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsModule', name: 'tabs-page', segment: 'tab', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -366,7 +366,7 @@ var MyApp = (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/app/app.html"*/'<!--<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>-->\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/app/app.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/app/app.html"*/'<!--<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>-->\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/app/app.html"*/,
             styleUrls: ['/app.scss'],
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])

@@ -85,6 +85,11 @@
     </div>
 </div>
 <script>
+    class AudioPlayer{
+        constructor(mediaEle) {
+            this.mediaEle = mediaEle;
+        }
+    }
     window.onload = function () {
         var playBtn = document.getElementById('play');
         var playedLine = document.getElementById('playedLine');
@@ -93,10 +98,10 @@
         var wy_audio = document.getElementById('wy_audio');
         var playLineWidth = document.getElementById('playLine').offsetWidth;
         var duration = wy_audio.duration;
-        /*wy_audio.oncanplay = function(){
+        wy_audio.oncanplay = function(){
             duration = wy_audio.duration
-
-        };*/
+            setMusicTotalTime(duration)
+        };
         var last = 0;
 
         wy_audio.addEventListener('timeupdate',function(){
@@ -116,13 +121,14 @@
         }
 
         var setMusicTotalTime = function (time) {
+            console.log(time)
+            if(isNaN(time)) return;
             time = Math.floor(time)
             var minutePart,secondPart;
             if(time >= 60) {
                 var m = Math.floor(time / 60);
                 var s = time % 60;
                 m>=10 ? minutePart = m : minutePart = '0' + m;
-                console.log(minutePart)
                 s >= 10 ? secondPart = s : '0' + s
             }else{
                 minutePart = '00';

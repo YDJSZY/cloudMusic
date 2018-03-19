@@ -38,11 +38,10 @@ export class EveryDayRecommendMusicPage implements OnInit{
         });
         loading.present()
         let promise = this.http.getData({url:'recommend/songs'});
-        promise.then((res):any=>{
-            let recommend = res.recommend
-            this.dayRcmdMusicList = recommend;
+        promise.then(function(res):any{
+            this.dayRcmdMusicList = res.recommend;
             loading.dismiss();
-        })
+        }.bind(this))
     }
 
     playMusic(music) {

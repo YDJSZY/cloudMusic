@@ -29,8 +29,7 @@
             </div>
         </div>
         <div class="play-handle">
-            <audio id="wy_music" controls="controls">
-            </audio>
+            <audio-player (changePlayStatus)="changePlayStatus($event)" [mediaUrl]="musicUrl" style="width: 100%"></audio-player>
         </div>
     </div>
 </ion-content>

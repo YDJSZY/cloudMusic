@@ -40,19 +40,19 @@ export class PersonalFmPage implements OnInit{
         });
         loading.present()
         let promise = this.http.getData({url:'personal_fm',params:{offset:this.offset}});
-        promise.then((res):any=>{
+        promise.then(function(res):any{
             this.personalFmData = res.data[0];
             this.getMusicUrl(this.personalFmData.id);
             loading.dismiss();
-        })
+        }.bind(this))
     }
 
     getMusicUrl(id) {
         let promise = this.http.getData({url:'music/url',params:{id:id}});
-        promise.then((res):any=>{
+        promise.then(function(res):any{
             this.fmMusicData = res.data[0];
             this.setMusicAudio()
-        })
+        }.bind(this))
     }
 
     setMusicAudio() {

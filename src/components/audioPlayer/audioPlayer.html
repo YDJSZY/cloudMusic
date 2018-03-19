@@ -1,0 +1,17 @@
+<div class="audio-container">
+    <audio #audioEle></audio>
+    <!--<div class="progress-line">
+        <div class="played-time">{{playedTime || '00:00'}}</div>
+        <div class="play-line-container">
+            <div class="play-line" #playLine id="playLine"></div>
+            <div class="played-length-line" #playedLine></div>
+            <div class="play-handle-dot" #playHandleDot >
+                <span class="dot"></span>
+            </div>
+        </div>
+        <div class="total-time">{{musicTotalTime}}</div>
+    </div>-->
+    <ion-range (ionBlur)="rangeBlurred($event)" (ionFocus)="rangeFocused($event)" [(ngModel)]="playProgress" color="danger" pin="true"></ion-range>
+    <button id="play">play</button>
+    <button id="paused">paused</button>
+</div>

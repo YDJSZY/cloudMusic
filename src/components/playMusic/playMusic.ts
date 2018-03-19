@@ -1,7 +1,7 @@
 /**
  * Created by luwenwei on 18/3/15.
  */
-import { Component,OnInit,ViewChild,AfterViewInit } from '@angular/core';
+import { Component,OnInit,ViewChild,AfterViewInit,ElementRef } from '@angular/core';
 import { HttpService } from '../../providers/httpService';
 import { NavController,NavParams } from 'ionic-angular';
 import {IonicPage} from "ionic-angular";
@@ -19,6 +19,7 @@ export class PlayMusicPage implements OnInit,AfterViewInit{
     musicData:any
     musicUrlData:any
     playingMusic:boolean = false
+    musicUrl:string
     constructor(
         private http:HttpService,
         private navCtrl:NavController,
@@ -34,12 +35,16 @@ export class PlayMusicPage implements OnInit,AfterViewInit{
     }
 
     ngAfterViewInit() {
+    }
 
+    changePlayStatus(value) {
+        console.log(value)
+        this.playingMusic = value
     }
 
     setMusicAudio() {
-        let media:any;
-        media = document.getElementById('wy_music')
+        this.musicUrl = 'http://music.163.com/song/media/outer/url?id=' + this.musicUrlData.id + '.mp3';
+        /*this.mediaEle = document.getElementById('wy_music')
         media.src = 'http://music.163.com/song/media/outer/url?id=' + this.musicUrlData.id + '.mp3';
         media.load();
         media.play();
@@ -53,7 +58,7 @@ export class PlayMusicPage implements OnInit,AfterViewInit{
         });
         media.addEventListener('canplay',()=>{
             console.log(media.duration)
-        });
+        });*/
     }
 
     getMusicUrl() {
