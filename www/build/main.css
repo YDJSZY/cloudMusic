@@ -28154,6 +28154,43 @@ ion-navbar.toolbar {
   opacity: 0.3;
 }
 
+.audio-container .range-ios .range-knob {
+  top: 10px !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.audio-container .handle-panel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.audio-container .handle-panel ion-icon {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.audio-container .handle-panel .pause-icon {
+  margin-left: 4px;
+}
+
+.audio-container .handle-panel .play-or-pause {
+  padding: 2px;
+  border-radius: 100%;
+  border: 1px solid #ffffff;
+  width: 36px;
+  text-align: center;
+}
+
 .play-music-container {
   padding-top: 100px;
   width: 100%;

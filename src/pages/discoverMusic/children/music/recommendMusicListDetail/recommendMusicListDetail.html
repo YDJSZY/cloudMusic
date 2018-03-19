@@ -59,7 +59,7 @@
         <ion-list>
             <ion-item *ngFor="let music of musicList.tracks;let $index = index">
                 <span item-start style="color: #969696;">{{$index+1}}</span>
-                <ion-label (click)="playMusic(music)">
+                <ion-label (click)="playMusic($index)">
                     <span style="color: #402424">{{music.name}}</span>
                     <p>{{music.artists[0].name + ' - ' + music.album.name}}</p>
                 </ion-label>

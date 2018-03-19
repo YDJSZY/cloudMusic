@@ -11,7 +11,16 @@
         </div>
         <div class="total-time">{{musicTotalTime}}</div>
     </div>-->
-    <ion-range (ionBlur)="rangeBlurred($event)" (ionFocus)="rangeFocused($event)" [(ngModel)]="playProgress" color="danger" pin="true"></ion-range>
-    <button id="play">play</button>
-    <button id="paused">paused</button>
+    <ion-range (ionBlur)="rangeBlurred($event)" (ionFocus)="rangeFocused($event)" [(ngModel)]="playProgress" color="danger" pin="true">
+        <ion-label range-left style="color: #ffffff;">{{playedTime || '00:00'}}</ion-label>
+        <ion-label range-right style="color: #ffffff;opacity: 0.6">{{musicTotalTime}}</ion-label>
+    </ion-range>
+    <div class="handle-panel">
+        <ion-icon name="ios-skip-backward-outline" (click)="changeMusic('previous')"></ion-icon>
+        <div class="play-or-pause" (click)="switchPlayStatue()">
+            <ion-icon name="ios-play-outline" class="pause-icon" *ngIf="!isPlaying"></ion-icon>
+            <ion-icon name="ios-pause-outline" *ngIf="isPlaying"></ion-icon>
+        </div>
+        <ion-icon name="ios-skip-forward-outline" (click)="changeMusic('next')"></ion-icon>
+    </div>
 </div>

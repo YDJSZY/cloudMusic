@@ -49,3 +49,32 @@
     background: #ffffff;
     opacity: 0.3;
 }
+
+.audio-container .range-ios .range-knob{
+    top: 10px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.audio-container .handle-panel{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.audio-container .handle-panel ion-icon{
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.audio-container .handle-panel .pause-icon{
+    margin-left: 4px;
+}
+
+.audio-container .handle-panel .play-or-pause{
+    padding: 2px;
+    border-radius: 100%;
+    border:1px solid #ffffff;
+    width:36px;
+    text-align: center;
+}

@@ -17,9 +17,11 @@ import {IonicPage} from "ionic-angular";
 export class PlayMusicPage implements OnInit,AfterViewInit{
     @ViewChild('playMusicNav') playMusicNav
     musicData:any
+    musicList:Array<any>
     musicUrlData:any
     playingMusic:boolean = false
     musicUrl:string
+    currentMusicIndex:number
     constructor(
         private http:HttpService,
         private navCtrl:NavController,
@@ -30,7 +32,9 @@ export class PlayMusicPage implements OnInit,AfterViewInit{
 
     ngOnInit() {
         this.playMusicNav.setBackButtonText("");
-        this.musicData = this.navParams.get('data');
+        this.musicList = this.navParams.get('data');
+        this.currentMusicIndex = this.navParams.get('index')
+        this.musicData = this.musicList[this.currentMusicIndex];
         this.getMusicUrl();
     }
 
@@ -38,27 +42,11 @@ export class PlayMusicPage implements OnInit,AfterViewInit{
     }
 
     changePlayStatus(value) {
-        console.log(value)
         this.playingMusic = value
     }
 
     setMusicAudio() {
         this.musicUrl = 'http://music.163.com/song/media/outer/url?id=' + this.musicUrlData.id + '.mp3';
-        /*this.mediaEle = document.getElementById('wy_music')
-        media.src = 'http://music.163.com/song/media/outer/url?id=' + this.musicUrlData.id + '.mp3';
-        media.load();
-        media.play();
-        this.playingMusic = true;
-
-        media.addEventListener('pause',()=>{
-            this.playingMusic = false;
-        });
-        media.addEventListener('play',()=>{
-            this.playingMusic = true;
-        });
-        media.addEventListener('canplay',()=>{
-            console.log(media.duration)
-        });*/
     }
 
     getMusicUrl() {
@@ -67,5 +55,18 @@ export class PlayMusicPage implements OnInit,AfterViewInit{
             this.musicUrlData = res.data[0];
             this.setMusicAudio();
         }.bind(this)).catch((e)=>{console.error(e)});
+    }
+
+    switchMusic(type) {
+        if(type === 'next') {
+            let nextIndex = ++this.currentMusicIndex;
+            if(nextIndex > this.musicList.length) return;
+            this.musicData = this.musicList[nextIndex];
+        }else{
+            let previousIndex = --this.currentMusicIndex;
+            if(previousIndex < 0) return;
+            this.musicData = this.musicList[previousIndex];
+        }
+        this.getMusicUrl();
     }
 }

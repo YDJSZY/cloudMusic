@@ -4,7 +4,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/toPromise';
-const apifiex:string = "http://192.168.10.122:8101/";
+const apifiex:string = "http://192.168.1.2:8101/";
 @Injectable()//标识一个类可以被注入器实例化
 export class HttpService {
     constructor(private http:HttpClient){
