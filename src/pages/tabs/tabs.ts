@@ -8,7 +8,7 @@ import {IonicPage} from "ionic-angular";
 
 @IonicPage({
     name : 'tabs-page',
-    segment : 'tab'
+    segment : 'tabs'
 })
 @Component({
     selector:'tabMain',
@@ -18,8 +18,8 @@ export class TabsPage implements OnInit{
     // this tells the tabs component which Pages
     // should be each tab's root Page
     @ViewChild('globalRootNav') nav: NavController
-    tab1Root:any = 'discover-music-page';
-    tab2Root:any = 'my-music-page';
+    discoverMusic:any = 'discover-music-page';
+    myMusic:any = 'my-music-page';
     constructor(
         public appCtrl: App,
         private rootViewCoverService: RootViewCoverService) {

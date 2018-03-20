@@ -4,9 +4,11 @@
 import { NgModule } from '@angular/core';
 import { PersonalFmPage } from './personalFm';
 import {IonicPageModule} from 'ionic-angular';
+import { AudioPlayerComponent } from '../../../../../components/audioPlayer/audioPlayer';
 
 @NgModule({
-    declarations: [PersonalFmPage],
+    declarations: [PersonalFmPage,AudioPlayerComponent],
+    entryComponents:[AudioPlayerComponent,AudioPlayerComponent],
     imports:[IonicPageModule.forChild(PersonalFmPage)]
 })
 export class PersonalFmModule { }

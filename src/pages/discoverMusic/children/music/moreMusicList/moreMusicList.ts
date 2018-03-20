@@ -5,10 +5,12 @@ import { RootViewCoverService } from '../../../provider/eventEmitService';
 import { IonicPage } from 'ionic-angular';
 
 @IonicPage({
-    name:'more-music-list'
+    name:'more-music-list',
+    segment:'more-music-list'
 })
 @Component({
     templateUrl: 'moreMusicList.html',
+    providers:[HttpService]
 })
 export class MoreMusicListPage implements OnInit{
     @ViewChild('musicListNav') musicListNav

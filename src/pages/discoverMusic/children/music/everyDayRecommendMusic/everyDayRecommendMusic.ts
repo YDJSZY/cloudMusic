@@ -44,7 +44,7 @@ export class EveryDayRecommendMusicPage implements OnInit{
         }.bind(this))
     }
 
-    playMusic(music) {
-        this.rootViewCoverService.globalRootViewCover.emit({component:'play-music-page',params:{data:music}});
+    playMusic($index) {
+        this.rootViewCoverService.globalRootViewCover.emit({component:'play-music-page',params:{data:this.dayRcmdMusicList,index:$index}});
     }
 }

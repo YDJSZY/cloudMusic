@@ -8,7 +8,8 @@ import { RootViewCoverService } from '../../provider/eventEmitService';
 import {IonicPage} from "ionic-angular";
 
 @IonicPage({
-    name : 'd-music-page'
+    name : 'd-music-page',
+    segment:'d-music-page'
 })
 @Component({
     selector:'music',
@@ -68,6 +69,6 @@ export class MusicPage implements OnInit{
     }
 
     personalFm() {/*查看私人FM*/
-        this.rootViewCoverService.rootViewCover.emit({component:'personal-fm-page'});
+        this.rootViewCoverService.globalRootViewCover.emit({component:'personal-fm-page'});
     }
 }

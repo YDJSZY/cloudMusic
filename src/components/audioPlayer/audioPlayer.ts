@@ -7,7 +7,6 @@ import {
     ViewChild,
     AfterViewInit,
     ChangeDetectorRef,
-    Renderer2,
     EventEmitter,
     Output
 } from '@angular/core';
@@ -27,8 +26,8 @@ export class AudioPlayerComponent implements OnInit,OnChanges,AfterViewInit{
     playedTime:string
     playProgress:number=0
     isPlaying:boolean=false
-    constructor(private cdRef:ChangeDetectorRef,private renderer:Renderer2) {
-        this.setPlayProgress = this.setPlayProgress.bind(this);
+    constructor(private cdRef:ChangeDetectorRef) {
+        this.setPlayProgress = this.setPlayProgress.bind(this);/*这样待会才能移除事件监听*/
     }
 
     ngOnInit() {
@@ -69,6 +68,7 @@ export class AudioPlayerComponent implements OnInit,OnChanges,AfterViewInit{
         _audioEle.addEventListener('ended',()=>{
             this.isPlaying = false;
             this.changePlayStatus.emit(false);
+            this.switchMusic.emit('next');/*切换音乐下首*/
         });/*播放结束*/
     }
 
@@ -85,13 +85,13 @@ export class AudioPlayerComponent implements OnInit,OnChanges,AfterViewInit{
         time = Math.floor(time)
         let minutePart,secondPart;
         if(time >= 60) {
-            let m = Math.floor(time / 60);
+            let m = Math.floor(time / 60);/*取出分钟数*/
             let s = time % 60;
             m>=10 ? minutePart = m : minutePart = '0' + m;
-            s >= 10 ? secondPart = s : '0' + s
+            s >= 10 ? secondPart = s : secondPart = '0' + s
         }else{
             minutePart = '00';
-            time >= 10 ? secondPart = minutePart : '0' + minutePart
+            time >= 10 ? secondPart = minutePart : secondPart = '0' + minutePart
         }
         this.musicTotalTime = minutePart + ":" + secondPart;
     }
@@ -134,7 +134,7 @@ export class AudioPlayerComponent implements OnInit,OnChanges,AfterViewInit{
     changeMusic(type) {
         this.isPlaying = false;
         this.changePlayStatus.emit(false);
-        this.switchMusic.emit(type);
+        this.switchMusic.emit(type);/*切换音乐上下首*/
     }
 
 }

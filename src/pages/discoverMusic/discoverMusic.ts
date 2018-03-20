@@ -8,7 +8,8 @@ import { RootViewCoverService } from './provider/eventEmitService';
 import {IonicPage} from "ionic-angular";
 
 @IonicPage({
-    name : 'discover-music-page'
+    name : 'discover-music-page',
+    segment:'discover-music-page'
 })
 @Component({
     selector:'discover-music',
@@ -18,9 +19,12 @@ import {IonicPage} from "ionic-angular";
 export class DiscoverMusicPage implements OnInit{
     // this tells the tabs component which Pages
     // should be each tab's root Page
-    @ViewChild('discoverMusicNav') nav: NavController
-    rootPage: any = 'discover-root-page'
-    constructor(private http:HttpService,private rootViewCoverService:RootViewCoverService) {
+    musicTab:any = 'd-music-page'
+    constructor(
+        private http:HttpService,
+        private rootViewCoverService:RootViewCoverService,
+        private navCtrl:NavController
+        ) {
         this.http = http;
     }
 
@@ -34,6 +38,10 @@ export class DiscoverMusicPage implements OnInit{
     }
 
     currentViewFade(data) {
-        this.nav.push(data.component,data.params);/*component组件会覆盖当前跟组件*/
+        this.navCtrl.push(data.component,data.params);/*component组件会覆盖当前跟组件*/
+    }
+
+    searchMusic() {
+        this.rootViewCoverService.rootViewCover.emit({component:'search-page'});
     }
 }

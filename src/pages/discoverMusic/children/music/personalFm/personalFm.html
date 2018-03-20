@@ -21,8 +21,10 @@
                 <p style="color: #969696;font-size: 12px;margin: 0">{{personalFmData.artists[0].name}}</p>
             </div>
             <div class="play-handle">
-                <audio id="wy_fm_music" controls="controls">
-                </audio>
+                <audio-player [mediaUrl]="musicUrl"
+                              (switchMusic)="switchMusic($event)"
+                              style="width: 100%">
+                </audio-player>
             </div>
         </div>
     </ng-container>

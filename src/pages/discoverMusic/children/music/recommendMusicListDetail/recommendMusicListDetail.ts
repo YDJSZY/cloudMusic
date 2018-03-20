@@ -5,11 +5,13 @@ import { RootViewCoverService } from '../../../provider/eventEmitService';
 import {IonicPage} from "ionic-angular";
 
 @IonicPage({
-    name : 'recd-music-list-page'
+    name : 'recd-music-list-page',
+    segment:'recd-music-list-page'
 })
 @Component({
     templateUrl: 'recommendMusicListDetail.html',
-    styleUrls:['/style.scss']
+    styleUrls:['/style.scss'],
+    providers:[HttpService]
 })
 export class RcmdMusicListDetailPage implements OnInit{
     @ViewChild('rcmdMusicListNav') rcmdMusicListNav

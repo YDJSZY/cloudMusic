@@ -7,7 +7,8 @@ import {IonicPage} from "ionic-angular";
 })
 @Component({
     templateUrl: 'singlePlay.html',
-    styleUrls:['/style.scss']
+    styleUrls:['/style.scss'],
+    providers:[HttpService]
 })
 export class MoreSinglePlayPage implements OnInit{
     @ViewChild('singlePlayNav') singlePlayNav

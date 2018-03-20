@@ -60,11 +60,11 @@ export class PlayMusicPage implements OnInit,AfterViewInit{
     switchMusic(type) {
         if(type === 'next') {
             let nextIndex = ++this.currentMusicIndex;
-            if(nextIndex > this.musicList.length) return;
+            if(nextIndex >= this.musicList.length) nextIndex = this.currentMusicIndex = 0;
             this.musicData = this.musicList[nextIndex];
         }else{
             let previousIndex = --this.currentMusicIndex;
-            if(previousIndex < 0) return;
+            if(previousIndex < 0) previousIndex = this.currentMusicIndex = this.musicList.length - 1;
             this.musicData = this.musicList[previousIndex];
         }
         this.getMusicUrl();

@@ -15,7 +15,7 @@
     <ng-container *ngIf="dayRcmdMusicList.length">
         <ion-list>
             <ion-item *ngFor="let music of dayRcmdMusicList;let $index = index">
-                <ion-label (click)="playMusic(music)">
+                <ion-label (click)="playMusic($index)">
                     <span style="color: #402424">{{music.name}}</span>
                     <p>{{music.artists[0].name + ' - ' + music.album.name}}</p>
                 </ion-label>
