@@ -7,7 +7,9 @@ import { RootViewCoverService } from '../../../provider/eventEmitService';
 import {IonicPage,LoadingController} from "ionic-angular";
 
 @IonicPage({
-    name : 'personal-fm-page'
+    name : 'personal-fm-page',
+    segment:'personalFm',
+    defaultHistory: ['discover-music-page']
 })
 @Component({
     selector:'personal-fm-page',

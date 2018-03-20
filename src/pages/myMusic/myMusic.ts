@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import {IonicPage} from "ionic-angular";
 
 @IonicPage({
-    name : 'my-music-page'
+    name : 'my-music',
+    //segment:'musics'
 })
 @Component({
     selector:'myMusic',

@@ -6,7 +6,7 @@ import {IonicPage} from "ionic-angular";
 
 @IonicPage({
     name : 'recd-music-list-page',
-    segment:'recd-music-list-page'
+    segment:'recommendMusicListDetail'
 })
 @Component({
     templateUrl: 'recommendMusicListDetail.html',

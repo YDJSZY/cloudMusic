@@ -3,7 +3,7 @@ import {ErrorHandler, NgModule} from '@angular/core';
 import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
 
-import {MyApp} from './app.component';
+import {MyApp} from './app';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import { RootViewCoverService } from '../pages/discoverMusic/provider/eventEmitService';
@@ -17,7 +17,7 @@ import { SharedModule } from '../sharedModule/sharedModule'
         SharedModule,
         HttpClientModule,
         BrowserModule,
-        IonicModule.forRoot(MyApp),
+        IonicModule.forRoot(MyApp)
     ],
     bootstrap: [IonicApp],
     entryComponents: [

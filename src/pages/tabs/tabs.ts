@@ -8,7 +8,7 @@ import {IonicPage} from "ionic-angular";
 
 @IonicPage({
     name : 'tabs-page',
-    segment : 'tabs'
+    segment : 'tab'/*我把它设置为tabs,发现每次刷新浏览器都会跳到首页,暂不清楚为什么*/
 })
 @Component({
     selector:'tabMain',
@@ -18,8 +18,8 @@ export class TabsPage implements OnInit{
     // this tells the tabs component which Pages
     // should be each tab's root Page
     @ViewChild('globalRootNav') nav: NavController
-    discoverMusic:any = 'discover-music-page';
-    myMusic:any = 'my-music-page';
+    discoverMusic:string = 'discover-music-page';
+    myMusic:string = 'my-music';
     constructor(
         public appCtrl: App,
         private rootViewCoverService: RootViewCoverService) {

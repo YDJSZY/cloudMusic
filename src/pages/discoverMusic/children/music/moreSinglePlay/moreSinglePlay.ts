@@ -3,7 +3,9 @@ import { HttpService } from '../../../../../providers/httpService';
 import {IonicPage} from "ionic-angular";
 
 @IonicPage({
-    name : 'more-single-play-page'
+    name : 'more-single-play-page',
+    segment:'moreSinglePlay',
+    defaultHistory: ['discover-music-page']/*默认路由历史记录,如果不设置,当别人通过url进入本页面时,左上角不会有返回按钮*/
 })
 @Component({
     templateUrl: 'singlePlay.html',

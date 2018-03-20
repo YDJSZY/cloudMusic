@@ -7,7 +7,9 @@ import { RootViewCoverService } from '../../../provider/eventEmitService';
 import {IonicPage,LoadingController} from "ionic-angular";
 
 @IonicPage({
-    name : 'day-rcmd-music-page'
+    name : 'day-rcmd-music-page',
+    segment:'everyDayRecommendMusic',
+    defaultHistory: ['discover-music-page']/*默认路由历史记录,如果不设置,当别人通过url进入本页面时,左上角不会有返回按钮*/
 })
 @Component({
     selector:'day-rcmd-music',
