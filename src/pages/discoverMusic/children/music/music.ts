@@ -2,9 +2,8 @@
  * Created by luwenwei on 18/3/10.
  */
 import { Component, OnInit } from '@angular/core';
-import { NavController, App, ViewController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { HttpService } from '../../../../providers/httpService';
-import { RootViewCoverService } from '../../provider/eventEmitService';
 import {IonicPage} from "ionic-angular";
 
 @IonicPage({
@@ -25,10 +24,7 @@ export class MusicPage implements OnInit{
     singlePlayList: Array<any>=[]
     constructor(
         public nav: NavController,
-        public appCtrl:App,
-        public viewCtrl:ViewController,
-        private http: HttpService,
-        private rootViewCoverService:RootViewCoverService
+        private http: HttpService
     ) {
         this.http = http;
     }
@@ -51,24 +47,33 @@ export class MusicPage implements OnInit{
 
     }
 
+    ionViewWillEnter() {
+        console.log(this.nav)
+    }
+
     checkMoreMusicList() {
-        this.rootViewCoverService.rootViewCover.emit({component:'more-music-list'});
+        this.nav.push('more-music-list')
+        //this.rootViewCoverService.rootViewCover.emit({component:'more-music-list'});
     }/*查看更多推荐歌单*/
 
     checkMoreSinglePlay() {
-        this.rootViewCoverService.rootViewCover.emit({component:'more-single-play-page'});
+        this.nav.push('more-single-play-page');
     }/*查看更多独家放送*/
 
     musicListDetail(list) {/*查看某歌单具体歌曲列表*/
         let obj = {id:list.id,avatarUrl:list.creator.avatarUrl,nickname:list.creator.nickname,name:list.name,picUrl:list.picUrl,playcount:list.playcount}
-        this.rootViewCoverService.rootViewCover.emit({component:'recd-music-list-page',params:{data:obj}});
+        this.nav.push('recd-music-list-page',{data:obj});
     }
 
     dayRecommendMusic() {/*查看每日推荐歌曲*/
-        this.rootViewCoverService.rootViewCover.emit({component:'day-rcmd-music-page'});
+        this.nav.push('day-rcmd-music-page');
     }
 
     personalFm() {/*查看私人FM*/
-        this.rootViewCoverService.globalRootViewCover.emit({component:'personal-fm-page'});
+        this.nav.push('personal-fm-page');
+    }
+
+    rankingList() {
+        this.nav.push('ranking-list-page');
     }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {IonicPage} from "ionic-angular";
+import {IonicPage,NavController} from "ionic-angular";
 
 @IonicPage({
     name : 'my-music',
@@ -12,6 +12,10 @@ import {IonicPage} from "ionic-angular";
 export class MyMusicPage {
     // this tells the tabs component which Pages
     // should be each tab's root Page
-    constructor() {
+    constructor(public navCtrl:NavController) {
+    }
+
+    goto() {
+        this.navCtrl.push('more-music-list')
     }
 }

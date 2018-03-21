@@ -19,7 +19,8 @@ import {IonicPage} from "ionic-angular";
 export class DiscoverMusicPage implements OnInit{
     // this tells the tabs component which Pages
     // should be each tab's root Page
-    musicTab:any = 'd-music-page'
+    musicTab:string = 'd-music-page'
+    videosTab:string = 'videos-page'
     constructor(
         private http:HttpService,
         private rootViewCoverService:RootViewCoverService,
@@ -39,9 +40,5 @@ export class DiscoverMusicPage implements OnInit{
 
     currentViewFade(data) {
         this.navCtrl.push(data.component,data.params);/*component组件会覆盖当前跟组件*/
-    }
-
-    searchMusic() {
-        this.rootViewCoverService.rootViewCover.emit({component:'search-page'});
     }
 }

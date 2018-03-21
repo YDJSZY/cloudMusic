@@ -4,10 +4,9 @@
 import { NgModule } from '@angular/core';
 import { PlayMusicPage } from './playMusic';
 import {IonicPageModule} from 'ionic-angular';
-import { AudioPlayerComponent } from '../audioPlayer/audioPlayer';
+import { SharedModule } from '../../sharedModule/sharedModule';
 @NgModule({
-    declarations: [PlayMusicPage,AudioPlayerComponent],
-    entryComponents:[AudioPlayerComponent],
-    imports:[IonicPageModule.forChild(PlayMusicPage)]
+    declarations: [PlayMusicPage],
+    imports:[IonicPageModule.forChild(PlayMusicPage),SharedModule]
 })
 export class PlayMusicModule { }

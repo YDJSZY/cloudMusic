@@ -1,3 +1,6 @@
+<ion-header class="custom-header">
+    <header-search></header-search>
+</ion-header>
 <ion-content class="custom-view">
     <div class="banner" style="width:100%;">
         <ion-slides loop="true" pager autoplay="2000" *ngIf="banners.length">
@@ -25,7 +28,7 @@
             </div>
             <span class="intro-text">歌单</span>
         </div>
-        <div class="intro-item">
+        <div class="intro-item" tappable (click)="rankingList()">
             <div class="intro-icon">
                 <ion-icon name="list"></ion-icon>
             </div>

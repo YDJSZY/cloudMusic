@@ -1,5 +1,5 @@
 import { Component,ViewChild,OnInit } from '@angular/core';
-import { LoadingController,ModalController } from 'ionic-angular';
+import { LoadingController,ModalController,NavController } from 'ionic-angular';
 import { HttpService } from '../../../../../providers/httpService';
 import { RootViewCoverService } from '../../../provider/eventEmitService';
 import { IonicPage } from 'ionic-angular';
@@ -7,7 +7,7 @@ import { IonicPage } from 'ionic-angular';
 @IonicPage({
     name:'more-music-list',
     segment:'more-music-list',
-    defaultHistory: ['discover-music-page']/*默认路由历史记录,如果不设置,当别人通过url进入本页面时,左上角不会有返回按钮*/
+    defaultHistory: ['discover-music-page','d-music-page']/*默认路由历史记录,如果不设置,当别人通过url进入本页面时,左上角不会有返回按钮*/
 })
 @Component({
     templateUrl: 'moreMusicList.html',
@@ -24,12 +24,14 @@ export class MoreMusicListPage implements OnInit{
     constructor(
         public loadingCtrl:LoadingController,
         public modalCtrl:ModalController,
+        public navCtrl:NavController,
         private http:HttpService,
         private rootViewCoverService:RootViewCoverService
     ) {
     }
 
     ngOnInit() {
+        console.log(67)
         this.musicListNav.setBackButtonText("");
         this.loadMusicList();
     }
@@ -88,7 +90,7 @@ export class MoreMusicListPage implements OnInit{
     }
 
     openHighqualityMusic() {/*去精品歌单*/
-        this.rootViewCoverService.rootViewCover.emit({component:'highquality-music-page'});
+        this.navCtrl.push('highquality-music-page');
     }
 
     musicListDetail(list) {/*查看某歌单具体歌曲列表*/

@@ -1,0 +1,23 @@
+<ion-header style="border-bottom: none" class="custom-header">
+    <ion-navbar #rankingListNav>
+        <ion-title>
+            排行榜
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="list" style="font-size: 35px;color: #ffffff;"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="ranking-list-content">
+    <header class="block-header">
+        <span class="l-red"></span>
+        <span class="block-title">云音乐官方榜</span>
+    </header>
+    <div class="ranking-list-container">
+        <div *ngFor="let list of listData;let $index = index" class="square-list-item" (click)="checkListDetail(list.id)" [ngClass]="{'noMarginRight': ($index+1) % 2 == 0}" style="width: calc((100% - 4px) / 2);">
+            <img [src]="list.bgImg" style="width: 100%;height: 100%;" />
+        </div>
+    </div>
+</ion-content>

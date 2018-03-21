@@ -1,0 +1,49 @@
+<ion-header style="border-bottom: none" class="ranking-list-detail-header">
+    <ion-navbar #rankingListDetailNav>
+        <ion-title>
+            排行榜
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="list" style="font-size: 35px;color: #ffffff;"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="ranking-list-detail-content">
+    <div class="music-list-info">
+        <div class="cover-img">
+            <img src="{{musicListInfo.coverImgUrl}}" style="width: 100%;" />
+        </div>
+        <div class="info-down">
+            <div class="collect">
+                <i class="iconfont icon-foldercollect"></i>
+                <span>{{musicListInfo.subscribedCount}}</span>
+            </div>
+            <div class="comment">
+                <i class="iconfont icon-comment"></i>
+                <span>{{musicListInfo.commentCount}}</span>
+            </div>
+            <div class="share">
+                <i class="iconfont icon-share"></i>
+                <span>{{musicListInfo.shareCount}}</span>
+            </div>
+            <div class="download">
+                <i class="iconfont icon-cloud-download"></i>
+                <span>下载</span>
+            </div>
+        </div>
+    </div>
+    <ng-container *ngIf="musicListInfo.tracks">
+        <ion-list>
+            <ion-item *ngFor="let music of musicListInfo.tracks;let $index = index">
+                <span item-start style="color: #969696;">{{$index+1}}</span>
+                <ion-label (click)="playMusic($index)">
+                    <span style="color: #402424">{{music.name}}</span>
+                    <!--<p>{{music.artists[0].name + ' - ' + music.album.name}}</p>-->
+                </ion-label>
+                <i class="iconfont icon-more" style="font-size: 20px;color: #cccccc;" item-end></i>
+            </ion-item>
+        </ion-list>
+    </ng-container>
+</ion-content>

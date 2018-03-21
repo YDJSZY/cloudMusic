@@ -4,11 +4,9 @@
 import { NgModule } from '@angular/core';
 import { PersonalFmPage } from './personalFm';
 import {IonicPageModule} from 'ionic-angular';
-import { AudioPlayerComponent } from '../../../../../components/audioPlayer/audioPlayer';
-
+import { SharedModule } from '../../../../../sharedModule/sharedModule'
 @NgModule({
-    declarations: [PersonalFmPage,AudioPlayerComponent],
-    entryComponents:[AudioPlayerComponent,AudioPlayerComponent],
-    imports:[IonicPageModule.forChild(PersonalFmPage)]
+    declarations: [PersonalFmPage],
+    imports:[IonicPageModule.forChild(PersonalFmPage),SharedModule]
 })
 export class PersonalFmModule { }

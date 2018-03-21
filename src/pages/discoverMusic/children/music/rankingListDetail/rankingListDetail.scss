@@ -1,0 +1,15 @@
+.ranking-list-detail-content .music-list-info{
+    position: relative;
+}
+
+.ranking-list-detail-content .music-list-info .cover-img{
+    position: absolute;
+    width:100%;
+}
+
+.ranking-list-detail-content .music-list-info .info-down{
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
