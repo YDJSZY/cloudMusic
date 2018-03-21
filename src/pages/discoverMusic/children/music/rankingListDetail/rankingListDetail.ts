@@ -1,6 +1,7 @@
 import { Component,OnInit,ViewChild } from '@angular/core';
 import { NavController,NavParams} from 'ionic-angular';
 import { HttpService } from '../../../../../providers/httpService';
+import { RootViewCoverService } from '../../../provider/eventEmitService';
 import {IonicPage} from "ionic-angular";
 
 @IonicPage({
@@ -16,7 +17,13 @@ import {IonicPage} from "ionic-angular";
 export class RankingListDetailPage implements OnInit{
     @ViewChild('rankingListDetailNav') rankingListDetailNav
     musicListInfo:any = {}
-    constructor(public navCtrl: NavController,public http:HttpService,public navParams:NavParams) {
+    coverImg:Object = {}
+    constructor(
+        public navCtrl: NavController,
+        public http:HttpService,
+        public navParams:NavParams,
+        public rootViewCoverService:RootViewCoverService
+    ) {
 
     }
 
@@ -30,7 +37,19 @@ export class RankingListDetailPage implements OnInit{
     getMusicList(id) {
         let promise = this.http.getData({url:'top/list',params:{idx:id}});
         promise.then(function (res):any{
-            this.musicListInfo = res.playlist
+            this.musicListInfo = res.playlist;
+            this.setCoverImgStyle();
         }.bind(this))
+    }
+
+    setCoverImgStyle() {
+        this.coverImg = {
+            'background':`url('${this.musicListInfo.coverImgUrl}') no-repeat`,
+            'background-size':'100% 100%'
+        }
+    }
+
+    playMusic(index) {
+        this.rootViewCoverService.globalRootViewCover.emit({component:'play-music-page',params:{data:this.musicListInfo.tracks,index:index}});
     }
 }

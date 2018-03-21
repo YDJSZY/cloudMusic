@@ -2,14 +2,37 @@
     position: relative;
 }
 
-.ranking-list-detail-content .music-list-info .cover-img{
-    position: absolute;
+.ranking-list-detail-content .music-list-info{
     width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 20rem;
+    color: #ffffff;
 }
 
 .ranking-list-detail-content .music-list-info .info-down{
-    position: absolute;
+    width:100%;
+    justify-content: space-between;
     bottom: 15px;
     display: flex;
-    justify-content: space-between;
+    padding: 0 10px 2px;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.ranking-list-detail-header .toolbar-background{
+    background: #dddddd !important;
+}
+
+.ranking-list-detail-header .show-back-button {
+    color: #ffffff !important;
+}
+
+.ranking-list-detail-header .toolbar-title {
+    color: #ffffff !important;
 }

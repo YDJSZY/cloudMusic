@@ -31,7 +31,6 @@ export class MoreMusicListPage implements OnInit{
     }
 
     ngOnInit() {
-        console.log(67)
         this.musicListNav.setBackButtonText("");
         this.loadMusicList();
     }

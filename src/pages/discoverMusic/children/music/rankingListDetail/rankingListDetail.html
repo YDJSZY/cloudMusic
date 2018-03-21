@@ -11,22 +11,19 @@
     </ion-navbar>
 </ion-header>
 <ion-content class="ranking-list-detail-content">
-    <div class="music-list-info">
-        <div class="cover-img">
-            <img src="{{musicListInfo.coverImgUrl}}" style="width: 100%;" />
-        </div>
+    <div class="music-list-info" [ngStyle]="coverImg">
         <div class="info-down">
             <div class="collect">
                 <i class="iconfont icon-foldercollect"></i>
-                <span>{{musicListInfo.subscribedCount}}</span>
+                <span>{{musicListInfo.subscribedCount | splitThousand}}</span>
             </div>
             <div class="comment">
                 <i class="iconfont icon-comment"></i>
-                <span>{{musicListInfo.commentCount}}</span>
+                <span>{{musicListInfo.commentCount | splitThousand}}</span>
             </div>
             <div class="share">
                 <i class="iconfont icon-share"></i>
-                <span>{{musicListInfo.shareCount}}</span>
+                <span>{{musicListInfo.shareCount | splitThousand}}</span>
             </div>
             <div class="download">
                 <i class="iconfont icon-cloud-download"></i>
@@ -40,7 +37,7 @@
                 <span item-start style="color: #969696;">{{$index+1}}</span>
                 <ion-label (click)="playMusic($index)">
                     <span style="color: #402424">{{music.name}}</span>
-                    <!--<p>{{music.artists[0].name + ' - ' + music.album.name}}</p>-->
+                    <p>{{music.ar[0].name + ' - ' + music.al.name}}</p>
                 </ion-label>
                 <i class="iconfont icon-more" style="font-size: 20px;color: #cccccc;" item-end></i>
             </ion-item>

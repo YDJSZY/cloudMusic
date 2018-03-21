@@ -3,19 +3,19 @@
         <ion-title>
             <div>
                 <span style="display: block">{{musicData.name}}</span>
-                <span style="display: block;font-size: 12px;color: #ddd;">{{musicData.artists[0].name}}</span>
+                <span style="display: block;font-size: 12px;color: #ddd;">{{musicData.al ? musicData.al.name : musicData.artists[0].name}}</span>
             </div>
 
         </ion-title>
-        <ion-buttons end>
+        <ion-buttons right>
             <button ion-button icon-only (click)="openModal()">
                 <i class="iconfont icon-share" style="font-size: 25px;color: #ffffff;"></i>
             </button>
         </ion-buttons>
     </ion-navbar>
 </ion-header>
-<ion-content class="play-music-content" style="position: relative">
-    <img src="{{musicData.album.blurPicUrl}}" class="bg-img"/>
+<ion-content no-bounce class="play-music-content" style="position: relative">
+    <img src="{{musicData.al ? musicData.al.picUrl : musicData.album.picUrl}}" class="bg-img"/>
     <div class="play-music-container">
         <div class="play-needle" [ngClass]="{'begin-play':playingMusic}">
             <img src="/assets/imgs/play_needle.png" />
@@ -24,7 +24,7 @@
             <div class="outside" [ngClass]="{'rotate-cd':playingMusic,'paused-music':!playingMusic}">
                 <img src="/assets/imgs/play_disc.png" />
                 <div class="inside">
-                    <img src="{{musicData.album.picUrl}}" />
+                    <img src="{{musicData.al ? musicData.al.picUrl : musicData.album.picUrl}}" />
                 </div>
             </div>
         </div>

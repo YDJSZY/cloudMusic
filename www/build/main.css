@@ -28192,7 +28192,7 @@ ion-navbar.toolbar {
 }
 
 .play-music-container {
-  padding-top: 100px;
+  padding-top: 50px;
   width: 100%;
   height: 100%;
   top: 0px;
@@ -28219,8 +28219,8 @@ ion-navbar.toolbar {
 }
 
 .play-music-container .begin-play {
-  -webkit-transform: rotate(3deg);
-  transform: rotate(3deg);
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
 }
 
 .play-music-container .play-needle img {
@@ -28230,7 +28230,6 @@ ion-navbar.toolbar {
 
 .play-music-main {
   margin: 0 auto;
-  margin-bottom: 15px;
   width: 260px;
   height: 260px;
   max-width: 356px;
@@ -28336,8 +28335,12 @@ ion-navbar.toolbar {
 
 @media screen and (max-width: 320px) {
   .play-music-main {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
+  }
+  .play-music-container .play-needle {
+    width: 104px;
+    height: 167px;
   }
 }
 
@@ -28371,6 +28374,10 @@ ion-navbar.toolbar {
   filter: blur(50px);
 }
 
+.play-music-content .scroll-content {
+  overflow-y: hidden;
+}
+
 /*
 .scroll-content{
     margin-top: 65px !important;
@@ -28379,8 +28386,13 @@ ion-header.custom-view::after {
   background-image: none;
 }
 
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .custom-view .scroll-content {
+    margin-top: 86px !important;
+  }
+}
+
 .custom-view .scroll-content {
-  margin-top: 86px !important;
   padding: 0px !important;
 }
 
@@ -28871,22 +28883,69 @@ ion-header.custom-view::after {
   position: relative;
 }
 
-.ranking-list-detail-content .music-list-info .cover-img {
-  position: absolute;
+.ranking-list-detail-content .music-list-info {
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  height: 20rem;
+  color: #ffffff;
 }
 
 .ranking-list-detail-content .music-list-info .info-down {
-  position: absolute;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   bottom: 15px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  padding: 0 10px 2px;
+}
+
+.ranking-list-detail-content .music-list-info .info-down div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ranking-list-detail-header .toolbar-background {
+  background: #dddddd !important;
+}
+
+.ranking-list-detail-header .show-back-button {
+  color: #ffffff !important;
+}
+
+.ranking-list-detail-header .toolbar-title {
+  color: #ffffff !important;
 }
 
 .recommend-music-header .toolbar-background {

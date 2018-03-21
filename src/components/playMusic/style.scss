@@ -1,5 +1,5 @@
 .play-music-container{
-    padding-top: 100px;
+    padding-top: 50px;
     width: 100%;
     height: 100%;
     top: 0px;
@@ -24,7 +24,7 @@
 }
 
 .play-music-container .begin-play{
-    transform: rotate(3deg);
+    transform: rotate(-6deg);
 }
 
 .play-music-container .play-needle img{
@@ -33,7 +33,6 @@
 }
 .play-music-main{
     margin: 0 auto;
-    margin-bottom: 15px;
     width: 260px;
     height: 260px;
     max-width: 356px;
@@ -112,8 +111,12 @@
 }
 @media screen and (max-width: 320px){
     .play-music-main{
-        width:260px;
-        height:260px;
+        width:240px;
+        height:240px;
+    }
+    .play-music-container .play-needle{
+        width:104px;
+        height:167px;
     }
 }
 @media screen and (min-width: 414px){
@@ -143,4 +146,8 @@
     width: 100%;
     height: 100%;
     filter: blur(50px)
+}
+
+.play-music-content .scroll-content{
+    overflow-y: hidden;
 }
