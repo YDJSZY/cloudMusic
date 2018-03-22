@@ -5,7 +5,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 
 @Component({
     templateUrl: 'app.html',
-    styleUrls:['/app.scss'],
+    styleUrls:['./app.scss'],
 })
 export class MyApp {
     @ViewChild(Nav)

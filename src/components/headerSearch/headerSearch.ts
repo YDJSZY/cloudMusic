@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-    selector: 'header-search',
+    selector: '[header-search]',
     templateUrl: 'headerSearch.html'
 })
 export class HeaderSearchComponent {

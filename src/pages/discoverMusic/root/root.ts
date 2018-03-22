@@ -13,7 +13,7 @@ import {IonicPage} from "ionic-angular";
 @Component({
     templateUrl: './root.html',
     providers:[HttpService],
-    styleUrls:['/root.scss']
+    styleUrls:['./root.scss']
 })
 export class DiscoverRootPage {
     // this tells the tabs component which Pages

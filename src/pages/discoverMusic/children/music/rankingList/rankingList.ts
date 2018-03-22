@@ -9,7 +9,7 @@ import {IonicPage} from "ionic-angular";
 @Component({
     selector:'ranking-list',
     templateUrl: 'rankingList.html',
-    styleUrls: ['/rankingList.scss']
+    styleUrls: ['./rankingList.scss']
 })
 export class RankingListPage implements OnInit{
     @ViewChild('rankingListNav') rankingListNav

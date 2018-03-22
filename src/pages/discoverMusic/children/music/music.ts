@@ -1,7 +1,7 @@
 /**
  * Created by luwenwei on 18/3/10.
  */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HttpService } from '../../../../providers/httpService';
 import {IonicPage} from "ionic-angular";
@@ -14,11 +14,10 @@ import {IonicPage} from "ionic-angular";
     selector:'music',
     templateUrl: 'music.html',
     providers:[HttpService],
-    styleUrls: ['/music.scss']
+    styleUrls: ['./music.scss']
 })
 export class MusicPage implements OnInit{
-    // this tells the tabs component which Pages
-    // should be each tab's root Page
+    @ViewChild('slideBanners') slideBanners
     banners: Array<any>=[]
     introMusicList: Array<any>=[]
     singlePlayList: Array<any>=[]
@@ -48,7 +47,17 @@ export class MusicPage implements OnInit{
     }
 
     ionViewWillEnter() {
-        console.log(this.nav)
+
+    }
+
+    ionViewDidEnter() {
+        if(this.slideBanners) {
+            this.slideBanners.startAutoplay();
+        }
+    }
+
+    ionViewWillLeave(){
+        this.slideBanners.stopAutoplay();/*当切换到别的页面时暂停轮播，不然待会回来不会自动轮播，不知道为什么*/
     }
 
     checkMoreMusicList() {
@@ -75,5 +84,9 @@ export class MusicPage implements OnInit{
 
     rankingList() {
         this.nav.push('ranking-list-page');
+    }
+
+    searchMusic() {
+        this.nav.push('search-page');
     }
 }

@@ -10,7 +10,7 @@ import {IonicPage} from "ionic-angular";
 })
 @Component({
     templateUrl: 'recommendMusicListDetail.html',
-    styleUrls:['/style.scss'],
+    styleUrls:['./style.scss'],
     providers:[HttpService]
 })
 export class RcmdMusicListDetailPage implements OnInit{

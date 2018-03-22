@@ -2,6 +2,7 @@
 /node_modules
 *.xml
 platforms/ios
+platforms/android
 platforms/browser
 .sourcemaps
 /www/

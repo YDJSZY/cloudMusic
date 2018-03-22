@@ -11,7 +11,7 @@ import {IonicPage} from "ionic-angular";
 })
 @Component({
     templateUrl: 'playMusic.html',
-    styleUrls:['/style.scss'],
+    styleUrls:['./style.scss'],
     providers:[HttpService]
 })
 export class PlayMusicPage implements OnInit,AfterViewInit{

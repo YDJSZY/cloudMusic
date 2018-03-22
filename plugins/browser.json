@@ -24,6 +24,9 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "lwwzy1314@163.com"
+    },
+    "cordova-plugin-crosswalk-webview": {
+      "PACKAGE_NAME": "lwwzy1314@163.com"
     }
   },
   "dependent_plugins": {}
