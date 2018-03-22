@@ -1,0 +1,35 @@
+.login-page{
+    padding: 20px;
+    background: #ffffff;
+    display: flex;
+    height:100%;
+    flex-direction: column;
+    .login-action{
+        flex: 1;
+        .cloud-music-logo{
+            width:100px;
+            height: 100px;
+            margin: 50px auto 20px;
+        }
+        .login-btn{
+            width:100%;
+            button{
+                background: #ffffff;
+                outline: none;
+                width:100%;
+                border: 1px solid #d43c33;
+                border-radius: 20px;
+                padding: 10px 0;
+                text-align: center;
+                color:#c11107;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+
+        }
+    }
+    .other-login-way{
+        flex: 1;
+    }
+}

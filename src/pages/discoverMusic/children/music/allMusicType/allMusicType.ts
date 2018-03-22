@@ -10,7 +10,7 @@ import { IonicPage } from 'ionic-angular';
 })
 @Component({
     templateUrl: 'allMusicType.html',
-    styleUrls:['./style.scss']
+    styleUrls:['/style.scss']
 })
 export class AllMusicTypePage implements OnInit{
     currentSelect:string='all'

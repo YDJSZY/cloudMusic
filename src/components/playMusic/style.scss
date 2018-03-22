@@ -5,7 +5,8 @@
     top: 0px;
     border-top: 1px solid #969696;
     left: 0;
-    position: absolute
+    position: absolute;
+    z-index: 2;
 }
 .play-music-container .play-needle{
     width:124px;
@@ -145,7 +146,7 @@
 .play-music-content .bg-img{
     width: 100%;
     height: 100%;
-    filter: blur(50px)
+    filter: blur(40px)
 }
 
 .play-music-content .scroll-content{

@@ -11,7 +11,7 @@ import {IonicPage} from "ionic-angular";
 @Component({
     selector:'ranking-list-detail',
     templateUrl: 'rankingListDetail.html',
-    styleUrls: ['./rankingListDetail.scss'],
+    styleUrls: ['/rankingListDetail.scss'],
     providers:[HttpService]
 })
 export class RankingListDetailPage implements OnInit{

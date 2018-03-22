@@ -14,7 +14,7 @@ import {IonicPage} from "ionic-angular";
     selector:'music',
     templateUrl: 'music.html',
     providers:[HttpService],
-    styleUrls: ['./music.scss']
+    styleUrls: ['/music.scss']
 })
 export class MusicPage implements OnInit{
     @ViewChild('slideBanners') slideBanners

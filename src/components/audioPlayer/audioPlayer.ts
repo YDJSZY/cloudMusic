@@ -14,7 +14,7 @@ import {
 @Component({
     selector:'audio-player',
     templateUrl: 'audioPlayer.html',
-    styleUrls:['./audioPlayer.scss']
+    styleUrls:['/audioPlayer.scss']
 })
 export class AudioPlayerComponent implements OnInit,OnChanges,AfterViewInit{
     @Input() mediaUrl:string;

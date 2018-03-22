@@ -1,0 +1,28 @@
+<ion-header class="custom-header">
+    <ion-toolbar>
+        <ion-title>
+            <span style="color: #ffffff;">手机号登录</span>
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="hideModal()">
+                <span style="color: #ffffff;" showWhen="ios">取消</span>
+                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="tel-login-content" style="background: #ffffff;">
+    <div style="padding: 10px 15px !important;">
+        <div style="border-bottom: 1px solid #dddddd;padding-left: 8px;">
+            <ion-icon name="ios-phone-portrait-outline" style="display: inline-block;vertical-align: text-bottom;margin-right: 5px"></ion-icon>
+            <ion-input type="text" [(ngModel)]="telNum" placeholder="手机号" style="display: inline-block;width: auto;"></ion-input>
+        </div>
+        <div style="border-bottom: 1px solid #dddddd;padding-left: 8px;">
+            <ion-icon name="ios-unlock-outline" style="display: inline-block;vertical-align: text-bottom;margin-right: 5px"></ion-icon>
+            <ion-input type="password" [(ngModel)]="password" placeholder="密码" style="display: inline-block;width: auto;"></ion-input>
+        </div>
+        <div class="login-btn">
+            <button (click)="login()">登录</button>
+        </div>
+    </div>
+</ion-content>

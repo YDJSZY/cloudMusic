@@ -1,1 +1,662 @@
-webpackJsonp([17],{112:function(n,e,t){"use strict";t.d(e,"a",function(){return i});t(3);var o=t(0),i=function(){return function(){this.rootViewCover=new o.l,this.globalRootViewCover=new o.l}}()},114:function(n,e,t){"use strict";t(3),t(0),t(200),t(199),t(51);t.d(e,"a",function(){return o});var o=function(){function n(){}return e=n,n.forRoot=function(){return{ngModule:e}},n;var e}()},137:function(n,e){function t(n){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+n+"'.")})}t.keys=function(){return[]},t.resolve=t,n.exports=t,t.id=137},170:function(n,e,t){function o(n){var e=i[n];return e?t.e(e[1]).then(function(){return t(e[0])}):Promise.reject(new Error("Cannot find module '"+n+"'."))}var i={"../components/playMusic/playMusic.module.ngfactory":[241,1],"../pages/discoverMusic/children/music/allMusicType/allMusicType.module.ngfactory":[242,11],"../pages/discoverMusic/children/music/everyDayRecommendMusic/everyDayRecommendMusic.module.ngfactory":[243,8],"../pages/discoverMusic/children/music/highqualityMusicList/highqualityMusic.module.ngfactory":[244,7],"../pages/discoverMusic/children/music/moreMusicList/moreMusicList.module.ngfactory":[245,6],"../pages/discoverMusic/children/music/moreSinglePlay/moreSinglePlay.module.ngfactory":[246,5],"../pages/discoverMusic/children/music/music.module.ngfactory":[247,10],"../pages/discoverMusic/children/music/personalFm/personalFm.module.ngfactory":[248,0],"../pages/discoverMusic/children/music/rankingList/rankingList.module.ngfactory":[249,12],"../pages/discoverMusic/children/music/rankingListDetail/rankingListDetail.module.ngfactory":[250,4],"../pages/discoverMusic/children/music/recommendMusicListDetail/recommendMusicListDetail.module.ngfactory":[251,3],"../pages/discoverMusic/children/videos/videos.module.ngfactory":[252,16],"../pages/discoverMusic/discoverMusic.module.ngfactory":[253,9],"../pages/discoverMusic/root/root.module.ngfactory":[254,2],"../pages/discoverMusic/search/search.module.ngfactory":[255,14],"../pages/myMusic/myMusic.module.ngfactory":[256,15],"../pages/tabs/tabs.module.ngfactory":[257,13]};o.keys=function(){return Object.keys(i)},o.id=170,n.exports=o},199:function(n,e,t){"use strict";t.d(e,"a",function(){return i});t(3);var o=t(0),i=function(){function n(n){this.cdRef=n,this.switchMusic=new o.l,this.changePlayStatus=new o.l,this.playProgress=0,this.isPlaying=!1,this.setMusicTime=function(n){if(!isNaN(n)){var e,t;if((n=Math.floor(n))>=60){var o=Math.floor(n/60),i=n%60;e=o>=10?o:"0"+o,t=i>=10?i:"0"+i}else e="00",t=n>=10?e:"0"+e;this.musicTotalTime=e+":"+t}},this.setPlayProgress=this.setPlayProgress.bind(this)}return n.prototype.ngOnInit=function(){},n.prototype.ngAfterViewInit=function(){this.cdRef.detectChanges()},n.prototype.ngOnChanges=function(n){var e=n.mediaUrl.currentValue;e!=n.mediaUrl.previousValue&&this.setMediaConfig(e)},n.prototype.setMediaConfig=function(n){var e=this,t=this.audioEle.nativeElement;t.src=n,t.load(),t.play(),this.duration=t.duration,t.addEventListener("canplay",function(){e.duration=t.duration,e.setMusicTime(e.duration)}),this.audioEle.nativeElement.addEventListener("timeupdate",this.setPlayProgress,!1),t.addEventListener("canplaythrough",function(){e.isPlaying=!0,e.changePlayStatus.emit(!0)}),t.addEventListener("ended",function(){e.isPlaying=!1,e.changePlayStatus.emit(!1),e.switchMusic.emit("next")})},n.prototype.setPlayProgress=function(){var n=this.audioEle.nativeElement.currentTime,e=n/this.duration;this.playProgress=Math.floor(100*e),this.setPlayedTime(n)},n.prototype.setPlayedTime=function(n){if(!isNaN(n)){var e,t;if((n=Math.floor(n))>=60){var o=Math.floor(n/60),i=n%60;e=o>=10?o:"0"+o,t=i>=10?i:"0"+i}else e="00",t=n>=10?n:"0"+n;this.playedTime=e+":"+t}},n.prototype.rangeFocused=function(n){this.audioEle.nativeElement.removeEventListener("timeupdate",this.setPlayProgress,!1)},n.prototype.rangeBlurred=function(n){this.audioEle.nativeElement.currentTime=Math.ceil(this.playProgress/100*this.duration),this.audioEle.nativeElement.addEventListener("timeupdate",this.setPlayProgress,!1)},n.prototype.switchPlayStatue=function(){this.isPlaying=!this.isPlaying,this.isPlaying?this.audioEle.nativeElement.play():this.audioEle.nativeElement.pause(),this.changePlayStatus.emit(this.isPlaying)},n.prototype.changeMusic=function(n){this.isPlaying=!1,this.changePlayStatus.emit(!1),this.switchMusic.emit(n)},n}()},200:function(n,e,t){"use strict";t.d(e,"a",function(){return o});t(3);var o=function(){function n(){}return n.prototype.transform=function(n){return Math.ceil(n/1e4)+"万"},n}()},203:function(n,e,t){"use strict";function o(n){return a._22(0,[a._18(402653184,1,{nav:0}),(n()(),a._20(-1,null,["\n"])),(n()(),a._20(-1,null,["\n"])),(n()(),a.Z(3,0,null,null,2,"ion-nav",[],null,null,null,O.b,O.a)),a._17(6144,null,v.a,null,[w.a]),a.Y(5,4374528,[[1,4]],0,w.a,[[2,b.a],[2,E.a],k.a,L.a,H.a,a.j,a.u,a.z,a.i,D.l,N.a,[2,B.a],G.a,a.k],{root:[0,"root"]},null)],function(n,e){n(e,5,0,e.component.rootPage)},null)}Object.defineProperty(e,"__esModule",{value:!0});var i=t(26),a=t(0),c=(t(3),t(51),t(110)),s=t(69),r=t(70),l=function(){function n(n,e,t){this.platform=n,this.statusBar=e,this.splashScreen=t,this.rootPage="tabs-page",this.initializeApp()}return n.prototype.initializeApp=function(){var n=this;this.platform.ready().then(function(){n.statusBar.styleDefault(),n.splashScreen.hide()})},n.prototype.openPage=function(n){this.nav.setRoot(n.component)},n}(),u=t(112),g=t(114),d=function(){return function(){}}(),M=t(45),m=t(190),A=t(191),y=t(192),f=t(193),h=t(194),p=t(195),_=t(196),P=t(197),C=t(198),O=t(240),v=t(32),w=t(49),b=t(5),E=t(20),k=t(8),L=t(1),H=t(4),D=t(7),N=t(24),B=t(13),G=t(9),I=a.X({encapsulation:0,styles:[['//[_ngcontent-%COMP%]   http[_ngcontent-%COMP%]://ionicframework.com/docs/theming/   App[_ngcontent-%COMP%]   Global[_ngcontent-%COMP%]   Sass\n//[_ngcontent-%COMP%]   --------------------------------------------------\n//[_ngcontent-%COMP%]   Put[_ngcontent-%COMP%]   style[_ngcontent-%COMP%]   rules[_ngcontent-%COMP%]   here[_ngcontent-%COMP%]   that[_ngcontent-%COMP%]   you[_ngcontent-%COMP%]   want[_ngcontent-%COMP%]   to[_ngcontent-%COMP%]   apply[_ngcontent-%COMP%]   globally.[_ngcontent-%COMP%]   These\n//[_ngcontent-%COMP%]   styles[_ngcontent-%COMP%]   are[_ngcontent-%COMP%]   for[_ngcontent-%COMP%]   the[_ngcontent-%COMP%]   entire[_ngcontent-%COMP%]   app[_ngcontent-%COMP%]   and[_ngcontent-%COMP%]   not[_ngcontent-%COMP%]   just[_ngcontent-%COMP%]   one[_ngcontent-%COMP%]   component.\n//[_ngcontent-%COMP%]   Additionally[_ngcontent-%COMP%], this[_ngcontent-%COMP%]   file[_ngcontent-%COMP%]   can[_ngcontent-%COMP%]   be[_ngcontent-%COMP%]   also[_ngcontent-%COMP%]   used[_ngcontent-%COMP%]   as[_ngcontent-%COMP%]   an[_ngcontent-%COMP%]   entry[_ngcontent-%COMP%]   point\n//[_ngcontent-%COMP%]   to[_ngcontent-%COMP%]   import[_ngcontent-%COMP%]   other[_ngcontent-%COMP%]   Sass[_ngcontent-%COMP%]   files[_ngcontent-%COMP%]   to[_ngcontent-%COMP%]   be[_ngcontent-%COMP%]   included[_ngcontent-%COMP%]   in[_ngcontent-%COMP%]   the[_ngcontent-%COMP%]   output[_ngcontent-%COMP%]   CSS.\n//\n//[_ngcontent-%COMP%]   Shared[_ngcontent-%COMP%]   Sass[_ngcontent-%COMP%]   variables[_ngcontent-%COMP%], which[_ngcontent-%COMP%]   can[_ngcontent-%COMP%]   be[_ngcontent-%COMP%]   used[_ngcontent-%COMP%]   to[_ngcontent-%COMP%]   adjust[_ngcontent-%COMP%]   Ionic\'s\n//[_ngcontent-%COMP%]   default[_ngcontent-%COMP%]   Sass[_ngcontent-%COMP%]   variables[_ngcontent-%COMP%], belong[_ngcontent-%COMP%]   in[_ngcontent-%COMP%]   "theme/variables.scss".\n//\n//[_ngcontent-%COMP%]   To[_ngcontent-%COMP%]   declare[_ngcontent-%COMP%]   rules[_ngcontent-%COMP%]   for[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]   specific[_ngcontent-%COMP%]   mode[_ngcontent-%COMP%], create[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]   child[_ngcontent-%COMP%]   rule\n//[_ngcontent-%COMP%]   for[_ngcontent-%COMP%]   the[_ngcontent-%COMP%]   .md[_ngcontent-%COMP%], .ios[_ngcontent-%COMP%], or[_ngcontent-%COMP%]   .wp[_ngcontent-%COMP%]   mode[_ngcontent-%COMP%]   classes.[_ngcontent-%COMP%]   The[_ngcontent-%COMP%]   mode[_ngcontent-%COMP%]   class[_ngcontent-%COMP%]   is\n//[_ngcontent-%COMP%]   automatically[_ngcontent-%COMP%]   applied[_ngcontent-%COMP%]   to[_ngcontent-%COMP%]   the[_ngcontent-%COMP%]   <body[_ngcontent-%COMP%] > element[_ngcontent-%COMP%]   in[_ngcontent-%COMP%]   the[_ngcontent-%COMP%]   app.\n\n@font-face[_ngcontent-%COMP%] {font-family: "iconfont";\n    src: url(\'./icon/iconfont.eot?t=1521107583978\'); \n    src: url(\'./icon/iconfont.eot?t=1521107583978#iefix\') format(\'embedded-opentype\'), \n    url(\'data:application/x-font-woff;charset=utf-8;base64,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\') format(\'woff\'),\n    url(\'./icon/iconfont.ttf?t=1521107583978\') format(\'truetype\'), \n    url(\'./icon/iconfont.svg?t=1521107583978#iconfont\') format(\'svg\'); \n}\n\n.iconfont[_ngcontent-%COMP%] {\n    font-family:"iconfont" !important;\n    font-size:16px;\n    font-style:normal;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n\n.icon-iconfont5[_ngcontent-%COMP%]:before { content: "\\e63a"; }\n\n.icon-anonymous-iconfont[_ngcontent-%COMP%]:before { content: "\\e606"; }\n\n.icon-more[_ngcontent-%COMP%]:before { content: "\\e637"; }\n\n.icon-sousuo[_ngcontent-%COMP%]:before { content: "\\e616"; }\n\n.icon-cloud-download[_ngcontent-%COMP%]:before { content: "\\e65b"; }\n\n.icon-checkmark[_ngcontent-%COMP%]:before { content: "\\e6da"; }\n\n.icon-share[_ngcontent-%COMP%]:before { content: "\\e630"; }\n\n.icon-foldercollect[_ngcontent-%COMP%]:before { content: "\\e62a"; }\n\n.icon-pa_checked01[_ngcontent-%COMP%]:before { content: "\\e66c"; }\n\n.icon-comment[_ngcontent-%COMP%]:before { content: "\\e607"; }\n\n.icon-hot[_ngcontent-%COMP%]:before { content: "\\e605"; }']],data:{}}),F=a.V("ng-component",l,function(n){return a._22(0,[(n()(),a.Z(0,0,null,null,1,"ng-component",[],null,null,null,o,I)),a.Y(1,49152,null,0,l,[H.a,s.a,r.a],null,null)],null,null)},{},{},[]),j=t(14),R=t(17),S=t(94),T=t(87),V=t(77),Y=t(93),J=t(15),K=t(25),Q=t(34),U=t(72),X=t(113),x=t(47),q=t(35),Z=t(78),W=t(59),z=t(101),$=t(96),nn=t(106),en=t(188),tn=t(95),on=t(29),an=t(92),cn=t(97),sn=a.W(d,[M.b],function(n){return a._10([a._11(512,a.i,a.S,[[8,[m.a,A.a,y.a,f.a,h.a,p.a,_.a,P.a,C.a,F]],[3,a.i],a.s]),a._11(5120,a.r,a._9,[[3,a.r]]),a._11(4608,j.k,j.j,[a.r,[2,j.s]]),a._11(4608,R.k,R.k,[]),a._11(4608,R.c,R.c,[]),a._11(4608,c.h,c.m,[j.c,a.w,c.k]),a._11(4608,c.n,c.n,[c.h,c.l]),a._11(5120,c.a,function(n){return[n]},[c.n]),a._11(4608,c.j,c.j,[]),a._11(6144,c.i,null,[c.j]),a._11(4608,c.g,c.g,[c.i]),a._11(6144,c.b,null,[c.g]),a._11(5120,c.f,c.o,[c.b,[2,c.a]]),a._11(4608,c.c,c.c,[c.f]),a._11(5120,a.b,a._0,[]),a._11(5120,a.p,a._6,[]),a._11(5120,a.q,a._7,[]),a._11(4608,i.c,i.q,[j.c]),a._11(6144,a.D,null,[i.c]),a._11(4608,i.f,S.a,[]),a._11(5120,i.d,function(n,e,t,o,a){return[new i.k(n,e),new i.o(t),new i.n(o,a)]},[j.c,a.u,j.c,j.c,i.f]),a._11(4608,i.e,i.e,[i.d,a.u]),a._11(135680,i.m,i.m,[j.c]),a._11(4608,i.l,i.l,[i.e,i.m]),a._11(6144,a.B,null,[i.l]),a._11(6144,i.p,null,[i.m]),a._11(4608,a.G,a.G,[a.u]),a._11(4608,i.h,i.h,[j.c]),a._11(4608,i.i,i.i,[j.c]),a._11(4608,T.a,T.a,[k.a,L.a]),a._11(4608,V.a,V.a,[k.a,L.a]),a._11(4608,Y.a,Y.a,[]),a._11(4608,J.a,J.a,[]),a._11(4608,K.a,K.a,[H.a]),a._11(4608,Q.a,Q.a,[L.a,H.a,a.u,G.a]),a._11(4608,U.a,U.a,[k.a,L.a]),a._11(5120,j.f,X.c,[j.q,[2,j.a],L.a]),a._11(4608,j.e,j.e,[j.f]),a._11(5120,x.b,x.d,[k.a,x.a]),a._11(5120,B.a,B.b,[k.a,x.b,j.e,q.b,a.i]),a._11(4608,Z.a,Z.a,[k.a,L.a,B.a]),a._11(4608,W.a,W.a,[k.a,L.a]),a._11(4608,z.a,z.a,[k.a,L.a,B.a]),a._11(4608,$.a,$.a,[L.a,H.a,G.a,k.a,D.l]),a._11(4608,nn.a,nn.a,[k.a,L.a]),a._11(4608,N.a,N.a,[H.a,L.a]),a._11(4608,u.a,u.a,[]),a._11(4608,s.a,s.a,[]),a._11(4608,r.a,r.a,[]),a._11(512,j.b,j.b,[]),a._11(512,R.j,R.j,[]),a._11(512,R.d,R.d,[]),a._11(512,R.i,R.i,[]),a._11(512,X.a,X.a,[]),a._11(512,g.a,g.a,[]),a._11(512,c.e,c.e,[]),a._11(512,c.d,c.d,[]),a._11(512,a.k,en.a,[]),a._11(256,L.b,{},[]),a._11(1024,tn.a,tn.b,[]),a._11(1024,H.a,H.b,[i.b,tn.a,a.u]),a._11(1024,L.a,L.c,[L.b,H.a]),a._11(512,G.a,G.a,[H.a]),a._11(512,on.a,on.a,[]),a._11(512,k.a,k.a,[L.a,H.a,[2,on.a]]),a._11(512,D.l,D.l,[k.a]),a._11(256,x.a,{links:[{loadChildren:"../components/playMusic/playMusic.module.ngfactory#PlayMusicModuleNgFactory",name:"play-music-page",segment:"playMusic",priority:"low",defaultHistory:[]},{loadChildren:"../pages/discoverMusic/children/music/allMusicType/allMusicType.module.ngfactory#AllMusicTypeModuleNgFactory",name:"all-music-type-page",segment:"allMusicType",priority:"low",defaultHistory:[]},{loadChildren:"../pages/discoverMusic/children/music/everyDayRecommendMusic/everyDayRecommendMusic.module.ngfactory#EveryDayRecommendMusicModuleNgFactory",name:"day-rcmd-music-page",segment:"everyDayRecommendMusic",priority:"low",defaultHistory:["discover-music-page"]},{loadChildren:"../pages/discoverMusic/children/music/highqualityMusicList/highqualityMusic.module.ngfactory#HighqualityMusicModuleNgFactory",name:"highquality-music-page",segment:"highqualityMusic",priority:"low",defaultHistory:[]},{loadChildren:"../pages/discoverMusic/children/music/moreMusicList/moreMusicList.module.ngfactory#MoreMusicListPageModuleNgFactory",name:"more-music-list",segment:"more-music-list",priority:"low",defaultHistory:["discover-music-page","d-music-page"]},{loadChildren:"../pages/discoverMusic/children/music/moreSinglePlay/moreSinglePlay.module.ngfactory#MoreSinglePlayModuleNgFactory",name:"more-single-play-page",segment:"moreSinglePlay",priority:"low",defaultHistory:["discover-music-page"]},{loadChildren:"../pages/discoverMusic/children/music/music.module.ngfactory#MusicModuleNgFactory",name:"d-music-page",segment:"d-music-page",priority:"low",defaultHistory:[]},{loadChildren:"../pages/discoverMusic/children/music/personalFm/personalFm.module.ngfactory#PersonalFmModuleNgFactory",name:"personal-fm-page",segment:"personalFm",priority:"low",defaultHistory:["discover-music-page"]},{loadChildren:"../pages/discoverMusic/children/music/rankingList/rankingList.module.ngfactory#RankingListModuleNgFactory",name:"ranking-list-page",segment:"ranking-list",priority:"low",defaultHistory:[]},{loadChildren:"../pages/discoverMusic/children/music/rankingListDetail/rankingListDetail.module.ngfactory#RankingListDetailModuleNgFactory",name:"ranking-list-detail-page",segment:"ranking-list-detail",priority:"low",defaultHistory:[]},{loadChildren:"../pages/discoverMusic/children/music/recommendMusicListDetail/recommendMusicListDetail.module.ngfactory#RecommendMusicListDetailModuleNgFactory",name:"recd-music-list-page",segment:"recommendMusicListDetail",priority:"low",defaultHistory:[]},{loadChildren:"../pages/discoverMusic/children/videos/videos.module.ngfactory#VideosModuleNgFactory",name:"videos-page",segment:"videos-page",priority:"low",defaultHistory:[]},{loadChildren:"../pages/discoverMusic/discoverMusic.module.ngfactory#DiscoverMusicModuleNgFactory",name:"discover-music-page",segment:"discover-music-page",priority:"low",defaultHistory:[]},{loadChildren:"../pages/discoverMusic/root/root.module.ngfactory#DiscoverRootPageModuleNgFactory",name:"discover-root-page",segment:"root",priority:"low",defaultHistory:[]},{loadChildren:"../pages/discoverMusic/search/search.module.ngfactory#SearchModuleNgFactory",name:"search-page",segment:"search",priority:"low",defaultHistory:[]},{loadChildren:"../pages/myMusic/myMusic.module.ngfactory#MyMusicModuleNgFactory",name:"my-music",segment:"myMusic",priority:"low",defaultHistory:[]},{loadChildren:"../pages/tabs/tabs.module.ngfactory#TabsModuleNgFactory",name:"tabs-page",segment:"tab",priority:"low",defaultHistory:[]}]},[]),a._11(512,a.h,a.h,[]),a._11(512,an.a,an.a,[a.h]),a._11(1024,q.b,q.c,[an.a,a.o]),a._11(1024,a.c,function(n,e,t,o,a,c,s,r,l,u,g,d,M){return[i.s(n),cn.a(e),Y.b(t,o),$.b(a,c,s,r,l),q.d(u,g,d,M)]},[[2,a.t],L.a,H.a,G.a,L.a,H.a,G.a,k.a,D.l,L.a,x.a,q.b,a.u]),a._11(512,a.d,a.d,[[2,a.c]]),a._11(131584,a.f,a.f,[a.u,a.T,a.o,a.k,a.i,a.d]),a._11(512,a.e,a.e,[a.f]),a._11(512,i.a,i.a,[[3,i.a]]),a._11(512,d,d,[]),a._11(256,c.k,"XSRF-TOKEN",[]),a._11(256,c.l,"X-XSRF-TOKEN",[]),a._11(256,M.a,l,[]),a._11(256,j.a,"/",[])])});Object(a.M)(),Object(i.j)().bootstrapModuleFactory(sn)}},[203]);
+webpackJsonp([18],{
+
+/***/ 111:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 111;
+
+/***/ }),
+
+/***/ 153:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../components/playMusic/playMusic.module": [
+		283,
+		17
+	],
+	"../pages/discoverMusic/children/music/allMusicType/allMusicType.module": [
+		284,
+		16
+	],
+	"../pages/discoverMusic/children/music/everyDayRecommendMusic/everyDayRecommendMusic.module": [
+		285,
+		15
+	],
+	"../pages/discoverMusic/children/music/highqualityMusicList/highqualityMusic.module": [
+		286,
+		0
+	],
+	"../pages/discoverMusic/children/music/moreMusicList/moreMusicList.module": [
+		287,
+		14
+	],
+	"../pages/discoverMusic/children/music/moreSinglePlay/moreSinglePlay.module": [
+		288,
+		13
+	],
+	"../pages/discoverMusic/children/music/music.module": [
+		289,
+		12
+	],
+	"../pages/discoverMusic/children/music/personalFm/personalFm.module": [
+		290,
+		11
+	],
+	"../pages/discoverMusic/children/music/rankingList/rankingList.module": [
+		291,
+		10
+	],
+	"../pages/discoverMusic/children/music/rankingListDetail/rankingListDetail.module": [
+		292,
+		9
+	],
+	"../pages/discoverMusic/children/music/recommendMusicListDetail/recommendMusicListDetail.module": [
+		293,
+		8
+	],
+	"../pages/discoverMusic/children/videos/videos.module": [
+		294,
+		7
+	],
+	"../pages/discoverMusic/discoverMusic.module": [
+		295,
+		6
+	],
+	"../pages/discoverMusic/search/search.module": [
+		296,
+		5
+	],
+	"../pages/login/login.module": [
+		297,
+		4
+	],
+	"../pages/login/telLogin/telLogin.module": [
+		298,
+		3
+	],
+	"../pages/myMusic/myMusic.module": [
+		299,
+		2
+	],
+	"../pages/tabs/tabs.module": [
+		300,
+		1
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 153;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 198:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by luwenwei on 18/3/11.
+ */
+
+
+
+var apifiex = "http://192.168.1.2:8101/";
+var HttpService = (function () {
+    function HttpService(http) {
+        this.http = http;
+    }
+    HttpService.prototype.getData = function (options) {
+        return this.http.get(apifiex + options.url, { params: options.params, withCredentials: true }).toPromise();
+    };
+    HttpService.prototype.postData = function (options) {
+        return this.http.post(apifiex + options.url, { data: options.data }).toPromise();
+    };
+    HttpService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])() //标识一个类可以被注入器实例化
+        ,
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], HttpService);
+    return HttpService;
+}());
+
+//# sourceMappingURL=httpService.js.map
+
+/***/ }),
+
+/***/ 199:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pipes_pipes__ = __webpack_require__(254);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_audioPlayer_audioPlayer__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_headerSearch_headerSearch__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(40);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var SharedModule = (function () {
+    function SharedModule() {
+    }
+    SharedModule_1 = SharedModule;
+    SharedModule.forRoot = function () {
+        return {
+            ngModule: SharedModule_1
+        };
+    };
+    SharedModule = SharedModule_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__pipes_pipes__["b" /* SplitThousandPipe */], __WEBPACK_IMPORTED_MODULE_1__pipes_pipes__["a" /* SafeHtmlPipe */], __WEBPACK_IMPORTED_MODULE_2__components_audioPlayer_audioPlayer__["a" /* AudioPlayerComponent */], __WEBPACK_IMPORTED_MODULE_3__components_headerSearch_headerSearch__["a" /* HeaderSearchComponent */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__pipes_pipes__["b" /* SplitThousandPipe */], __WEBPACK_IMPORTED_MODULE_1__pipes_pipes__["a" /* SafeHtmlPipe */], __WEBPACK_IMPORTED_MODULE_2__components_audioPlayer_audioPlayer__["a" /* AudioPlayerComponent */], __WEBPACK_IMPORTED_MODULE_3__components_headerSearch_headerSearch__["a" /* HeaderSearchComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["e" /* IonicModule */]]
+        })
+    ], SharedModule);
+    return SharedModule;
+    var SharedModule_1;
+}());
+
+//# sourceMappingURL=sharedModule.js.map
+
+/***/ }),
+
+/***/ 200:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RootViewCoverService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RootViewCoverService = (function () {
+    function RootViewCoverService() {
+        this.rootViewCover = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.globalRootViewCover = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+    }
+    RootViewCoverService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], RootViewCoverService);
+    return RootViewCoverService;
+}());
+
+//# sourceMappingURL=eventEmitService.js.map
+
+/***/ }),
+
+/***/ 201:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(223);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 223:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_discoverMusic_provider_eventEmitService__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__sharedModule_sharedModule__ = __webpack_require__(199);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_4__app__["a" /* MyApp */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_8__sharedModule_sharedModule__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_4__app__["a" /* MyApp */], {}, {
+                    links: [
+                        { loadChildren: '../components/playMusic/playMusic.module#PlayMusicModule', name: 'play-music-page', segment: 'playMusic', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/music/allMusicType/allMusicType.module#AllMusicTypeModule', name: 'all-music-type-page', segment: 'allMusicType', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/music/everyDayRecommendMusic/everyDayRecommendMusic.module#EveryDayRecommendMusicModule', name: 'day-rcmd-music-page', segment: 'everyDayRecommendMusic', priority: 'low', defaultHistory: ['discover-music-page'] },
+                        { loadChildren: '../pages/discoverMusic/children/music/highqualityMusicList/highqualityMusic.module#HighqualityMusicModule', name: 'highquality-music-page', segment: 'highqualityMusic', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/music/moreMusicList/moreMusicList.module#MoreMusicListPageModule', name: 'more-music-list', segment: 'more-music-list', priority: 'low', defaultHistory: ['discover-music-page', 'd-music-page'] },
+                        { loadChildren: '../pages/discoverMusic/children/music/moreSinglePlay/moreSinglePlay.module#MoreSinglePlayModule', name: 'more-single-play-page', segment: 'moreSinglePlay', priority: 'low', defaultHistory: ['discover-music-page'] },
+                        { loadChildren: '../pages/discoverMusic/children/music/music.module#MusicModule', name: 'd-music-page', segment: 'd-music-page', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/music/personalFm/personalFm.module#PersonalFmModule', name: 'personal-fm-page', segment: 'personalFm', priority: 'low', defaultHistory: ['discover-music-page'] },
+                        { loadChildren: '../pages/discoverMusic/children/music/rankingList/rankingList.module#RankingListModule', name: 'ranking-list-page', segment: 'ranking-list', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/music/rankingListDetail/rankingListDetail.module#RankingListDetailModule', name: 'ranking-list-detail-page', segment: 'ranking-list-detail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/music/recommendMusicListDetail/recommendMusicListDetail.module#RecommendMusicListDetailModule', name: 'recd-music-list-page', segment: 'recommendMusicListDetail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/videos/videos.module#VideosModule', name: 'videos-page', segment: 'videos-page', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/discoverMusic.module#DiscoverMusicModule', name: 'discover-music-page', segment: 'discover-music-page', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/search/search.module#SearchModule', name: 'search-page', segment: 'search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginModule', name: 'login-page', segment: 'login-page', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/telLogin/telLogin.module#TelLoginModule', name: 'tel-login', segment: 'telLogin', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/myMusic/myMusic.module#MyMusicModule', name: 'my-music', segment: 'myMusic', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabs/tabs.module#TabsModule', name: 'tabs-page', segment: 'tab', priority: 'low', defaultHistory: [] }
+                    ]
+                })
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_4__app__["a" /* MyApp */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_7__pages_discoverMusic_provider_eventEmitService__["a" /* RootViewCoverService */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */],
+                __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicErrorHandler */] }
+            ],
+            exports: [__WEBPACK_IMPORTED_MODULE_8__sharedModule_sharedModule__["a" /* SharedModule */]]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 254:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return SplitThousandPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafeHtmlPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(26);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by luwenwe on 2017/7/19.
+ */
+
+
+// 管道装师符 ， name就是管道名称
+var SplitThousandPipe = (function () {
+    function SplitThousandPipe() {
+    }
+    // value : 就是传入的值
+    // ...args : 参数集合(用了...拓展符),会把数组内的值依次作为参数传入
+    // ...args可以改成我们常规的写法(value:any,start:number,end:number)
+    SplitThousandPipe.prototype.transform = function (input) {
+        return Math.ceil(input / 10000) + "万";
+    };
+    SplitThousandPipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Pipe */])({
+            name: 'splitThousand'
+        })
+    ], SplitThousandPipe);
+    return SplitThousandPipe;
+}());
+
+var SafeHtmlPipe = (function () {
+    function SafeHtmlPipe(sanitized) {
+        this.sanitized = sanitized;
+    }
+    SafeHtmlPipe.prototype.transform = function (value) {
+        return this.sanitized.bypassSecurityTrustHtml(value);
+    };
+    SafeHtmlPipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Pipe */])({ name: 'safeHtml' }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]])
+    ], SafeHtmlPipe);
+    return SafeHtmlPipe;
+}());
+
+//# sourceMappingURL=pipes.js.map
+
+/***/ }),
+
+/***/ 255:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AudioPlayerComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AudioPlayerComponent = (function () {
+    function AudioPlayerComponent(cdRef) {
+        this.cdRef = cdRef;
+        this.switchMusic = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.changePlayStatus = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.playProgress = 0;
+        this.isPlaying = false;
+        this.setMusicTime = function (time) {
+            if (isNaN(time))
+                return;
+            time = Math.floor(time);
+            var minutePart, secondPart;
+            if (time >= 60) {
+                var m = Math.floor(time / 60); /*取出分钟数*/
+                var s = time % 60;
+                m >= 10 ? minutePart = m : minutePart = '0' + m;
+                s >= 10 ? secondPart = s : secondPart = '0' + s;
+            }
+            else {
+                minutePart = '00';
+                time >= 10 ? secondPart = minutePart : secondPart = '0' + minutePart;
+            }
+            this.musicTotalTime = minutePart + ":" + secondPart;
+        };
+        this.setPlayProgress = this.setPlayProgress.bind(this); /*这样待会才能移除事件监听*/
+    }
+    AudioPlayerComponent.prototype.ngOnInit = function () {
+    };
+    AudioPlayerComponent.prototype.ngAfterViewInit = function () {
+        this.cdRef.detectChanges();
+    };
+    AudioPlayerComponent.prototype.ngOnChanges = function (SimpleChanges) {
+        var mediaUrlPreviousValue = SimpleChanges.mediaUrl.previousValue;
+        var mediaUrlCurrentValue = SimpleChanges.mediaUrl.currentValue;
+        if (mediaUrlCurrentValue != mediaUrlPreviousValue) {
+            this.setMediaConfig(mediaUrlCurrentValue);
+        }
+    };
+    AudioPlayerComponent.prototype.setMediaConfig = function (mediaUrl) {
+        var _this = this;
+        var _audioEle = this.audioEle.nativeElement;
+        _audioEle.src = mediaUrl;
+        _audioEle.load();
+        _audioEle.play();
+        this.duration = _audioEle.duration;
+        _audioEle.addEventListener('canplay', function () {
+            _this.duration = _audioEle.duration;
+            _this.setMusicTime(_this.duration);
+        });
+        this.audioEle.nativeElement.addEventListener('timeupdate', this.setPlayProgress, false);
+        _audioEle.addEventListener('canplaythrough', function () {
+            _this.isPlaying = true;
+            _this.changePlayStatus.emit(true); /*通知父组件更改播放状态*/
+        });
+        _audioEle.addEventListener('ended', function () {
+            _this.isPlaying = false;
+            _this.changePlayStatus.emit(false);
+            _this.switchMusic.emit('next'); /*切换音乐下首*/
+        }); /*播放结束*/
+    };
+    AudioPlayerComponent.prototype.setPlayProgress = function () {
+        var _audioEle = this.audioEle.nativeElement;
+        var currentTime = _audioEle.currentTime; /*当前已播放的时间,单位秒*/
+        var d = (currentTime / this.duration); /*当前播放时常占总时常的百分比*/
+        this.playProgress = Math.floor(d * 100);
+        this.setPlayedTime(currentTime);
+    };
+    AudioPlayerComponent.prototype.setPlayedTime = function (time) {
+        if (isNaN(time))
+            return;
+        time = Math.floor(time);
+        var minutePart, secondPart;
+        if (time >= 60) {
+            var m = Math.floor(time / 60); /*大于60s取出分钟数*/
+            var s = time % 60; /*取出秒*/
+            m >= 10 ? minutePart = m : minutePart = '0' + m;
+            s >= 10 ? secondPart = s : secondPart = '0' + s;
+        }
+        else {
+            minutePart = '00';
+            time >= 10 ? secondPart = time : secondPart = '0' + time;
+        }
+        this.playedTime = minutePart + ":" + secondPart;
+    };
+    AudioPlayerComponent.prototype.rangeFocused = function (e) {
+        this.audioEle.nativeElement.removeEventListener('timeupdate', this.setPlayProgress, false);
+    }; /*当按下进度滚轮时去掉音乐播放时间的监听*/
+    AudioPlayerComponent.prototype.rangeBlurred = function (e) {
+        this.audioEle.nativeElement.currentTime = Math.ceil((this.playProgress / 100) * this.duration);
+        this.audioEle.nativeElement.addEventListener('timeupdate', this.setPlayProgress, false);
+    };
+    AudioPlayerComponent.prototype.switchPlayStatue = function () {
+        this.isPlaying = !this.isPlaying;
+        if (this.isPlaying) {
+            this.audioEle.nativeElement.play();
+        }
+        else {
+            this.audioEle.nativeElement.pause();
+        }
+        this.changePlayStatus.emit(this.isPlaying);
+    };
+    AudioPlayerComponent.prototype.changeMusic = function (type) {
+        this.isPlaying = false;
+        this.changePlayStatus.emit(false);
+        this.switchMusic.emit(type); /*切换音乐上下首*/
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], AudioPlayerComponent.prototype, "mediaUrl", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('audioEle'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+    ], AudioPlayerComponent.prototype, "audioEle", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+    ], AudioPlayerComponent.prototype, "switchMusic", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+    ], AudioPlayerComponent.prototype, "changePlayStatus", void 0);
+    AudioPlayerComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'audio-player',template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/components/audioPlayer/audioPlayer.html"*/'<div class="audio-container">\n    <audio #audioEle></audio>\n    <!--<div class="progress-line">\n        <div class="played-time">{{playedTime || \'00:00\'}}</div>\n        <div class="play-line-container">\n            <div class="play-line" #playLine id="playLine"></div>\n            <div class="played-length-line" #playedLine></div>\n            <div class="play-handle-dot" #playHandleDot >\n                <span class="dot"></span>\n            </div>\n        </div>\n        <div class="total-time">{{musicTotalTime}}</div>\n    </div>-->\n    <ion-range (ionBlur)="rangeBlurred($event)" (ionFocus)="rangeFocused($event)" [(ngModel)]="playProgress" color="danger" pin="true">\n        <ion-label range-left style="color: #ffffff;">{{playedTime || \'00:00\'}}</ion-label>\n        <ion-label range-right style="color: #ffffff;opacity: 0.6">{{musicTotalTime}}</ion-label>\n    </ion-range>\n    <div class="handle-panel">\n        <ion-icon name="ios-skip-backward-outline" (click)="changeMusic(\'previous\')"></ion-icon>\n        <div class="play-or-pause" (click)="switchPlayStatue()">\n            <ion-icon name="ios-play-outline" class="pause-icon" *ngIf="!isPlaying"></ion-icon>\n            <ion-icon name="ios-pause-outline" *ngIf="isPlaying"></ion-icon>\n        </div>\n        <ion-icon name="ios-skip-forward-outline" (click)="changeMusic(\'next\')"></ion-icon>\n    </div>\n</div>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/components/audioPlayer/audioPlayer.html"*/,
+            styleUrls: ['/audioPlayer.scss']
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */]])
+    ], AudioPlayerComponent);
+    return AudioPlayerComponent;
+}());
+
+//# sourceMappingURL=audioPlayer.js.map
+
+/***/ }),
+
+/***/ 256:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderSearchComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var HeaderSearchComponent = (function () {
+    function HeaderSearchComponent(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    HeaderSearchComponent.prototype.searchMusic = function () {
+        this.navCtrl.push('search-page');
+    };
+    HeaderSearchComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: '[header-search]',template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/components/headerSearch/headerSearch.html"*/'<ion-toolbar>\n    <ion-buttons left>\n        <button ion-button icon-only>\n            <ion-icon name="ios-microphone-outline" style="font-size: 30px;color: #ffffff;"></ion-icon>\n        </button>\n    </ion-buttons>\n    <div center\n         style="background: #ffffff;text-align: center;flex:1;border-radius: 15px;color:#969696;margin: 0 15px;padding: 6px 0"\n         (click)="searchMusic()">\n        <ion-icon name="search" style="font-size: 18px"></ion-icon>\n        <span>搜索音乐, 视频, 电台</span>\n    </div>\n    <ion-buttons right>\n        <button ion-button icon-only color="royal">\n            <ion-icon style="font-size: 35px;color: #ffffff;" name="list"></ion-icon>\n        </button>\n    </ion-buttons>\n</ion-toolbar>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/components/headerSearch/headerSearch.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]])
+    ], HeaderSearchComponent);
+    return HeaderSearchComponent;
+}());
+
+//# sourceMappingURL=headerSearch.js.map
+
+/***/ }),
+
+/***/ 274:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_httpService__ = __webpack_require__(198);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var MyApp = (function () {
+    function MyApp(platform, statusBar, splashScreen, http) {
+        this.platform = platform;
+        this.statusBar = statusBar;
+        this.splashScreen = splashScreen;
+        this.http = http;
+        this.rootPage = '';
+        this.initializeApp();
+    }
+    MyApp.prototype.initializeApp = function () {
+        var _this = this;
+        this.platform.ready().then(function () {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            _this.statusBar.styleDefault();
+            _this.splashScreen.hide();
+            _this.login();
+        });
+    };
+    MyApp.prototype.login = function () {
+        var isLogin = window.localStorage.getItem('isLogin');
+        if (isLogin === 'true') {
+            this.rootPage = 'tabs-page';
+        }
+        else {
+            this.rootPage = 'login-page';
+        }
+    };
+    MyApp.prototype.openPage = function (page) {
+        // Reset the content nav to have just this page
+        // we wouldn't want the back button to show in this scenario
+        this.nav.setRoot(page.component);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */]),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */]) === "function" && _a || Object)
+    ], MyApp.prototype, "nav", void 0);
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/app/app.html"*/'<!--<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>-->\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/app/app.html"*/,
+            styleUrls: ['/app.scss'],
+            providers: [__WEBPACK_IMPORTED_MODULE_4__providers_httpService__["a" /* HttpService */]]
+        }),
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__providers_httpService__["a" /* HttpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_httpService__["a" /* HttpService */]) === "function" && _e || Object])
+    ], MyApp);
+    return MyApp;
+    var _a, _b, _c, _d, _e;
+}());
+
+//# sourceMappingURL=app.js.map
+
+/***/ })
+
+},[201]);
+//# sourceMappingURL=main.js.map

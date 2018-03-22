@@ -15,7 +15,7 @@ import {IonicPage,LoadingController} from "ionic-angular";
     selector:'day-rcmd-music',
     templateUrl: 'everyDayRecommendMusic.html',
     providers:[HttpService],
-    styleUrls: ['./style.scss']
+    styleUrls: ['/style.scss']
 })
 export class EveryDayRecommendMusicPage implements OnInit{
     @ViewChild('dayRcmdMusicNav') dayRcmdMusicNav

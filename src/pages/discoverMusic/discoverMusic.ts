@@ -14,6 +14,7 @@ import {IonicPage} from "ionic-angular";
 @Component({
     selector:'discover-music',
     templateUrl: 'discoverMusic.html',
+    styleUrls:['/discoverMusic.scss'],
     providers:[HttpService]
 })
 export class DiscoverMusicPage implements OnInit{
@@ -33,9 +34,6 @@ export class DiscoverMusicPage implements OnInit{
         this.rootViewCoverService.rootViewCover.subscribe((data)=>{
             this.currentViewFade(data)
         })/*订阅覆盖当前组件事件，该服务必须是单例*/
-
-        let loginPromise = this.http.getData({url:"login/cellphone/",params:{phone:"18649685236",password:"1314520ZY"}});
-        loginPromise.then(()=>{}).catch((e)=>{console.error(e)});
     }
 
     currentViewFade(data) {
