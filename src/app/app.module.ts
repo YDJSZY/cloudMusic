@@ -7,6 +7,7 @@ import {MyApp} from './app';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import { RootViewCoverService } from '../pages/discoverMusic/provider/eventEmitService';
+import { AuthService } from '../providers/authService';
 import { SharedModule } from '../sharedModule/sharedModule'
 
 @NgModule({
@@ -29,6 +30,7 @@ import { SharedModule } from '../sharedModule/sharedModule'
         HttpClient,
         StatusBar,
         SplashScreen,
+        AuthService,
         {provide: ErrorHandler, useClass: IonicErrorHandler}
     ],
     exports:[SharedModule]

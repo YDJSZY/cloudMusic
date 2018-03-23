@@ -1,0 +1,70 @@
+.account-content{
+    .account-header{
+        background: #ffffff;
+        padding: 15px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid #dddddd;
+        .avatar-img{
+            width:50px;
+            height:50px;
+            margin-right: 10px;
+            img{
+                width:100%;
+                height:100%;
+                border-radius: 100%;
+            }
+        }
+        .user-name{
+            p{
+                margin: 0;
+            }
+            .level{
+                display: block;
+                width:fit-content;
+                margin: 0;
+                border:1px solid #dddddd;
+                padding: 2px 3px;
+                text-align: center;
+                color: #969696;
+                border-radius: 10px;
+            }
+        }
+    }
+    .info-panel{
+        background: #ffffff;
+        padding: 15px;
+        display: flex;
+        justify-content: space-around;
+        .info{
+            flex: 1;
+            border-right:1px solid #dddddd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            p{
+                margin: 0;
+                padding: 0;
+                color: #969696;
+            }
+        }
+        .info:last-child{
+            border: none;
+        }
+    }
+    .logout{
+        margin-top: 10px;
+        background: #ffffff;
+        width:100%;
+        button{
+            width:100%;
+            background: #ffffff;
+            text-align: center;
+            color:#d43c33;
+            outline: none;
+            padding: 10px 0;
+        }
+    }
+}

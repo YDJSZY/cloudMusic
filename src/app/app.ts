@@ -3,6 +3,7 @@ import {Nav, Platform} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import { HttpService } from '../providers/httpService';
+import { AuthService } from '../providers/authService';
 
 @Component({
     templateUrl: 'app.html',
@@ -10,8 +11,7 @@ import { HttpService } from '../providers/httpService';
     providers:[HttpService]
 })
 export class MyApp {
-    @ViewChild(Nav)
-    nav:Nav;
+    @ViewChild(Nav) nav:Nav;
 
     rootPage:string = '';
 
@@ -21,7 +21,8 @@ export class MyApp {
         public platform:Platform,
         public statusBar:StatusBar,
         public splashScreen:SplashScreen,
-        public http:HttpService
+        public http:HttpService,
+        private authService:AuthService
     ) {
         this.initializeApp();
     }
@@ -37,8 +38,8 @@ export class MyApp {
     }
     
     login() {
-        let isLogin = window.localStorage.getItem('isLogin');
-        if(isLogin === 'true'){
+        let isLogin = this.authService.getLoginState();
+        if(isLogin){
             this.rootPage = 'tabs-page';
         }else{
             this.rootPage = 'login-page';

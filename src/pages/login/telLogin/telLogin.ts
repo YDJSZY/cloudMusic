@@ -2,9 +2,10 @@
  * Created by luwenwei on 18/3/13.
  */
 import { Component,OnInit } from '@angular/core';
-import { ViewController,NavParams,NavController } from 'ionic-angular';
+import { ViewController,NavParams,NavController,ToastController } from 'ionic-angular';
 import { IonicPage } from 'ionic-angular';
 import { HttpService } from '../../../providers/httpService';
+import { AuthService} from '../../../providers/authService';
 
 @IonicPage({
     name:'tel-login'
@@ -19,24 +20,45 @@ export class TelLoginPage implements OnInit{
     password:any
     constructor(
         public navCtrl:NavController,
-        private viewCtrl:ViewController,
-        public http:HttpService){
+        public viewCtrl:ViewController,
+        public toastCtrl:ToastController,
+        public http:HttpService,
+        private authService:AuthService){
     }
 
     ngOnInit() {
         
     }
 
-    hideModal() {
-        this.viewCtrl.dismiss();
+    hideModal(data) {
+        this.viewCtrl.dismiss(data);
     }
 
     login() {
+        if(!this.telNum){
+            return this.createToast('请填写用户名')
+        }
+        if(!this.password){
+            return this.createToast('请输入密码')
+        }
         let loginPromise = this.http.getData({url:"login/cellphone/",params:{phone:this.telNum,password:this.password}});
         loginPromise.then(function(res):any{
             if(res.code == 200) {
-                this.navCtrl.push('tabs-page')
+                this.authService.setLoginState({isLogin:true,userId:res.account.id});
+                this.hideModal(true);
+                //this.navCtrl.setRoot('tabs-page');
+            }else{
+                this.createToast('用户名或密码错误');
             }
         }.bind(this)).catch((e)=>{console.error(e)});
+    }
+
+    createToast(message:string) {
+        let toast = this.toastCtrl.create({
+            message: message,
+            duration: 3000,
+            position: 'bottom'
+        })
+        toast.present();
     }
 }

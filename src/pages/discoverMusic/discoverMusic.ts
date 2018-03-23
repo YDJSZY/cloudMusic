@@ -5,6 +5,7 @@ import { Component,OnInit,ViewChild } from '@angular/core';
 import { HttpService } from '../../providers/httpService';
 import { NavController } from 'ionic-angular';
 import { RootViewCoverService } from './provider/eventEmitService';
+import { AuthService } from '../../providers/authService';
 import {IonicPage} from "ionic-angular";
 
 @IonicPage({
@@ -25,7 +26,8 @@ export class DiscoverMusicPage implements OnInit{
     constructor(
         private http:HttpService,
         private rootViewCoverService:RootViewCoverService,
-        private navCtrl:NavController
+        private navCtrl:NavController,
+        private authService:AuthService
         ) {
         this.http = http;
     }
@@ -38,5 +40,14 @@ export class DiscoverMusicPage implements OnInit{
 
     currentViewFade(data) {
         this.navCtrl.push(data.component,data.params);/*component组件会覆盖当前跟组件*/
+    }
+
+    ionViewCanEnter() {
+        let loginState = this.authService.getLoginState();
+        if(loginState){
+            return true;
+        }
+        this.rootViewCoverService.globalRootViewCover.emit({component:'login-page'})
+        return false;
     }
 }

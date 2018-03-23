@@ -20,9 +20,10 @@ export class TabsPage implements OnInit {
     @ViewChild('globalRootNav') nav: NavController
     discoverMusic: string = 'discover-music-page';
     myMusic: string = 'my-music';
-
-    constructor(public appCtrl: App,
-                private rootViewCoverService: RootViewCoverService) {
+    account: string = 'account-page'
+    constructor(
+        public appCtrl: App,
+        private rootViewCoverService: RootViewCoverService) {
 
     }
 

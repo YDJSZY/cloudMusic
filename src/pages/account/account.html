@@ -1,0 +1,41 @@
+<ion-header class="custom-header">
+    <ion-navbar #accountNav>
+        <ion-title>我的账号</ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only color="royal">
+                <ion-icon style="font-size: 35px;color: #ffffff;" name="list"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="account-content" style="background: #eeeeee">
+    <div class="account-header" *ngIf="userMessage">
+        <div class="avatar-img">
+            <img [src]="userMessage.profile.avatarUrl" />
+        </div>
+        <div class="user-name">
+            <p>{{userMessage.profile.nickname}}</p>
+            <span class="level">
+                <img src="../assets/imgs/level.png" style="display: inline-block;width: 14px;height: 14px;vertical-align: middle" />
+                {{userMessage.level}}
+            </span>
+        </div>
+    </div>
+    <div class="info-panel" *ngIf="userMessage">
+        <div class="action-some info">
+            <p>动态</p>
+            <span>{{userMessage.profile.eventCount}}</span>
+        </div>
+        <div class="follow info">
+            <p>关注</p>
+            <span>{{userMessage.profile.follows}}</span>
+        </div>
+        <div class="fans info">
+            <p>粉丝</p>
+            <span>{{userMessage.profile.followeds}}</span>
+        </div>
+    </div>
+    <div class="logout">
+        <button (click)="logout()">退出登录</button>
+    </div>
+</ion-content>

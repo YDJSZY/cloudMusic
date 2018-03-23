@@ -1,9 +1,10 @@
 /**
  * Created by luwenwei on 18/3/22.
  */
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { HttpService } from '../../providers/httpService';
-import { ModalController } from 'ionic-angular';
+import { ModalController,NavController,ViewController } from 'ionic-angular';
+import { AuthService} from '../../providers/authService';
 import {IonicPage} from "ionic-angular";
 
 @IonicPage({
@@ -16,19 +17,37 @@ import {IonicPage} from "ionic-angular";
     styleUrls:['/login.scss'],
     providers:[HttpService]
 })
-export class LoginPage {
+export class LoginPage implements OnInit{
     constructor(
         public http:HttpService,
-        public modalCtrl:ModalController
+        public modalCtrl:ModalController,
+        public navCtrl:NavController,
+        public viewCtrl:ViewController,
+        private authService:AuthService
     ) {
         
     }
 
     loginByTel() {
         let modal = this.modalCtrl.create('tel-login');
-        modal.onDidDismiss(data => {
-           
-        });
+        modal.onWillDismiss(data => {
+            console.log('f:'+data)
+            if(data) this.navCtrl.push('tabs-page');
+        })
         modal.present();
+    }
+
+    ngOnInit() {
+
+    }
+
+    ionViewCanEnter():boolean {
+        let loginState = this.authService.getLoginState();
+        if(loginState){
+            console.log(loginState)
+            this.navCtrl.setRoot('tabs-page');
+            return false;
+        }
+        return true;
     }
 }
