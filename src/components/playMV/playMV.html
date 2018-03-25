@@ -1,0 +1,7 @@
+<ion-content>
+    <ng-container *ngIf="mvUrlData">
+        <video controls autoplay #musicMV style="width: 100%">
+            <source src="http://localhost:8101/mv/url?url={{mvUrlData[mvType]}}" />
+        </video>
+    </ng-container>
+</ion-content>

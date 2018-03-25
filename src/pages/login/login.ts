@@ -31,7 +31,7 @@ export class LoginPage implements OnInit{
     loginByTel() {
         let modal = this.modalCtrl.create('tel-login');
         modal.onWillDismiss(data => {
-            console.log('f:'+data)
+            //console.log(this.navCtrl.)
             if(data) this.navCtrl.push('tabs-page');
         })
         modal.present();

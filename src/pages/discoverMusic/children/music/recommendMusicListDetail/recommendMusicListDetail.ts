@@ -52,6 +52,7 @@ export class RcmdMusicListDetailPage implements OnInit{
     }
 
     playMusic(index) {
+        //this.navCtrl.push('play-music-page',{data:this.musicList.tracks,index:index})
         this.rootViewCoverService.globalRootViewCover.emit({component:'play-music-page',params:{data:this.musicList.tracks,index:index}});
     }
 }

@@ -29,7 +29,6 @@ export class DiscoverMusicPage implements OnInit{
         private navCtrl:NavController,
         private authService:AuthService
         ) {
-        this.http = http;
     }
 
     ngOnInit() {
@@ -47,7 +46,7 @@ export class DiscoverMusicPage implements OnInit{
         if(loginState){
             return true;
         }
-        this.rootViewCoverService.globalRootViewCover.emit({component:'login-page'})
+        this.rootViewCoverService.setRoot.emit({component:'login-page'})
         return false;
     }
 }

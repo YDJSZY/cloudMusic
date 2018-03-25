@@ -11,14 +11,17 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content class="personal-fm-content" style="position: relative">
+<ion-content class="personal-fm-content">
     <ng-container *ngIf="personalFmData.album">
+        <div class="bg-modal"></div>
         <img src="{{personalFmData.album.blurPicUrl}}" class="bg-img"/>
-        <div class="album-cover">
-            <img class="album-cover-img" [src]="personalFmData.album.picUrl" />
-            <div class="album-des">
-                <p style="color: #ffffff;margin: 0">{{personalFmData.name}}</p>
-                <p style="color: #969696;font-size: 12px;margin: 0">{{personalFmData.artists[0].name}}</p>
+        <div class="album-content">
+            <div class="album-cover">
+                <img class="album-cover-img" [src]="personalFmData.album.picUrl" />
+                <div class="album-des">
+                    <p style="color: #ffffff;margin: 0">{{personalFmData.name}}</p>
+                    <p style="color: #969696;font-size: 12px;margin: 0">{{personalFmData.artists[0].name}}</p>
+                </div>
             </div>
             <div class="play-handle">
                 <audio-player [mediaUrl]="musicUrl"

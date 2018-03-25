@@ -28581,6 +28581,11 @@ ion-header.custom-view::after {
   right: 3px;
 }
 
+.music-list-content .play-count ion-icon {
+  font-weight: bold;
+  color: #ffffff;
+}
+
 .check-icon {
   position: absolute;
   bottom: 0;
@@ -28955,20 +28960,72 @@ ion-header.custom-view::after {
   height: 100%;
   -webkit-filter: blur(50px);
   filter: blur(50px);
+  position: absolute;
+  z-index: -1;
 }
 
-.personal-fm-content .album-cover {
+.personal-fm-content .bg-modal {
+  background: #000000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+}
+
+.personal-fm-content .album-content {
   width: 100%;
   padding: 20px;
-  position: absolute;
-  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1;
+  height: 100%;
 }
 
-.personal-fm-content .album-cover .album-cover-img {
+.personal-fm-content .scroll-content {
+  overflow-y: hidden;
+}
+
+.personal-fm-content .range-ios.range-has-pin {
+  padding-top: 0 !important;
+}
+
+.personal-fm-content .album-content .album-cover {
+  -webkit-box-flex: 1.5;
+  -webkit-flex: 1.5;
+  -ms-flex: 1.5;
+  flex: 1.5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.personal-fm-content .album-content .album-cover .album-cover-img {
   border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.personal-fm-content .album-cover .album-des {
+.personal-fm-content .album-content .album-cover .album-des {
   text-align: center;
   width: 100%;
   margin-top: 15px;
@@ -28976,7 +29033,6 @@ ion-header.custom-view::after {
 
 .personal-fm-content .play-handle {
   width: 100%;
-  margin-top: 15px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28985,6 +29041,14 @@ ion-header.custom-view::after {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .ranking-list-detail-content .music-list-info {

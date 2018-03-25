@@ -54,7 +54,7 @@ export class AccountPage implements OnInit {
                     text: '确定',
                     handler: () => {
                         this.authService.logout();
-                        this.rootViewCoverService.globalRootViewCover.emit({component:'login-page'})
+                        this.rootViewCoverService.setRoot.emit({component:'login-page'})
                     }
                 }
             ]

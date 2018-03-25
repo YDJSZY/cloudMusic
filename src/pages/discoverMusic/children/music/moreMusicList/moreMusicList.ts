@@ -94,6 +94,6 @@ export class MoreMusicListPage implements OnInit{
 
     musicListDetail(list) {/*查看某歌单具体歌曲列表*/
         let obj = {id:list.id,name:list.name,picUrl:list.picUrl,playount:list.playCount}
-        this.rootViewCoverService.rootViewCover.emit({component:'recd-music-list-page',params:{data:obj}});
+        this.navCtrl.push('recd-music-list-page',{data:obj});
     }
 }

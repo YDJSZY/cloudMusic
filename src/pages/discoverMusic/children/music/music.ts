@@ -21,6 +21,7 @@ export class MusicPage implements OnInit{
     banners: Array<any>=[]
     introMusicList: Array<any>=[]
     singlePlayList: Array<any>=[]
+    recommendMV: Array<any>=[]
     constructor(
         public nav: NavController,
         private http: HttpService
@@ -42,6 +43,11 @@ export class MusicPage implements OnInit{
         let singlePlayPromise = this.http.getData({url:"personalized/privatecontent"});
         singlePlayPromise.then(function (res):any{
             this.singlePlayList = res.result;
+        }.bind(this)).catch((e)=>{console.error(e)});
+
+        let recommendMVPromise = this.http.getData({url:"personalized/mv"});
+        recommendMVPromise.then(function (res):any{
+            this.recommendMV = res.result;
         }.bind(this)).catch((e)=>{console.error(e)});
 
     }
@@ -88,5 +94,9 @@ export class MusicPage implements OnInit{
 
     searchMusic() {
         this.nav.push('search-page');
+    }
+
+    playMv(mvId) {/*播放mv*/
+        this.nav.push('play-mv-page',{mvId:mvId});
     }
 }

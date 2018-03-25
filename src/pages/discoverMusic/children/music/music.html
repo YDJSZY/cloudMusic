@@ -90,4 +90,21 @@
             </div>
         </section>
     </div>
+    <div class="intro-music-list">
+        <header class="block-header" tappable>
+            <span class="l-red"></span>
+            <span class="block-title">推荐MV</span>
+            <span class="left-direct"></span>
+        </header>
+        <section class="music-list-content">
+            <div *ngFor="let list of recommendMV;let $index=index" tappable class="square-list-item" (click)="playMv(list.id)" [ngClass]="{'noMarginRight': ($index+1) % 2 == 0}" style="width: calc((100% - 4px) / 2);">
+                <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
+                <span class="square-list-item-des">{{list.name}}</span>
+                <div class="play-count">
+                    <ion-icon name="ios-videocam-outline"></ion-icon>
+                    <span>{{list.playCount | splitThousand}}</span>
+                </div>
+            </div>
+        </section>
+    </div>
 </ion-content>

@@ -12,11 +12,8 @@ import { AuthService } from '../providers/authService';
 })
 export class MyApp {
     @ViewChild(Nav) nav:Nav;
-
-    rootPage:string = '';
-
     pages:Array<{title:string, component:any}>;
-
+    rootPage:string
     constructor(
         public platform:Platform,
         public statusBar:StatusBar,
@@ -25,6 +22,7 @@ export class MyApp {
         private authService:AuthService
     ) {
         this.initializeApp();
+        this.rootPage = this.authService.getLoginState() ? 'tabs-page' : 'login-page';
     }
 
     initializeApp() {
@@ -33,7 +31,7 @@ export class MyApp {
             // Here you can do any higher level native things you might need.
             this.statusBar.styleDefault();
             this.splashScreen.hide();
-            this.login();
+            //this.login();
         });
     }
     
