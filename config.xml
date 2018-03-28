@@ -3,7 +3,7 @@
     <name>ydjs</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.10.189:8100" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -86,7 +86,10 @@
     <allow-navigation href="http://192.168.8.245:8100" />
     <allow-navigation href="http://192.168.10.181:8102" />
     <allow-navigation href="http://192.168.10.181:8100" />
+    <allow-navigation href="http://192.168.10.198:8100" />
+    <allow-navigation href="http://192.168.8.213:8100" />
+    <allow-navigation href="http://192.168.10.189:8100" />
     <engine name="ios" spec="~4.5.4" />
     <engine name="browser" spec="~5.0.3" />
-    <allow-navigation href="http://192.168.10.198:8100" />
+    <engine name="android" spec="~7.0.0" />
 </widget>

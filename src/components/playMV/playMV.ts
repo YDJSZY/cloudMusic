@@ -42,4 +42,13 @@ export class PlayMVPage implements OnInit{
             this.musicMV.nativeElement.play();*/
         }.bind(this))
     }
+
+    playMv() {
+        this.musicMV.nativeElement.play();
+    }
+
+    goBack(e) {
+        e.stopPropagation();
+        this.navCtrl.pop();
+    }
 }

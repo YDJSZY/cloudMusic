@@ -28481,6 +28481,7 @@ ion-navbar.toolbar {
   background: #ffffff;
   text-align: center;
   color: #d43c33;
+  font-size: 16px;
   outline: none;
   padding: 10px 0;
 }
@@ -28494,9 +28495,9 @@ ion-header.custom-view::after {
 }
 
 @media screen and (width: 320px) {
-  .custom-view .scroll-content {
-    margin-top: 86px !important;
-  }
+  /*.custom-view .scroll-content {
+         margin-top: 105px !important;
+    }*/
 }
 
 .custom-view .scroll-content {
@@ -29227,6 +29228,51 @@ ion-header.custom-view::after {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.video-content .video-block .des {
+  padding: 15px 15px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.video-content .video-block .video-cover {
+  position: relative;
+}
+
+.video-content .video-block .video-cover .play-video {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ffffff;
+  border-radius: 45px;
+  text-align: center;
+  color: #ffffff;
+  left: 50%;
+  top: 50%;
+  font-size: 24px;
+  line-height: 45px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.video-content .video-block .video-cover .play-video ion-icon {
+  margin-top: 2px;
+  margin-left: 5px;
+}
+
+.video-content .video-block .video-cover .play-count {
+  color: #ffffff;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
+.video-content .video-block .video-cover .play-count ion-icon {
+  font-weight: bold;
+  vertical-align: text-bottom;
 }
 
 .search-input-container {

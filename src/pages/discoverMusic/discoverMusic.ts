@@ -23,6 +23,7 @@ export class DiscoverMusicPage implements OnInit{
     // should be each tab's root Page
     musicTab:string = 'd-music-page'
     videosTab:string = 'videos-page'
+    radioTab:string = 'radio-page'
     constructor(
         private http:HttpService,
         private rootViewCoverService:RootViewCoverService,

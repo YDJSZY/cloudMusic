@@ -3,7 +3,7 @@
  */
 import { Component,OnInit } from '@angular/core';
 import { HttpService } from '../../providers/httpService';
-import { ModalController,NavController,ViewController } from 'ionic-angular';
+import { ModalController,NavController } from 'ionic-angular';
 import { AuthService} from '../../providers/authService';
 import {IonicPage} from "ionic-angular";
 
@@ -22,19 +22,21 @@ export class LoginPage implements OnInit{
         public http:HttpService,
         public modalCtrl:ModalController,
         public navCtrl:NavController,
-        public viewCtrl:ViewController,
         private authService:AuthService
     ) {
         
     }
 
     loginByTel() {
-        let modal = this.modalCtrl.create('tel-login');
+        let modal = this.modalCtrl.create('tel-login',{callback:this.gotoHomePage.bind(this)});
         modal.onWillDismiss(data => {
             //console.log(this.navCtrl.)
-            if(data) this.navCtrl.push('tabs-page');
         })
         modal.present();
+    }
+
+    gotoHomePage() {
+        this.navCtrl.push('tabs-page')
     }
 
     ngOnInit() {

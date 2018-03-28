@@ -1,0 +1,42 @@
+.video-content{
+    .video-block{
+        .des{
+            padding: 15px 15px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+        .video-cover{
+            position: relative;
+            .play-video{
+                position: absolute;
+                width:45px;
+                height: 45px;
+                border:1px solid #ffffff;
+                border-radius: 45px;
+                text-align: center;
+                color: #ffffff;
+                left: 50%;
+                top:50%;
+                font-size: 24px;
+                line-height: 45px;
+                transform: translate(-50%,-50%);
+                ion-icon{
+                    margin-top: 2px;
+                    margin-left: 5px;
+                }
+            }
+            .play-count{
+                color: #ffffff;
+                position: absolute;
+                left: 10px;
+                bottom: 10px;
+                ion-icon{
+                    font-weight: bold;
+                    vertical-align: text-bottom;
+                }
+            }
+        }
+    }
+}

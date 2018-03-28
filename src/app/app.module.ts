@@ -8,7 +8,7 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import { RootViewCoverService } from '../pages/discoverMusic/provider/eventEmitService';
 import { AuthService } from '../providers/authService';
-import { SharedModule } from '../sharedModule/sharedModule'
+import { SharedModule } from '../sharedModule/sharedModule';
 
 @NgModule({
     declarations: [

@@ -18,16 +18,19 @@ import { AuthService} from '../../../providers/authService';
 export class TelLoginPage implements OnInit{
     telNum:number
     password:any
+    goToHomePage:Function
     constructor(
         public navCtrl:NavController,
         public viewCtrl:ViewController,
         public toastCtrl:ToastController,
         public http:HttpService,
+        public navParams:NavParams,
         private authService:AuthService){
     }
 
     ngOnInit() {
-        
+        let callback = this.navParams.get('callback');
+        this.goToHomePage = callback;
     }
 
     hideModal(data) {
@@ -45,8 +48,8 @@ export class TelLoginPage implements OnInit{
         loginPromise.then(function(res):any{
             if(res.code == 200) {
                 this.authService.setLoginState({isLogin:true,userId:res.account.id});
+                this.goToHomePage();
                 this.hideModal(true);
-                //this.navCtrl.setRoot('tabs-page');
             }else{
                 this.createToast('用户名或密码错误');
             }

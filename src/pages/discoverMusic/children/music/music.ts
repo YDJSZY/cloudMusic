@@ -2,7 +2,7 @@
  * Created by luwenwei on 18/3/10.
  */
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,LoadingController } from 'ionic-angular';
 import { HttpService } from '../../../../providers/httpService';
 import {IonicPage} from "ionic-angular";
 
@@ -18,37 +18,41 @@ import {IonicPage} from "ionic-angular";
 })
 export class MusicPage implements OnInit{
     @ViewChild('slideBanners') slideBanners
+    getDataSuccess:boolean = false
     banners: Array<any>=[]
     introMusicList: Array<any>=[]
     singlePlayList: Array<any>=[]
     recommendMV: Array<any>=[]
     constructor(
         public nav: NavController,
+        public loadingCtrl: LoadingController,
         private http: HttpService
     ) {
         this.http = http;
     }
 
     ngOnInit() {
+        let loading = this.loadingCtrl.create({
+            content: '正在加载数据...',
+            duration: 10000, //单位是毫秒
+        });
+        loading.present()
         let bannersPromise = this.http.getData({url:"banner"});
-        bannersPromise.then(function (res):any{
-            this.banners = res.banners;
-        }.bind(this)).catch((e)=>{console.error(e)});
 
         let recommendPromise = this.http.getData({url:"recommend/resource"});
-        recommendPromise.then(function (res):any{
-            this.introMusicList = res.recommend;
-        }.bind(this)).catch((e)=>{console.error(e)});
 
         let singlePlayPromise = this.http.getData({url:"personalized/privatecontent"});
-        singlePlayPromise.then(function (res):any{
-            this.singlePlayList = res.result;
-        }.bind(this)).catch((e)=>{console.error(e)});
 
         let recommendMVPromise = this.http.getData({url:"personalized/mv"});
-        recommendMVPromise.then(function (res):any{
-            this.recommendMV = res.result;
-        }.bind(this)).catch((e)=>{console.error(e)});
+
+        Promise.all([bannersPromise,recommendPromise,singlePlayPromise,recommendMVPromise]).then(function (res):any{
+            loading.dismiss();
+            this.banners = res[0].banners;
+            this.introMusicList = res[1].recommend;
+            this.singlePlayList = res[2].result;
+            this.recommendMV = res[3].result;
+            this.getDataSuccess = true;
+        }.bind(this))
 
     }
 
