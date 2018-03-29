@@ -45,6 +45,7 @@ $colors: (
 $gray:#7d7878;
 $grayBlack:#402424;
 
+$textColor:#d43c33;
 
 // App iOS Variables
 // --------------------------------------------------
@@ -143,4 +144,27 @@ $grayBlack:#402424;
 
 .hide{
     display: none;
+}
+
+.l {
+    display: inline-block;
+    width: 2px;
+    background: #d43c33;
+    height: 15px;
+    margin-right: 7px;
+    vertical-align: text-bottom;
+}
+
+.avatar{
+    width:45px;
+    height: 45px;
+    border-radius: 45px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    img{
+        width:100%;
+        height: 100%;
+        border-radius: 100%;
+    }
 }

@@ -13,6 +13,8 @@ import {IonicPage,NavController, NavParams} from "ionic-angular";
 })
 export class RadioDetailPage implements OnInit{
     @ViewChild('radioDetailNav') radioDetailNav
+    radioDetailMes:Object = {}
+    currentSelect:string = 'radioOrder'
     constructor(
         public http:HttpService,
         public navCtrl:NavController,
@@ -28,6 +30,13 @@ export class RadioDetailPage implements OnInit{
     }
 
     getRadioDetail(id) {
-        let radioDetailPromise = this.http.getData({'url':'dj/detail?',params:{rid:id}})
+        let radioDetailPromise = this.http.getData({'url':'dj/detail?',params:{rid:id}});
+        radioDetailPromise.then(function (res):any{
+            this.radioDetailMes = res.djRadio
+        }.bind(this))
+    }
+
+    switchShowMes(type:string){
+        this.currentSelect = type;
     }
 }

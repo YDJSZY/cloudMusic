@@ -11,5 +11,68 @@
     </ion-navbar>
 </ion-header>
 <ion-content class="radio-detail-content">
-
+    <div class="detail-bg">
+        <img [src]="radioDetailMes.picUrl" />
+    </div>
+    <div class="detail-main">
+        <div class="show-select">
+            <div class="left-detail" (click)="switchShowMes('radioIntroduce')" [ngClass]="{'current-select':currentSelect === 'radioIntroduce'}">
+                <span>详情</span>
+            </div>
+            <div class="right-order" (click)="switchShowMes('radioOrder')" [ngClass]="{'current-select':currentSelect === 'radioOrder'}">
+                <span>节目</span>
+                <i></i>
+            </div>
+        </div>
+        <div class="radio-main-content">
+            <div class="radio-introduce" *ngIf="currentSelect === 'radioIntroduce'">
+                <div class="r-title">
+                    <i class="l"></i>
+                    <span style="color: #d43c33;font-weight: 500">主播</span>
+                </div>
+                <div class="dj-avatar" *ngIf="radioDetailMes.dj">
+                    <div class="dj-left">
+                        <div class="avatar">
+                            <img [src]="radioDetailMes.dj.avatarUrl" />
+                        </div>
+                        <div class="nickname">
+                            <h6>{{radioDetailMes.dj.nickname}}</h6>
+                            <p>{{radioDetailMes.dj.description}}</p>
+                        </div>
+                    </div>
+                    <div class="dj-right">
+                        <button class="gift">赞赏</button>
+                        <p>{{radioDetailMes.dj.rewardCount + '次赞赏'}}</p>
+                    </div>
+                </div>
+                <div class="dj-introduce-content">
+                    <i class="l"></i>
+                    <span style="color: #d43c33;font-weight: 500">电台内容简介</span>
+                    <div class="introduce-text">
+                        {{radioDetailMes.desc}}
+                    </div>
+                </div>
+                <div class="radio-comment">
+                    <div style="padding: 10px 0">
+                        <i class="l"></i>
+                        <span style="color: #d43c33;font-weight: 500">精彩评论</span>
+                    </div>
+                    <ng-container *ngIf="radioDetailMes.commentDatas">
+                        <div class="comment-content" *ngFor="let comment of radioDetailMes.commentDatas">
+                            <div class="comment-people">
+                                <div class="avatar">
+                                    <img [src]="comment.userProfile.avatarUrl" />
+                                </div>
+                                <span style="color: #d43c33;">{{comment.userProfile.nickname}}</span>
+                            </div>
+                            <div class="comment-text">{{comment.content}}
+                                <p style="color: #969696;font-size: 12px"><i style="display: inline-block;height: 1px;width: 15px;background: #969696;vertical-align: middle"></i>{{comment.programName}}</p>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="radio-order-list"></div>
+        </div>
+    </div>
 </ion-content>
