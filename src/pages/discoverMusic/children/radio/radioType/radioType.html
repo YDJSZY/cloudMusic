@@ -1,0 +1,40 @@
+<ion-header style="border-bottom: none" class="custom-header">
+    <ion-navbar #radioTypeNav>
+        <ion-title center>
+            电台分类
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="list" style="font-size: 35px;color: #ffffff;"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="radio-type-content">
+    <div class="hot-type radio-type">
+        <div class="header">热门分类</div>
+        <div class="type-detail">
+            <ng-container *ngFor="let type of radioAllType;let $index = index" >
+                <ng-container *ngIf="$index < 6">
+                    <div class="type-des">
+                        <img [src]="type.picUWPUrl" />
+                        <span>{{type.name}}</span>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+    </div>
+    <div class="more-type radio-type">
+        <div class="header">更多分类</div>
+        <div class="type-detail">
+            <ng-container *ngFor="let type of radioAllType;let $index = index" >
+                <ng-container *ngIf="$index >= 6">
+                    <div class="type-des">
+                        <img [src]="type.picUWPUrl" />
+                        <span>{{type.name}}</span>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+    </div>
+</ion-content>

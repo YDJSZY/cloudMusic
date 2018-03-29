@@ -39,7 +39,7 @@ export class DiscoverMusicPage implements OnInit{
     }
 
     currentViewFade(data) {
-        this.navCtrl.push(data.component,data.params);/*component组件会覆盖当前跟组件*/
+        this.navCtrl.push(data.component,{data:data.params});/*component组件会覆盖当前跟组件*/
     }
 
     ionViewCanEnter() {

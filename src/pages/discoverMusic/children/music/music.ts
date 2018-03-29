@@ -4,6 +4,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController,LoadingController } from 'ionic-angular';
 import { HttpService } from '../../../../providers/httpService';
+import { RootViewCoverService } from '../../provider/eventEmitService';
 import {IonicPage} from "ionic-angular";
 
 @IonicPage({
@@ -26,7 +27,8 @@ export class MusicPage implements OnInit{
     constructor(
         public nav: NavController,
         public loadingCtrl: LoadingController,
-        private http: HttpService
+        private http: HttpService,
+        private rootViewCoverService: RootViewCoverService
     ) {
         this.http = http;
     }
@@ -71,36 +73,35 @@ export class MusicPage implements OnInit{
     }
 
     checkMoreMusicList() {
-        this.nav.push('more-music-list')
-        //this.rootViewCoverService.rootViewCover.emit({component:'more-music-list'});
+        this.rootViewCoverService.rootViewCover.emit({component:'more-music-list'});
     }/*查看更多推荐歌单*/
 
     checkMoreSinglePlay() {
-        this.nav.push('more-single-play-page');
+        this.rootViewCoverService.rootViewCover.emit({component:'more-single-play-page'})
     }/*查看更多独家放送*/
 
     musicListDetail(list) {/*查看某歌单具体歌曲列表*/
         let obj = {id:list.id,avatarUrl:list.creator.avatarUrl,nickname:list.creator.nickname,name:list.name,picUrl:list.picUrl,playcount:list.playcount}
-        this.nav.push('recd-music-list-page',{data:obj});
+        this.rootViewCoverService.rootViewCover.emit({component:'recd-music-list-page',params:obj});
     }
 
     dayRecommendMusic() {/*查看每日推荐歌曲*/
-        this.nav.push('day-rcmd-music-page');
+        this.rootViewCoverService.rootViewCover.emit({component:'day-rcmd-music-page'})
     }
 
     personalFm() {/*查看私人FM*/
-        this.nav.push('personal-fm-page');
+        this.rootViewCoverService.rootViewCover.emit({component:'personal-fm-page'})
     }
 
     rankingList() {
-        this.nav.push('ranking-list-page');
+        this.rootViewCoverService.rootViewCover.emit({component:'ranking-list-page'})
     }
 
     searchMusic() {
-        this.nav.push('search-page');
+        this.rootViewCoverService.rootViewCover.emit({component:'search-page'})
     }
 
     playMv(mvId) {/*播放mv*/
-        this.nav.push('play-mv-page',{mvId:mvId});
+        this.rootViewCoverService.globalRootViewCover.emit({component:'play-mv-page',params:{mvId:mvId}})
     }
 }

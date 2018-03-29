@@ -45,6 +45,6 @@ export class TabsPage implements AfterViewInit {
     }
     
     setRoot(data) {
-        this.appCtrl.getRootNav().setRoot(data.component, data.params)
+        this.appCtrl.getRootNav().setRoot(data.component, {data:data.params})
     }
 }

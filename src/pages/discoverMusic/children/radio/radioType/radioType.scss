@@ -1,0 +1,29 @@
+.radio-type-content{
+    .radio-type{
+        .header{
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #dddddd;
+        }
+        .type-detail{
+            .type-des{
+                display: inline-block;
+                padding: 15px 0;
+                border-bottom: 1px solid #dddddd;
+                border-right: 1px solid #dddddd;
+                text-align: center;
+                width:50%;
+                margin-right: -4px;
+                img{
+                    vertical-align: middle;
+                    display: inline-block;
+                    width:25px;
+                    height: 25px;
+                }
+            }
+            .type-des:nth-child(2n){
+                border-right: none;
+            }
+        }
+    }
+}

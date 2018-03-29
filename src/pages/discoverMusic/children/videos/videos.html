@@ -1,24 +1,3 @@
-<ion-header class="custom-header">
-    <ion-toolbar>
-        <ion-buttons left>
-            <button ion-button icon-only>
-                <ion-icon name="ios-microphone-outline" style="font-size: 30px;color: #ffffff;"></ion-icon>
-            </button>
-        </ion-buttons>
-        <div center
-             style="background: #ffffff;text-align: center;flex:1;border-radius: 15px;color:#969696;margin: 0 15px;padding: 6px 0"
-             (click)="searchMusic()">
-            <ion-icon name="search" style="font-size: 18px"></ion-icon>
-            <span>搜索音乐, 视频, 电台</span>
-        </div>
-        <ion-buttons right>
-            <button ion-button icon-only color="royal">
-                <ion-icon style="font-size: 35px;color: #ffffff;" name="list"></ion-icon>
-            </button>
-        </ion-buttons>
-    </ion-toolbar>
-</ion-header>
-
 <ion-content class="video-content">
     <ion-refresher (ionRefresh)="doRefresh($event)">
         <ion-refresher-content pullingText="放手刷新" refreshingText="请求中"></ion-refresher-content>

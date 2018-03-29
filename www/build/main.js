@@ -1,4 +1,4 @@
-webpackJsonp([20],{
+webpackJsonp([23],{
 
 /***/ 112:
 /***/ (function(module, exports) {
@@ -23,87 +23,95 @@ webpackEmptyAsyncContext.id = 112;
 var map = {
 	"../components/playMV/playMV.module": [
 		285,
-		22
+		0
 	],
 	"../components/playMusic/playMusic.module": [
 		284,
-		42
+		22
 	],
 	"../pages/account/account.module": [
 		286,
-		41
+		21
 	],
 	"../pages/discoverMusic/children/music/allMusicType/allMusicType.module": [
 		287,
-		40
+		20
 	],
 	"../pages/discoverMusic/children/music/everyDayRecommendMusic/everyDayRecommendMusic.module": [
 		288,
-		39
+		19
 	],
 	"../pages/discoverMusic/children/music/highqualityMusicList/highqualityMusic.module": [
-		290,
-		23
+		289,
+		1
 	],
 	"../pages/discoverMusic/children/music/moreMusicList/moreMusicList.module": [
-		289,
-		38
+		290,
+		18
 	],
 	"../pages/discoverMusic/children/music/moreSinglePlay/moreSinglePlay.module": [
 		291,
-		37
+		17
 	],
 	"../pages/discoverMusic/children/music/music.module": [
 		292,
-		36
+		16
 	],
 	"../pages/discoverMusic/children/music/personalFm/personalFm.module": [
 		293,
-		35
+		15
 	],
 	"../pages/discoverMusic/children/music/rankingList/rankingList.module": [
 		294,
-		34
+		14
 	],
 	"../pages/discoverMusic/children/music/rankingListDetail/rankingListDetail.module": [
 		295,
-		33
+		13
 	],
 	"../pages/discoverMusic/children/music/recommendMusicListDetail/recommendMusicListDetail.module": [
 		296,
-		32
+		12
 	],
 	"../pages/discoverMusic/children/radio/radio.module": [
-		368,
-		31
+		297,
+		11
+	],
+	"../pages/discoverMusic/children/radio/radioDetail/radioDetail.module": [
+		298,
+		10
+	],
+	"../pages/discoverMusic/children/radio/radioType/radioType.module": [
+		299,
+		9
 	],
 	"../pages/discoverMusic/children/videos/videos.module": [
-		297,
-		30
+		300,
+		8
 	],
 	"../pages/discoverMusic/discoverMusic.module": [
-		298,
-		29
+		301,
+		7
 	],
 	"../pages/discoverMusic/search/search.module": [
-		300,
-		28
+		302,
+		6
 	],
 	"../pages/login/login.module": [
-		299,
-		27
+		303,
+		5
 	],
 	"../pages/login/telLogin/telLogin.module": [
-		301,
-		26
+		304,
+		4
 	],
 	"../pages/myMusic/myMusic.module": [
-		302,
-		25
+		305,
+		3
 	],
 	"../pages/tabs/tabs.module": [
-		303,
-		24
+		306,
+		2
 	]
 };
 function webpackAsyncContext(req) {
@@ -146,7 +154,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var apifiex = "http://192.168.10.189:8101/";
+var apifiex = "http://192.168.10.193:8101/";
 var HttpService = (function () {
     function HttpService(http) {
         this.http = http;
@@ -313,22 +321,24 @@ var AppModule = (function () {
                         { loadChildren: '../pages/account/account.module#MusicModule', name: 'account-page', segment: 'account-page', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/music/allMusicType/allMusicType.module#AllMusicTypeModule', name: 'all-music-type-page', segment: 'allMusicType', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/music/everyDayRecommendMusic/everyDayRecommendMusic.module#EveryDayRecommendMusicModule', name: 'day-rcmd-music-page', segment: 'everyDayRecommendMusic', priority: 'low', defaultHistory: ['discover-music-page'] },
-                        { loadChildren: '../pages/discoverMusic/children/music/moreMusicList/moreMusicList.module#MoreMusicListPageModule', name: 'more-music-list', segment: 'more-music-list', priority: 'low', defaultHistory: ['discover-music-page', 'd-music-page'] },
                         { loadChildren: '../pages/discoverMusic/children/music/highqualityMusicList/highqualityMusic.module#HighqualityMusicModule', name: 'highquality-music-page', segment: 'highqualityMusic', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/music/moreMusicList/moreMusicList.module#MoreMusicListPageModule', name: 'more-music-list', segment: 'more-music-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/music/moreSinglePlay/moreSinglePlay.module#MoreSinglePlayModule', name: 'more-single-play-page', segment: 'moreSinglePlay', priority: 'low', defaultHistory: ['discover-music-page'] },
                         { loadChildren: '../pages/discoverMusic/children/music/music.module#MusicModule', name: 'd-music-page', segment: 'd-music-page', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/discoverMusic/children/music/personalFm/personalFm.module#PersonalFmModule', name: 'personal-fm-page', segment: 'personalFm', priority: 'low', defaultHistory: ['discover-music-page'] },
+                        { loadChildren: '../pages/discoverMusic/children/music/personalFm/personalFm.module#PersonalFmModule', name: 'personal-fm-page', segment: 'personalFm', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/music/rankingList/rankingList.module#RankingListModule', name: 'ranking-list-page', segment: 'ranking-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/music/rankingListDetail/rankingListDetail.module#RankingListDetailModule', name: 'ranking-list-detail-page', segment: 'ranking-list-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/music/recommendMusicListDetail/recommendMusicListDetail.module#RecommendMusicListDetailModule', name: 'recd-music-list-page', segment: 'recommendMusicListDetail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/radio/radio.module#RadioModule', name: 'radio-page', segment: 'radio-page', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/radio/radioDetail/radioDetail.module#RadioDetailModule', name: 'radio-detail-page', segment: 'radio-detail-page', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/radio/radioType/radioType.module#RadioTypeModule', name: 'radio-type-page', segment: 'radio-type-page', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/videos/videos.module#VideosModule', name: 'videos-page', segment: 'videos-page', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/discoverMusic.module#DiscoverMusicModule', name: 'discover-music-page', segment: 'discover-music-page', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginModule', name: 'login-page', segment: 'login-page', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/search/search.module#SearchModule', name: 'search-page', segment: 'search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginModule', name: 'login-page', segment: 'login-page', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/telLogin/telLogin.module#TelLoginModule', name: 'tel-login', segment: 'telLogin', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/myMusic/myMusic.module#MyMusicModule', name: 'my-music', segment: 'myMusic', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabs/tabs.module#TabsModule', name: 'tabs-page', segment: 'tab', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/discoverMusic/children/radio/radio.module#RadioModule', name: 'radio-page', segment: 'radio-page', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/tabs/tabs.module#TabsModule', name: 'tabs-page', segment: 'tab', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -646,17 +656,7 @@ var MyApp = (function () {
             // Here you can do any higher level native things you might need.
             _this.statusBar.styleDefault();
             _this.splashScreen.hide();
-            //this.login();
         });
-    };
-    MyApp.prototype.login = function () {
-        var isLogin = this.authService.getLoginState();
-        if (isLogin) {
-            this.rootPage = 'tabs-page';
-        }
-        else {
-            this.rootPage = 'login-page';
-        }
     };
     MyApp.prototype.openPage = function (page) {
         // Reset the content nav to have just this page

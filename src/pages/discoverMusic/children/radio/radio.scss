@@ -1,0 +1,34 @@
+.radio-content{
+    .radio-type-ranking{
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #dddddd;
+        ion-icon{
+            vertical-align: middle;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .radio-type{
+            border-right: 1px solid #dddddd;
+            text-align: center;
+            flex:1;
+        }
+        .radio-ranking{
+            text-align: center;
+            flex:1;
+        }
+    }
+    .radioName{
+        position: absolute;
+        bottom: 10px;
+        opacity: 0.8;
+        left: 10px;
+        color: #ffffff;
+        font-weight:500;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+}

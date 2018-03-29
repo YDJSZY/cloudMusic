@@ -31,18 +31,7 @@ export class MyApp {
             // Here you can do any higher level native things you might need.
             this.statusBar.styleDefault();
             this.splashScreen.hide();
-            //this.login();
         });
-    }
-    
-    login() {
-        let isLogin = this.authService.getLoginState();
-        if(isLogin){
-            this.rootPage = 'tabs-page';
-        }else{
-            this.rootPage = 'login-page';
-        }
-       
     }
 
     openPage(page) {

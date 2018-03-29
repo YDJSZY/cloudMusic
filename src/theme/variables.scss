@@ -126,6 +126,7 @@ $grayBlack:#402424;
     display: inline-block;
     vertical-align: text-top;
     position: relative;
+    overflow: hidden;
 }
 
 .square-list-item-des{
@@ -138,4 +139,8 @@ $grayBlack:#402424;
 
 .noMarginRight{
     margin-right: 0;
+}
+
+.hide{
+    display: none;
 }

@@ -4,6 +4,7 @@
 import { Component,OnInit } from '@angular/core';
 import { NavController,LoadingController,IonicPage } from 'ionic-angular';
 import { HttpService } from '../../../../providers/httpService';
+import { RootViewCoverService } from '../../provider/eventEmitService';
 
 @IonicPage({
     name : 'videos-page',
@@ -21,16 +22,16 @@ export class VideosPage implements OnInit{
     constructor(
         public http:HttpService,
         public navCtrl:NavController,
-        public loadingCtrl:LoadingController
+        public loadingCtrl:LoadingController,
+        private rootViewCoverService:RootViewCoverService
     ) {
     }
 
     ngOnInit() {
-        console.log(this.videosData)
         this.getVideos();
     }
 
-    getVideos(refresher) {
+    getVideos(refresher = null) {
         let loading = this.loadingCtrl.create({
             content: '正在加载数据...',
             duration: 10000, //单位是毫秒
@@ -45,7 +46,7 @@ export class VideosPage implements OnInit{
     }
 
     playMv(mvId) {
-        this.navCtrl.push('play-mv-page',{mvId:mvId})
+        this.rootViewCoverService.globalRootViewCover.emit({component:'play-mv-page',params:{mvId:mvId}})
     }
 
     doRefresh(refresher) {
