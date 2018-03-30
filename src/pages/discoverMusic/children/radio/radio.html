@@ -1,108 +1,110 @@
 <ion-content padding class="radio-content">
-    <div class="banner" style="width:100%;">
-        <ion-slides #slideBanners loop="true" pager="true" autoplay="2000" *ngIf="banners.length">
-            <ion-slide style="width:100%;height:100%" *ngFor="let banner of banners">
-                <img [src]="banner.pic" style="width: 100%;height: 100%"/>
-            </ion-slide>
-        </ion-slides>
-    </div>
-    <div class="radio-type-ranking">
-        <div class="radio-type" (click)="showRadioType()">
-            <ion-icon name="ios-apps-outline"></ion-icon>
-            <span>电台分类</span>
+    <div>
+        <div class="banner" style="width:100%;">
+            <ion-slides #slideBanners loop="true" pager="true" autoplay="2000" *ngIf="banners.length">
+                <ion-slide style="width:100%;height:100%" *ngFor="let banner of banners">
+                    <img [src]="banner.pic" style="width: 100%;height: 100%"/>
+                </ion-slide>
+            </ion-slides>
         </div>
-        <div class="radio-ranking">
-            <ion-icon name="ios-grid-outline"></ion-icon>
-            <span>电台排行</span>
+        <div class="radio-type-ranking">
+            <div class="radio-type" (click)="showRadioType()">
+                <ion-icon name="ios-apps-outline"></ion-icon>
+                <span>电台分类</span>
+            </div>
+            <div class="radio-ranking">
+                <ion-icon name="ios-grid-outline"></ion-icon>
+                <span>电台排行</span>
+            </div>
         </div>
-    </div>
-    <div class="intro-music-list">
-        <header class="block-header">
-            <span class="l-red"></span>
-            <span class="block-title">电台个性推荐</span>
-        </header>
-        <section class="music-list-content">
-            <div *ngFor="let list of recommendRadio;let $index=index" class="square-list-item" (click)="radioDetail(list.id)" [ngClass]="{'noMarginRight': ($index+1) % 3 == 0,'hide':$index >=6 }" style="width: calc((100% - 8px) / 3);">
-                <div style="position: relative">
-                    <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
-                    <div class="radioName">
-                        <span>{{list.name}}</span>
+        <div class="intro-music-list">
+            <header class="block-header">
+                <span class="l-red"></span>
+                <span class="block-title">电台个性推荐</span>
+            </header>
+            <section class="music-list-content">
+                <div *ngFor="let list of recommendRadio;let $index=index" class="square-list-item" (click)="radioDetail(list.id)" [ngClass]="{'noMarginRight': ($index+1) % 3 == 0,'hide':$index >=6 }" style="width: calc((100% - 8px) / 3);">
+                    <div style="position: relative">
+                        <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
+                        <div class="radioName">
+                            <span>{{list.name}}</span>
+                        </div>
                     </div>
+                    <span class="square-list-item-des">{{list.rcmdtext}}</span>
                 </div>
-                <span class="square-list-item-des">{{list.rcmdtext}}</span>
-            </div>
-        </section>
-    </div>
-    <div class="intro-music-list">
-        <header class="block-header">
-            <span class="l-red"></span>
-            <span class="block-title">有声书</span>
-            <span class="left-direct"></span>
-        </header>
-        <section class="music-list-content">
-            <div *ngFor="let list of audioBook;let $index=index" class="square-list-item" (click)="radioDetail(list.id)" [ngClass]="{'noMarginRight': ($index+1) % 3 == 0,'hide':$index >=3 }" style="width: calc((100% - 8px) / 3);">
-                <div style="position: relative">
-                    <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
-                    <div class="radioName">
-                        <span>{{list.name}}</span>
+            </section>
+        </div>
+        <div class="intro-music-list">
+            <header class="block-header">
+                <span class="l-red"></span>
+                <span class="block-title">有声书</span>
+                <span class="left-direct"></span>
+            </header>
+            <section class="music-list-content">
+                <div *ngFor="let list of audioBook;let $index=index" class="square-list-item" (click)="radioDetail(list.id)" [ngClass]="{'noMarginRight': ($index+1) % 3 == 0,'hide':$index >=3 }" style="width: calc((100% - 8px) / 3);">
+                    <div style="position: relative">
+                        <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
+                        <div class="radioName">
+                            <span>{{list.name}}</span>
+                        </div>
                     </div>
+                    <span class="square-list-item-des">{{list.rcmdtext}}</span>
                 </div>
-                <span class="square-list-item-des">{{list.rcmdtext}}</span>
-            </div>
-        </section>
-    </div>
-    <div class="intro-music-list">
-        <header class="block-header">
-            <span class="l-red"></span>
-            <span class="block-title">知识技能</span>
-            <span class="left-direct"></span>
-        </header>
-        <section class="music-list-content">
-            <div *ngFor="let list of knowledgeAbility;let $index=index" class="square-list-item" (click)="radioDetail(list.id)" [ngClass]="{'noMarginRight': ($index+1) % 3 == 0,'hide':$index >=3 }" style="width: calc((100% - 8px) / 3);">
-                <div style="position: relative">
-                    <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
-                    <div class="radioName">
-                        <span>{{list.name}}</span>
+            </section>
+        </div>
+        <div class="intro-music-list">
+            <header class="block-header">
+                <span class="l-red"></span>
+                <span class="block-title">知识技能</span>
+                <span class="left-direct"></span>
+            </header>
+            <section class="music-list-content">
+                <div *ngFor="let list of knowledgeAbility;let $index=index" class="square-list-item" (click)="radioDetail(list.id)" [ngClass]="{'noMarginRight': ($index+1) % 3 == 0,'hide':$index >=3 }" style="width: calc((100% - 8px) / 3);">
+                    <div style="position: relative">
+                        <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
+                        <div class="radioName">
+                            <span>{{list.name}}</span>
+                        </div>
                     </div>
+                    <span class="square-list-item-des">{{list.rcmdtext}}</span>
                 </div>
-                <span class="square-list-item-des">{{list.rcmdtext}}</span>
-            </div>
-        </section>
-    </div>
-    <div class="intro-music-list">
-        <header class="block-header">
-            <span class="l-red"></span>
-            <span class="block-title">商业财经</span>
-            <span class="left-direct"></span>
-        </header>
-        <section class="music-list-content">
-            <div *ngFor="let list of businessRadio;let $index=index" class="square-list-item" (click)="radioDetail(list.id)" [ngClass]="{'noMarginRight': ($index+1) % 3 == 0,'hide':$index >=3 }" style="width: calc((100% - 8px) / 3);">
-                <div style="position: relative">
-                    <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
-                    <div class="radioName">
-                        <span>{{list.name}}</span>
+            </section>
+        </div>
+        <div class="intro-music-list">
+            <header class="block-header">
+                <span class="l-red"></span>
+                <span class="block-title">商业财经</span>
+                <span class="left-direct"></span>
+            </header>
+            <section class="music-list-content">
+                <div *ngFor="let list of businessRadio;let $index=index" class="square-list-item" (click)="radioDetail(list.id)" [ngClass]="{'noMarginRight': ($index+1) % 3 == 0,'hide':$index >=3 }" style="width: calc((100% - 8px) / 3);">
+                    <div style="position: relative">
+                        <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
+                        <div class="radioName">
+                            <span>{{list.name}}</span>
+                        </div>
                     </div>
+                    <span class="square-list-item-des">{{list.rcmdtext}}</span>
                 </div>
-                <span class="square-list-item-des">{{list.rcmdtext}}</span>
-            </div>
-        </section>
-    </div>
-    <div class="intro-music-list">
-        <header class="block-header">
-            <span class="l-red"></span>
-            <span class="block-title">人文历史</span>
-            <span class="left-direct"></span>
-        </header>
-        <section class="music-list-content">
-            <div *ngFor="let list of historyRadio;let $index=index" class="square-list-item" (click)="radioDetail(list.id)" [ngClass]="{'noMarginRight': ($index+1) % 3 == 0,'hide':$index >=3 }" style="width: calc((100% - 8px) / 3);">
-                <div style="position: relative">
-                    <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
-                    <div class="radioName">
-                        <span>{{list.name}}</span>
+            </section>
+        </div>
+        <div class="intro-music-list">
+            <header class="block-header">
+                <span class="l-red"></span>
+                <span class="block-title">人文历史</span>
+                <span class="left-direct"></span>
+            </header>
+            <section class="music-list-content">
+                <div *ngFor="let list of historyRadio;let $index=index" class="square-list-item" (click)="radioDetail(list.id)" [ngClass]="{'noMarginRight': ($index+1) % 3 == 0,'hide':$index >=3 }" style="width: calc((100% - 8px) / 3);">
+                    <div style="position: relative">
+                        <img [src]="list.picUrl" style="width: 100%;height: 100%;"/>
+                        <div class="radioName">
+                            <span>{{list.name}}</span>
+                        </div>
                     </div>
+                    <span class="square-list-item-des">{{list.rcmdtext}}</span>
                 </div>
-                <span class="square-list-item-des">{{list.rcmdtext}}</span>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
 </ion-content>

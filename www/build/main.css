@@ -3862,6 +3862,21 @@ ion-icon::before {
   overflow: hidden;
 }
 
+.exceed-one-wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.exceed-two-wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+
 .noMarginRight {
   margin-right: 0;
 }
@@ -3892,6 +3907,51 @@ ion-icon::before {
   width: 100%;
   height: 100%;
   border-radius: 100%;
+}
+
+.noBorderTop {
+  border-top: none !important;
+}
+
+.marquee {
+  overflow: hidden;
+}
+
+.marquee .marquee-text {
+  display: inline-block;
+  -webkit-animation: marque-animation 7s linear infinite;
+  animation: marque-animation 7s linear infinite;
+}
+
+@-webkit-keyframes marque-animation {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marque-animation {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.bg-shadow-modal {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.3;
+  position: absolute;
+  z-index: 1;
 }
 
 ion-action-sheet {
@@ -28113,6 +28173,7 @@ ion-navbar.toolbar {
 
 .audio-container {
   width: 100%;
+  padding-bottom: 15px;
 }
 
 .audio-container .progress-line {
@@ -28229,6 +28290,19 @@ ion-navbar.toolbar {
   left: 0;
   position: absolute;
   z-index: 2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .play-music-container .play-needle {
@@ -28320,7 +28394,6 @@ ion-navbar.toolbar {
 
 .play-music-container .play-handle {
   width: 100%;
-  padding: 15px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28363,11 +28436,18 @@ ion-navbar.toolbar {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2) {
   .play-music-main {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
   }
+}
+
+@media screen and (max-width: 320px) {
+  /*.play-music-main{
+        width:240px;
+        height:240px;
+    }*/
   .play-music-container .play-needle {
     width: 104px;
     height: 167px;
@@ -28994,15 +29074,6 @@ ion-header.custom-view::after {
   z-index: -1;
 }
 
-.personal-fm-content .bg-modal {
-  background: #000000;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  position: absolute;
-  z-index: -1;
-}
-
 .personal-fm-content .album-content {
   width: 100%;
   padding: 20px;
@@ -29307,6 +29378,22 @@ ion-header.custom-view::after {
   overflow: hidden;
 }
 
+.play-radio-content .play-music-container .relevant-information {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #cccccc;
+  padding: 15px;
+}
+
 .radio-detail-content .detail-bg {
   position: relative;
   height: 45%;
@@ -29335,7 +29422,7 @@ ion-header.custom-view::after {
   text-align: center;
   font-weight: 500;
   padding: 7px 5px;
-  color: #333;
+  color: #797171;
 }
 
 .radio-detail-content .detail-main .show-select .current-select {
@@ -29441,14 +29528,38 @@ ion-header.custom-view::after {
 }
 
 .radio-detail-content .detail-main .radio-main-content .radio-introduce .radio-comment {
-  padding-left: 8px;
   padding-bottom: 15px;
+}
+
+.radio-detail-content .detail-main .radio-main-content .radio-introduce .radio-comment .comment-content {
+  padding-left: 8px;
 }
 
 .radio-detail-content .detail-main .radio-main-content .radio-introduce .radio-comment .comment-content .comment-text {
   padding-left: 56px;
   padding-right: 10px;
   color: #333333;
+}
+
+.radio-detail-content .detail-main .radio-main-content .radio-program-list .header {
+  background: #eeeeee;
+  padding: 8px;
+}
+
+.radio-detail-content .detail-main .radio-main-content .radio-program-list .header .total-count {
+  color: #da746e;
+}
+
+.radio-detail-content .detail-main .radio-main-content .radio-program-list .dashboard-mes {
+  margin-top: 5px;
+}
+
+.radio-detail-content .detail-main .radio-main-content .radio-program-list .dashboard-mes span {
+  margin-right: 8px;
+}
+
+.radio-detail-content .detail-main .radio-main-content .radio-program-list .dashboard-mes span ion-icon {
+  vertical-align: middle;
 }
 
 .radio-type-content .radio-type .header {

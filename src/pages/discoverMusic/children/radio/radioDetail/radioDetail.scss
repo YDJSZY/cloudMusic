@@ -16,10 +16,10 @@
                 text-align: center;
                 font-weight: 500;
                 padding: 7px 5px;
-                color: #333;
+                color: $unSelect;
             }
             .current-select{
-                color: #d43c33;
+                color: $textColor;
                 border-bottom: 2px solid #d43c33;
             }
         }
@@ -98,9 +98,9 @@
                     }
                 }
                 .radio-comment{
-                    padding-left: 8px;
                     padding-bottom: 15px;
                     .comment-content{
+                        padding-left: 8px;
                         .comment-text{
                             padding-left: 56px;
                             padding-right: 10px;
@@ -112,7 +112,24 @@
                     }
                 }
             }
-
+            .radio-program-list{
+                .header{
+                    background: #eeeeee;
+                    padding: 8px;
+                    .total-count{
+                        color:$grayRed
+                    }
+                }
+                .dashboard-mes{
+                    margin-top: 5px;
+                    span{
+                        margin-right: 8px;
+                        ion-icon{
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -1,0 +1,40 @@
+<ion-header style="border-bottom: none" class="play-music-header">
+    <ion-navbar #playMusicNav>
+        <ion-title>
+            <div class="marquee">
+                <span [ngClass]="{'marquee-text':radioData.name.length > 5}">{{radioData.name}}</span>
+            </div>
+        </ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only (click)="openModal()">
+                <i class="iconfont icon-share" style="font-size: 25px;color: #ffffff;"></i>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content no-bounce class="play-music-content play-radio-content" style="position: relative">
+    <div class="bg-shadow-modal"></div>
+    <img [src]="radioData.blurCoverUrl" class="bg-img"/>
+    <div class="play-music-container">
+        <div class="play-music-main">
+            <div class="outside" [ngClass]="{'rotate-cd':playingMusic,'paused-music':!playingMusic}">
+                <img src="/assets/imgs/play_disc.png" />
+                <div class="inside">
+                    <img src="{{radioData.coverUrl}}" />
+                </div>
+            </div>
+        </div>
+        <div class="relevant-information">
+            <div class="comment" (click)="showComment()">
+                <ion-icon name="logo-twitch"></ion-icon>
+            </div>
+        </div>
+        <div class="play-handle">
+            <audio-player (changePlayStatus)="changePlayStatus($event)"
+                          [mediaUrl]="musicUrl"
+                          (switchMusic)="switchMusic($event)"
+                          style="width: 100%">
+            </audio-player>
+        </div>
+    </div>
+</ion-content>

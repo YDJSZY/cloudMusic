@@ -7,6 +7,9 @@
     left: 0;
     position: absolute;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .play-music-container .play-needle{
     width:124px;
@@ -87,7 +90,6 @@
 }
 .play-music-container .play-handle{
     width:100%;
-    padding: 15px;
     display: flex;
     justify-content: center;
 
@@ -101,6 +103,7 @@
         transform: rotate(360deg);
     }
 }
+
 @media screen and (width: 375px){
     .play-music-main{
         width:300px;
@@ -110,11 +113,23 @@
         padding: 47px;
     }
 }
-@media screen and (max-width: 320px){
+
+@media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2){
     .play-music-main{
+        width:200px;
+        height:200px;
+    }
+}
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
+
+
+
+}
+@media screen and (max-width: 320px){
+    /*.play-music-main{
         width:240px;
         height:240px;
-    }
+    }*/
     .play-music-container .play-needle{
         width:104px;
         height:167px;

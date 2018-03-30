@@ -72,7 +72,33 @@
                     </ng-container>
                 </div>
             </div>
-            <div class="radio-order-list"></div>
+            <div class="radio-program-list" *ngIf="currentSelect === 'radioOrder'">
+                <ng-container *ngIf="radioProgram">
+                    <div class="header">
+                        <span class="total-count">{{'共' + radioProgram.count + '期'}}</span>
+                    </div>
+                    <ion-list>
+                        <ion-item *ngFor="let program of radioProgram.programs;let $index = index" [ngClass]="{'noBorderTop':$index === 0}">
+                            <span item-start style="color: #969696;">{{program.serialNum}}</span>
+                            <ion-label (click)="playRadio($index)">
+                                <span class="exceed-two-wrap" style="color: #402424">{{program.name}}</span>
+                                <p class="dashboard-mes">
+                                    <span>{{program.createTime | date:'MM-dd'}}</span>
+                                    <span>
+                                        <ion-icon name="ios-play-outline"></ion-icon>
+                                        {{program.listenerCount}}
+                                    </span>
+                                    <span>
+                                        <ion-icon name="ios-time-outline"></ion-icon>
+                                        {{getDuration(program.duration)}}
+                                    </span>
+                                </p>
+                            </ion-label>
+                            <i class="iconfont icon-more" style="font-size: 20px;color: #cccccc;" item-end></i>
+                        </ion-item>
+                    </ion-list>
+                </ng-container>
+            </div>
         </div>
     </div>
 </ion-content>

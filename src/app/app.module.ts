@@ -18,7 +18,7 @@ import { SharedModule } from '../sharedModule/sharedModule';
         SharedModule,
         HttpClientModule,
         BrowserModule,
-        IonicModule.forRoot(MyApp)
+        IonicModule.forRoot(MyApp,{backButtonText: '',})
     ],
     bootstrap: [IonicApp],
     entryComponents: [

@@ -46,6 +46,8 @@ $gray:#7d7878;
 $grayBlack:#402424;
 
 $textColor:#d43c33;
+$grayRed:#da746e;
+$unSelect:#797171;
 
 // App iOS Variables
 // --------------------------------------------------
@@ -138,6 +140,21 @@ $textColor:#d43c33;
     overflow: hidden;
 }
 
+.exceed-one-wrap{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.exceed-two-wrap{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
 .noMarginRight{
     margin-right: 0;
 }
@@ -167,4 +184,34 @@ $textColor:#d43c33;
         height: 100%;
         border-radius: 100%;
     }
+}
+
+.noBorderTop{
+    border-top:none !important;
+}
+
+.marquee{
+    overflow: hidden;
+    .marquee-text{
+        display: inline-block;
+        animation: marque-animation 7s linear infinite;
+    }
+}
+
+@keyframes marque-animation {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.bg-shadow-modal{
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.3;
+    position: absolute;
+    z-index: 1;
 }
