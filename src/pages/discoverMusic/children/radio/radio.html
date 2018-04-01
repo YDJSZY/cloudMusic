@@ -1,5 +1,5 @@
 <ion-content padding class="radio-content">
-    <div>
+    <ng-container *ngIf="getDataSuccess">
         <div class="banner" style="width:100%;">
             <ion-slides #slideBanners loop="true" pager="true" autoplay="2000" *ngIf="banners.length">
                 <ion-slide style="width:100%;height:100%" *ngFor="let banner of banners">
@@ -106,5 +106,5 @@
                 </div>
             </section>
         </div>
-    </div>
+    </ng-container>
 </ion-content>

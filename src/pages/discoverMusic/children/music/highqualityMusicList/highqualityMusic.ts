@@ -10,7 +10,8 @@ import {IonicPage} from "ionic-angular";
 })
 @Component({
     templateUrl: 'highqualityMusic.html',
-    providers:[HttpService]
+    providers:[HttpService],
+    styles:['./style.scss']
 })
 export class HighqualityMusicPage implements OnInit{
     @ViewChild('highqualityMusicNav') highqualityMusicNav

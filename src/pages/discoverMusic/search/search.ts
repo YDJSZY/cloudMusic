@@ -10,7 +10,7 @@ import {IonicPage,NavController} from "ionic-angular";
 @Component({
     selector:'search',
     templateUrl: 'search.html',
-    styleUrls:['/style.scss']
+    styles:['./style.scss']
 })
 export class SearchPage implements AfterViewInit{
     @ViewChild('searchInput') searchInput:ElementRef

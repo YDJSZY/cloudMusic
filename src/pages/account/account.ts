@@ -13,7 +13,7 @@ import {IonicPage,AlertController} from "ionic-angular";
     selector:'account',
     templateUrl: 'account.html',
     providers:[HttpService],
-    styleUrls: ['/account.scss']
+    styles: ['./account.scss']
 })
 export class AccountPage implements OnInit {
     @ViewChild('accountNav') accountNav

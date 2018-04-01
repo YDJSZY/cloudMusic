@@ -4,10 +4,12 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import { HttpService } from '../providers/httpService';
 import { AuthService } from '../providers/authService';
-import 'lib-flexible/flexible.js';
+//import appStyle from './app.scss';
+//import 'lib-flexible/flexible.js';
+
 @Component({
     templateUrl: 'app.html',
-    styleUrls:['/app.scss'],
+    styles:['./app.scss'],
     providers:[HttpService]
 })
 export class MyApp {

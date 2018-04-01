@@ -15,7 +15,7 @@ import {IonicPage} from "ionic-angular";
 @Component({
     selector:'discover-music',
     templateUrl: 'discoverMusic.html',
-    styleUrls:['/discoverMusic.scss'],
+    styles:['./discoverMusic.scss'],
     providers:[HttpService]
 })
 export class DiscoverMusicPage implements OnInit{

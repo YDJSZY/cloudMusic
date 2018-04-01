@@ -9,7 +9,7 @@ import { HttpService } from '../../../../../providers/httpService';
 @Component({
     selector:'radio-type',
     templateUrl: './radioType.html',
-    styleUrls:['/radioType.scss']
+    styles:['./radioType.scss']
 })
 export class RadioTypePage implements OnInit{
     @ViewChild('radioTypeNav') radioTypeNav

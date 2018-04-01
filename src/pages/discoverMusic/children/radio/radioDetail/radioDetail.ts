@@ -10,7 +10,7 @@ import { RootViewCoverService } from '../../../provider/eventEmitService';
 @Component({
     selector:'radio-detail',
     templateUrl: './radioDetail.html',
-    styleUrls:['/radioDetail.scss']
+    styles:['./radioDetail.scss']
 })
 export class RadioDetailPage implements OnInit{
     @ViewChild('radioDetailNav') radioDetailNav

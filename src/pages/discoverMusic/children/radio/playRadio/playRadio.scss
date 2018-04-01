@@ -6,6 +6,12 @@
             align-items: center;
             color: #cccccc;
             padding: 15px;
+            .comment{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
 }

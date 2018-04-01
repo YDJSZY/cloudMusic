@@ -15,7 +15,7 @@ import {IonicPage,LoadingController} from "ionic-angular";
     selector:'personal-fm-page',
     templateUrl: 'personalFm.html',
     providers:[HttpService],
-    styleUrls: ['/style.scss']
+    styles: ['./style.scss']
 })
 export class PersonalFmPage implements OnInit{
     @ViewChild('personalFmNav') personalFmNav

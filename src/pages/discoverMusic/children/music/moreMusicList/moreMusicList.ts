@@ -11,7 +11,8 @@ import { IonicPage } from 'ionic-angular';
 })
 @Component({
     templateUrl: 'moreMusicList.html',
-    providers:[HttpService]
+    providers:[HttpService],
+    styles:['./moreMusicList.scss']
 })
 export class MoreMusicListPage implements OnInit{
     @ViewChild('musicListNav') musicListNav

@@ -5,7 +5,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController,LoadingController } from 'ionic-angular';
 import { HttpService } from '../../../../providers/httpService';
 import { RootViewCoverService } from '../../provider/eventEmitService';
-import {IonicPage} from "ionic-angular";
+import {IonicPage,Content} from "ionic-angular";
 
 @IonicPage({
     name : 'd-music-page',
@@ -15,15 +15,17 @@ import {IonicPage} from "ionic-angular";
     selector:'music',
     templateUrl: 'music.html',
     providers:[HttpService],
-    styleUrls: ['/music.scss']
+    styles: ['./music.scss']
 })
 export class MusicPage implements OnInit{
     @ViewChild('slideBanners') slideBanners
+    @ViewChild(Content) content: Content;
     getDataSuccess:boolean = false
     banners: Array<any>=[]
     introMusicList: Array<any>=[]
     singlePlayList: Array<any>=[]
     recommendMV: Array<any>=[]
+    loading:any
     constructor(
         public nav: NavController,
         public loadingCtrl: LoadingController,
@@ -34,11 +36,20 @@ export class MusicPage implements OnInit{
     }
 
     ngOnInit() {
-        let loading = this.loadingCtrl.create({
+        this.showLoading();
+        this.getData();
+        this.content.resize();
+    }
+
+    showLoading() {
+        this.loading = this.loadingCtrl.create({
             content: '正在加载数据...',
             duration: 10000, //单位是毫秒
         });
-        loading.present()
+        this.loading.present()
+    }
+
+    getData() {
         let bannersPromise = this.http.getData({url:"banner"});
 
         let recommendPromise = this.http.getData({url:"recommend/resource"});
@@ -48,14 +59,13 @@ export class MusicPage implements OnInit{
         let recommendMVPromise = this.http.getData({url:"personalized/mv"});
 
         Promise.all([bannersPromise,recommendPromise,singlePlayPromise,recommendMVPromise]).then(function (res):any{
-            loading.dismiss();
+            this.loading.dismiss();
             this.banners = res[0].banners;
             this.introMusicList = res[1].recommend;
             this.singlePlayList = res[2].result;
             this.recommendMV = res[3].result;
             this.getDataSuccess = true;
         }.bind(this))
-
     }
 
     ionViewWillEnter() {

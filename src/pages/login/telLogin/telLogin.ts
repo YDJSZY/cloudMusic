@@ -12,7 +12,7 @@ import { AuthService} from '../../../providers/authService';
 })
 @Component({
     templateUrl: 'telLogin.html',
-    styleUrls:['/style.scss'],
+    styles:['./style.scss'],
     providers:[HttpService]
 })
 export class TelLoginPage implements OnInit{

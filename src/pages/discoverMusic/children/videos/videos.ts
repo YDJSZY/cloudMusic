@@ -13,7 +13,7 @@ import { RootViewCoverService } from '../../provider/eventEmitService';
 @Component({
     selector:'videos',
     templateUrl: './videos.html',
-    styleUrls:['/videos.scss']
+    styles:['./videos.scss']
 })
 export class VideosPage implements OnInit{
     // this tells the tabs component which Pages

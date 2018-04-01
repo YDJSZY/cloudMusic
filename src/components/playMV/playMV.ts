@@ -14,7 +14,7 @@ import {IonicPage} from "ionic-angular";
     selector:'play-mv',
     templateUrl: 'playMV.html',
     providers:[HttpService],
-    styleUrls: ['/playMV.scss']
+    styles: ['./playMV.scss']
 })
 export class PlayMVPage implements OnInit{
     @ViewChild('musicMV') musicMV:ElementRef

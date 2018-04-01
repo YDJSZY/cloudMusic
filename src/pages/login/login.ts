@@ -14,7 +14,7 @@ import {IonicPage} from "ionic-angular";
 @Component({
     selector:'login-page',
     templateUrl: 'login.html',
-    styleUrls:['/login.scss'],
+    styles:['./login.scss'],
     providers:[HttpService]
 })
 export class LoginPage implements OnInit{

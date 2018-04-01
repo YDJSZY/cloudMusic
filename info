@@ -16,4 +16,9 @@
 
 --emulator	将Cordova构建到仿真器
 
+ionic cordova platform add browser 添加浏览器平台
+
 --buildConfig	使用指定的Cordova构建配置
+
+ionic cordova build android --prod --release --aot --minifyjs --minifycss --optimizejs
+ionic cordova build ios --prod --release --aot --minifyjs --minifycss --optimizejs

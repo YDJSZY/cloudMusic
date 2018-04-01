@@ -9,7 +9,7 @@ import {IonicPage} from "ionic-angular";
 })
 @Component({
     templateUrl: 'singlePlay.html',
-    styleUrls:['/style.scss'],
+    styles:['./style.scss'],
     providers:[HttpService]
 })
 export class MoreSinglePlayPage implements OnInit{

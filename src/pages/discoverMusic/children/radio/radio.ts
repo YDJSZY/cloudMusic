@@ -3,7 +3,7 @@
  */
 import { Component, OnInit ,ViewChild} from '@angular/core';
 import { HttpService } from '../../../../providers/httpService';
-import {IonicPage,NavController} from "ionic-angular";
+import {IonicPage,NavController,LoadingController} from "ionic-angular";
 import { RootViewCoverService } from '../../provider/eventEmitService';
 
 @IonicPage({
@@ -13,7 +13,7 @@ import { RootViewCoverService } from '../../provider/eventEmitService';
 @Component({
     selector:'radio',
     templateUrl: './radio.html',
-    styleUrls:['/radio.scss']
+    styles:['./radio.scss']
 })
 export class RadioPage implements OnInit{
     @ViewChild('slideBanners') slideBanners
@@ -23,47 +23,59 @@ export class RadioPage implements OnInit{
     knowledgeAbility:Array<any> = []
     businessRadio:Array<any> = []
     historyRadio:Array<any> = []
+    loading:any
+    getDataSuccess:boolean = false
     constructor(
         public http:HttpService,
         public navCtrl:NavController,
-        public rootViewCoverService:RootViewCoverService
+        public rootViewCoverService:RootViewCoverService,
+        public loadingCtrl:LoadingController
     ) {
     }
 
     ngOnInit() {
+        this.showLoading()
         this.getData();
+    }
+
+    showLoading() {
+        this.loading = this.loadingCtrl.create({
+            content: '正在加载数据...',
+            duration: 10000, //单位是毫秒
+        });
+        this.loading.present()
     }
 
     getData() {
         let bannersPromise = this.http.getData({url:"banner"});
-        bannersPromise.then(function(res):any{
-            this.banners = res.banners;
-        }.bind(this));
 
         let recommendRadioPromise = this.http.getData({url:"dj/recommend"});
-        recommendRadioPromise.then(function (res):any{
-            this.recommendRadio = res.djRadios
-        }.bind(this));
 
         let audioBookPromise = this.http.getData({url:"dj/recommend/type?type=10001"});
-        audioBookPromise.then(function (res):any{
-            this.audioBook = res.djRadios
-        }.bind(this));
 
         let knowledgePromise = this.http.getData({url:"dj/recommend/type?type=453050"});
-        knowledgePromise.then(function (res):any{
-            this.knowledgeAbility = res.djRadios
-        }.bind(this));
 
         let businessPromise = this.http.getData({url:"dj/recommend/type?type=453051"});
-        businessPromise.then(function (res):any{
-            this.businessRadio = res.djRadios
-        }.bind(this));
 
         let historyRadioPromise = this.http.getData({url:"dj/recommend/type?type=11"});
-        historyRadioPromise.then(function (res):any{
-            this.historyRadio = res.djRadios
-        }.bind(this));
+
+        Promise.all([
+            bannersPromise,
+            recommendRadioPromise,
+            audioBookPromise,
+            knowledgePromise,
+            businessPromise,
+            historyRadioPromise
+        ]).then(function (res):any{
+            this.loading.dismiss();
+            this.banners = res[0].banners;
+            this.recommendRadio = res[1].djRadios;
+            this.audioBook = res[2].djRadios;
+            this.knowledgeAbility = res[3].djRadios;
+            this.businessRadio = res[4].djRadios;
+            this.historyRadio = res[5].djRadios;
+            this.getDataSuccess = true;
+        }.bind(this))
     }
 
     ionViewDidEnter() {

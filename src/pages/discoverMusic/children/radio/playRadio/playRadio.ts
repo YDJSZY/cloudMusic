@@ -10,7 +10,7 @@ import { RootViewCoverService } from '../../../provider/eventEmitService';
 @Component({
     selector:'play-radio',
     templateUrl: './playRadio.html',
-    styleUrls:['/playRadio.scss']
+    styles:['./playRadio.scss']
 })
 export class PlayRadioPage implements OnInit{
     radioPrograms:Array<any> = []
@@ -60,6 +60,12 @@ export class PlayRadioPage implements OnInit{
     }
 
     showComment() {
-
+        let id = this.radioData.id;
+        let coverUrl = this.radioData.coverUrl;
+        let name = this.radioData.name;
+        let category = this.radioData.radio.category;
+        let radioName = this.radioData.radio.name;
+        let obj = {coverUrl,name,category,radioName,id};
+        this.rootViewCoverService.globalRootViewCover.emit({component:'radio-comment-page',params:{data:obj}});
     }
 }

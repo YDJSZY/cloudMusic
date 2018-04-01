@@ -1,0 +1,29 @@
+<ion-header style="border-bottom: none" class="custom-header">
+    <ion-navbar>
+        <ion-title center>
+            评论
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="list" style="font-size: 35px;color: #ffffff;"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="radio-comment-content">
+    <div class="audio-mes">
+        <div class="audio-bg-cover">
+            <img [src]="radioMes.coverUrl" />
+        </div>
+        <div class="name-and-author">
+            <p class="audio-name">
+                {{radioMes.name}}
+            </p>
+            <p class="audio-author">
+                <span class="dj-category">{{radioMes.category}}</span>
+                <span>{{radioMes.radioName}}</span>
+            </p>
+        </div>
+    </div>
+    <comment [commentData]="commentData"></comment>
+</ion-content>
