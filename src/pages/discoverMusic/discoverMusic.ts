@@ -1,12 +1,12 @@
 /**
  * Created by luwenwei on 18/3/10.
  */
-import { Component,OnInit,ViewChild } from '@angular/core';
+import { Component,OnInit,ViewChild,AfterViewInit,ElementRef } from '@angular/core';
 import { HttpService } from '../../providers/httpService';
 import { NavController } from 'ionic-angular';
 import { RootViewCoverService } from './provider/eventEmitService';
 import { AuthService } from '../../providers/authService';
-import {IonicPage} from "ionic-angular";
+import {IonicPage,Content,Tabs} from "ionic-angular";
 
 @IonicPage({
     name : 'discover-music-page',
@@ -21,9 +21,12 @@ import {IonicPage} from "ionic-angular";
 export class DiscoverMusicPage implements OnInit{
     // this tells the tabs component which Pages
     // should be each tab's root Page
+    @ViewChild(Content) content: Content;
+    @ViewChild('discoverMusicTabs') tabRef: Tabs;
     musicTab:string = 'd-music-page'
     videosTab:string = 'videos-page'
     radioTab:string = 'radio-page'
+    contentEle:ElementRef
     constructor(
         private http:HttpService,
         private rootViewCoverService:RootViewCoverService,
@@ -49,5 +52,9 @@ export class DiscoverMusicPage implements OnInit{
         }
         this.rootViewCoverService.setRoot.emit({component:'login-page'})
         return false;
+    }
+
+    enterSearchPage() {
+        this.navCtrl.push('search-page')
     }
 }

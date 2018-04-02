@@ -1,14 +1,27 @@
 <ion-header class="custom-header">
-    <ion-toolbar>
+    <ion-navbar #musicListNav>
         <div class="search-input-container">
-            <input #searchInput class="search-input" placeholder="搜索音乐, 视频, 电台" />
+            <input #searchInput class="search-input" [(ngModel)]="keyword" placeholder="搜索音乐, 视频, 电台" />
+            <span class="clear-search" *ngIf="keyword" (click)="clearKeyword()">&times;</span>
             <ion-icon class="search-icon" name="search" style="font-size: 18px"></ion-icon>
         </div>
         <ion-buttons end>
-            <button ion-button icon-only (click)="cancelSearch()" style="color: #ffffff;">
-                取消
+            <button ion-button icon-only (click)="search()" style="color: #ffffff;">
+                搜索
             </button>
         </ion-buttons>
-    </ion-toolbar>
+    </ion-navbar>
 </ion-header>
-<ion-content></ion-content>
+<ion-content class="search-content">
+    <ng-container *ngIf="searchResults.length">
+        <ion-list>
+            <ion-item *ngFor="let music of searchResults;let $index = index">
+                <ion-label (click)="playMusic($index)">
+                    <span style="color: #402424">{{music.name}}</span>
+                    <p>{{music.artists[0].name + ' - ' + music.album.name}}</p>
+                </ion-label>
+                <i class="iconfont icon-more" style="font-size: 20px;color: #cccccc;" item-end></i>
+            </ion-item>
+        </ion-list>
+    </ng-container>
+</ion-content>

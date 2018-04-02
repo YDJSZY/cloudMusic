@@ -1,7 +1,7 @@
 /**
  * Created by luwenwei on 18/3/10.
  */
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild,AfterViewInit } from '@angular/core';
 import { NavController,LoadingController } from 'ionic-angular';
 import { HttpService } from '../../../../providers/httpService';
 import { RootViewCoverService } from '../../provider/eventEmitService';
@@ -17,7 +17,7 @@ import {IonicPage,Content} from "ionic-angular";
     providers:[HttpService],
     styles: ['./music.scss']
 })
-export class MusicPage implements OnInit{
+export class MusicPage implements OnInit,AfterViewInit{
     @ViewChild('slideBanners') slideBanners
     @ViewChild(Content) content: Content;
     getDataSuccess:boolean = false
@@ -38,7 +38,14 @@ export class MusicPage implements OnInit{
     ngOnInit() {
         this.showLoading();
         this.getData();
-        this.content.resize();
+    }
+
+    ngAfterViewInit() {
+        /*this.contentEle = this.content.getNativeElement()
+        let h = this.tabRef.getNativeElement().querySelector('.tabbar').offsetHeight;*/
+        setTimeout(()=>{
+            this.content.getNativeElement().getElementsByClassName('scroll-content')[0].style.marginTop = 42 + 'px !important'
+        },2000)
     }
 
     showLoading() {

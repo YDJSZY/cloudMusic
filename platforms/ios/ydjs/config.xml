@@ -57,6 +57,8 @@
     <allow-navigation href="http://192.168.8.213:8100" />
     <allow-navigation href="http://192.168.10.189:8100" />
     <allow-navigation href="http://192.168.10.195:8100" />
+    <allow-navigation href="http://192.168.10.79:8102" />
+    <allow-navigation href="http://192.168.10.79:8100" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />
