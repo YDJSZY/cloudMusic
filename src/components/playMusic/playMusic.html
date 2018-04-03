@@ -29,6 +29,12 @@
                 </div>
             </div>
         </div>
+        <div class="relevant-information">
+            <div class="comment" (click)="showComment()">
+                <ion-icon name="logo-twitch"></ion-icon>
+                <span class="comment-count">{{musicData.commentCount}}</span>
+            </div>
+        </div>
         <div class="play-handle">
             <audio-player (changePlayStatus)="changePlayStatus($event)"
                           [mediaUrl]="musicUrl"

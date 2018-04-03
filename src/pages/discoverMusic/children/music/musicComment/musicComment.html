@@ -1,0 +1,38 @@
+<ion-header style="border-bottom: none" class="custom-header">
+    <ion-navbar>
+        <ion-title center>
+            评论
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="ios-stats-outline" style="font-size: 35px;color: #ffffff;"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="music-comment-content">
+    <div class="music-mes">
+        <div class="music-bg-cover">
+            <img [src]="radioMes.coverUrl" />
+        </div>
+        <div class="name-and-author">
+            <p class="music-name">
+                {{radioMes.name}}
+            </p>
+            <p class="music-author">
+                <span>{{radioMes.authorName}}</span>
+            </p>
+        </div>
+    </div>
+    <comment [commentData]="commentData"></comment>
+</ion-content>
+<ion-footer keyboard-attach class="comment-footer">
+    <ion-toolbar>
+        <input placeholder="发表评论" class="comment-input" />
+        <ion-buttons end>
+            <button ion-button icon-only style="color: #d43c33;">
+                发送
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

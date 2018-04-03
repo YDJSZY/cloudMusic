@@ -36,6 +36,7 @@ export class MusicPage implements OnInit,AfterViewInit{
     }
 
     ngOnInit() {
+        console.log(this.banners)
         this.showLoading();
         this.getData();
     }
@@ -43,9 +44,9 @@ export class MusicPage implements OnInit,AfterViewInit{
     ngAfterViewInit() {
         /*this.contentEle = this.content.getNativeElement()
         let h = this.tabRef.getNativeElement().querySelector('.tabbar').offsetHeight;*/
-        setTimeout(()=>{
+        /*setTimeout(()=>{
             this.content.getNativeElement().getElementsByClassName('scroll-content')[0].style.marginTop = 42 + 'px !important'
-        },2000)
+        },2000)*/
     }
 
     showLoading() {

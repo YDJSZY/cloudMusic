@@ -15,7 +15,7 @@ export class MyMusicPage {
     constructor(public navCtrl:NavController) {
     }
 
-    goto() {
-        this.navCtrl.push('more-music-list')
+    showPlayRecords() {
+        this.navCtrl.push('play-record')
     }
 }

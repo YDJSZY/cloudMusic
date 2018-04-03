@@ -19,6 +19,8 @@ export class SearchPage implements AfterViewInit{
     keyword:string
     searchResults:Array<any> = []
     loading:any
+    offset:number = 0
+    infiniteScroll:any
     constructor(
         private navCtrl:NavController,
         private http: HttpService,
@@ -39,15 +41,20 @@ export class SearchPage implements AfterViewInit{
         this.navCtrl.pop();
     }
 
+    getData() {
+        let searchPromise = this.http.getData({url:'search',params:{keywords:this.keyword,offset:this.offset}});
+        searchPromise.then(function (res):any{
+            this.loading.dismiss();
+            this.searchResults = [...this.searchResults,...res.result.songs];
+            if(this.infiniteScroll) this.infiniteScroll.complete();
+        }.bind(this))
+    }
+
     search() {
         if(!this.keyword) return;
         this.showLoading();
+        this.getData();
         this.searchResults = [];
-        let searchPromise = this.http.getData({url:'search',params:{keywords:this.keyword}});
-        searchPromise.then(function (res):any{
-            this.loading.dismiss();
-            this.searchResults = res.result.songs;
-        }.bind(this))
     }
 
     showLoading() {
@@ -64,5 +71,11 @@ export class SearchPage implements AfterViewInit{
 
     clearKeyword() {
         this.keyword = '';
+    }
+
+    loadMore(infiniteScroll) {
+        if(!this.infiniteScroll) this.infiniteScroll = infiniteScroll;
+        ++this.offset;
+        this.getData();
     }
 }

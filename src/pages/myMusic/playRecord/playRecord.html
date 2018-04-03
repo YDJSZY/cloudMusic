@@ -1,0 +1,25 @@
+<ion-header class="custom-header">
+    <ion-navbar>
+        <ion-title>
+            最近播放
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="royal">
+                <ion-icon style="font-size: 30px;color: #ffffff;" name="ios-stats-outline"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="play-record-content">
+    <ng-container *ngIf="records.length">
+        <ion-list>
+            <ion-item *ngFor="let music of records;let $index = index">
+                <ion-label (click)="playMusic($index)">
+                    <span style="color: #402424">{{music.song.name}}</span>
+                    <p>{{music.song.ar[0].name + ' - ' + music.song.al.name}}</p>
+                </ion-label>
+                <i class="iconfont icon-more" style="font-size: 20px;color: #cccccc;" item-end></i>
+            </ion-item>
+        </ion-list>
+    </ng-container>
+</ion-content>

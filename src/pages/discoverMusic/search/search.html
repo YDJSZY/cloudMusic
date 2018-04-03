@@ -24,4 +24,9 @@
             </ion-item>
         </ion-list>
     </ng-container>
+    <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+        <ion-infinite-scroll-content loadingText="加载中..." threshold="10px">
+
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>

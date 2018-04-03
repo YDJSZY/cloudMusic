@@ -1,8 +1,43 @@
-<ion-header>
-
+<ion-header class="custom-header">
+    <ion-navbar #myMusicNav>
+        <ion-title>
+            我的音乐
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="ios-stats-outline" style="font-size: 30px;color: #ffffff;"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <h3>radioss</h3>
-    <button (click)="goto()">gooo</button>
+    <ion-list>
+        <ion-item-group>
+            <button ion-item>
+                <ion-icon name="ios-musical-notes-outline" item-start style="color: #969696;"></ion-icon>
+                <ion-label>
+                    <span style="color: #402424">本地音乐</span>
+                </ion-label>
+            </button>
+            <button ion-item (click)="showPlayRecords()">
+                <ion-icon name="ios-aperture-outline" item-start style="color: #969696;"></ion-icon>
+                <ion-label>
+                    <span style="color: #402424">最近播放</span>
+                </ion-label>
+            </button>
+            <button ion-item>
+                <ion-icon name="ios-radio-outline" item-start style="color: #969696;"></ion-icon>
+                <ion-label>
+                    <span style="color: #402424">我的电台</span>
+                </ion-label>
+            </button>
+            <button ion-item>
+                <ion-icon name="ios-basket-outline" item-start style="color: #969696;"></ion-icon>
+                <ion-label>
+                    <span style="color: #402424">我的收藏</span>
+                </ion-label>
+            </button>
+        </ion-item-group>
+    </ion-list>
 </ion-content>

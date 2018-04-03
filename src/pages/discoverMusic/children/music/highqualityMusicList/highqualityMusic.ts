@@ -79,7 +79,6 @@ export class HighqualityMusicPage implements OnInit{
     }
 
     musicListDetail(list) {/*查看某歌单具体歌曲列表*/
-        console.log(list)
         let obj = {id:list.id,name:list.name,picUrl:list.picUrl || list.coverImgUrl,playcount:list.playCount}
         this.rootViewCoverService.rootViewCover.emit({component:'recd-music-list-page',params:{data:obj}});
     }
