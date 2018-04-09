@@ -73,10 +73,12 @@ export class PlayMusicPage implements OnInit,AfterViewInit{
     }
 
     showComment() {
+        let album = this.musicData.album || this.musicData.al;
+        let artists = this.musicData.artists || this.musicData.ar;
         let id = this.musicData.id;
-        let coverUrl = this.musicData.album.picUrl || './assets/imgs/sing.png';
+        let coverUrl = album.picUrl || './assets/imgs/sing.png';
         let name = this.musicData.name;
-        let authorName = this.musicData.artists[0].name;
+        let authorName = artists[0].name;
         let obj = {coverUrl,name,authorName,id};
         this.rootViewCoverService.globalRootViewCover.emit({component:'music-comment-page',params:{data:obj}});
     }

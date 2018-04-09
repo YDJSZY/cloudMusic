@@ -25,7 +25,7 @@
             <div class="outside" [ngClass]="{'rotate-cd':playingMusic,'paused-music':!playingMusic}">
                 <img src="/assets/imgs/play_disc.png" />
                 <div class="inside">
-                    <img [src]="musicData.al ? musicData.al.picUrl : musicData.album.picUrl" />
+                    <img [src]="(musicData.al ? musicData.al.picUrl : musicData.album.picUrl) || '/assets/imgs/sing.png'" />
                 </div>
             </div>
         </div>

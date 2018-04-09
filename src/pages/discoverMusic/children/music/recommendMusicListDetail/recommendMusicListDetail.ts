@@ -30,6 +30,7 @@ export class RcmdMusicListDetailPage implements OnInit{
 
     ngOnInit() {
         this.musicListInfo = this.navParams.get("data");
+        console.log(this.musicListInfo)
         this.rcmdMusicListNav.setBackButtonText("");
         this.getMusicList();
     }

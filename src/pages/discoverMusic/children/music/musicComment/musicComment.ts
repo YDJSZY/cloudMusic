@@ -27,6 +27,10 @@ export class MusicCommentPage implements OnInit {
 
     ngOnInit() {
         this.radioMes = this.navParams.get('data')
+        //
+    }
+
+    ionViewWillEnter() {
         this.getComments(this.radioMes.id)
     }
 
