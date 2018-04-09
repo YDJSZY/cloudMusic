@@ -16,7 +16,7 @@
 </ion-header>
 <ion-content no-bounce class="play-music-content" style="position: relative">
     <div class="bg-shadow-modal"></div>
-    <img src="{{musicData.al ? musicData.al.picUrl : musicData.album.picUrl}}" class="bg-img"/>
+    <img [src]="musicData.al ? musicData.al.picUrl : musicData.album.picUrl" class="bg-img"/>
     <div class="play-music-container">
         <div class="play-needle" [ngClass]="{'begin-play':playingMusic}">
             <img src="/assets/imgs/play_needle.png" />
@@ -25,8 +25,14 @@
             <div class="outside" [ngClass]="{'rotate-cd':playingMusic,'paused-music':!playingMusic}">
                 <img src="/assets/imgs/play_disc.png" />
                 <div class="inside">
-                    <img src="{{musicData.al ? musicData.al.picUrl : musicData.album.picUrl}}" />
+                    <img [src]="musicData.al ? musicData.al.picUrl : musicData.album.picUrl" />
                 </div>
+            </div>
+        </div>
+        <div class="relevant-information">
+            <div class="comment" (click)="showComment()">
+                <ion-icon name="logo-twitch"></ion-icon>
+                <span class="comment-count">{{musicData.commentCount}}</span>
             </div>
         </div>
         <div class="play-handle">

@@ -5,7 +5,7 @@
         </ion-title>
         <ion-buttons end>
             <button ion-button icon-only (click)="openModal()">
-                <ion-icon name="list" style="font-size: 35px;color: #ffffff;"></ion-icon>
+                <ion-icon name="ios-stats-outline" style="font-size: 35px;color: #ffffff;"></ion-icon>
             </button>
         </ion-buttons>
     </ion-navbar>
@@ -27,3 +27,13 @@
     </div>
     <comment [commentData]="commentData"></comment>
 </ion-content>
+<ion-footer keyboard-attach class="comment-footer">
+    <ion-toolbar>
+        <input placeholder="发表评论" class="comment-input" />
+        <ion-buttons end>
+            <button ion-button icon-only style="color: #d43c33;">
+                发送
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

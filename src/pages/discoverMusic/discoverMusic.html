@@ -1,4 +1,4 @@
-<ion-header class="custom-header">
+<ion-header class="custom-header" #customHeader>
     <ion-toolbar>
         <ion-buttons left>
             <button ion-button icon-only>
@@ -7,19 +7,19 @@
         </ion-buttons>
         <div center
              style="background: #ffffff;text-align: center;flex:1;border-radius: 15px;color:#969696;margin: 0 15px;padding: 6px 0"
-             (click)="searchMusic()">
+             (click)="enterSearchPage()">
             <ion-icon name="search" style="font-size: 18px"></ion-icon>
             <span>搜索音乐, 视频, 电台</span>
         </div>
         <ion-buttons right>
             <button ion-button icon-only color="royal">
-                <ion-icon style="font-size: 35px;color: #ffffff;" name="list"></ion-icon>
+                <ion-icon style="font-size: 30px;color: #ffffff;" name="ios-stats-outline"></ion-icon>
             </button>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
-<ion-content>
-    <ion-tabs tabsPlacement="top" name="discoverMusicTabs">
+<ion-content >
+    <ion-tabs tabsPlacement="top" name="discoverMusicTabs" #discoverMusicTabs>
         <ion-tab [root]="musicTab" tabsHideOnSubPages="true" tabUrlPath="music-tab" tabTitle="音乐"></ion-tab>
         <ion-tab [root]="videosTab" tabsHideOnSubPages="true" tabUrlPath="videos-tab" tabTitle="视频"></ion-tab>
         <ion-tab [root]="radioTab" tabsHideOnSubPages="true" tabUrlPath="radio-tab" tabTitle="电台"></ion-tab>

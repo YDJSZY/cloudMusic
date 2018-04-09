@@ -3949,9 +3949,9 @@ ion-icon::before {
   width: 100%;
   height: 100%;
   background: #000000;
-  opacity: 0.3;
+  opacity: 0.4;
   position: absolute;
-  z-index: 1;
+  z-index: -1;
 }
 
 ion-action-sheet {
@@ -28173,7 +28173,7 @@ ion-navbar.toolbar {
 
 .audio-container {
   width: 100%;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 }
 
 .audio-container .progress-line {
@@ -28353,7 +28353,6 @@ ion-navbar.toolbar {
 }
 
 .comment-container .comment-body {
-  margin-bottom: 50px;
   padding: 0 8px;
 }
 
@@ -28401,6 +28400,39 @@ ion-navbar.toolbar {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.play-music-container .relevant-information {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.play-music-container .relevant-information .comment {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .play-music-container .play-needle {
@@ -28702,9 +28734,9 @@ ion-header.custom-view::after {
 }
 
 @media screen and (width: 320px) {
-  /*.custom-view .scroll-content {
-         margin-top: 105px !important;
-    }*/
+  .custom-view .scroll-content {
+    margin-top: 42px !important;
+  }
 }
 
 .custom-view .scroll-content {
@@ -29531,6 +29563,10 @@ ion-header.custom-view::after {
   margin-right: 7px;
 }
 
+.radio-comment-content .audio-mes .audio-bg-cover img {
+  height: 100%;
+}
+
 .radio-comment-content .audio-mes .name-and-author .audio-author {
   font-size: 12px;
   color: #7d7878;
@@ -29544,6 +29580,27 @@ ion-header.custom-view::after {
 .radio-comment-content .audio-mes .name-and-author p {
   margin: 0;
   padding: 3px 0;
+}
+
+.comment-footer .toolbar {
+  height: 50px !important;
+  padding: 10px !important;
+}
+
+.comment-footer .comment-input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dddddd;
+  background: #ffffff;
+  border-radius: 25px;
+  outline: none;
+  text-indent: 10px;
+  -webkit-appearance: none;
+  -webkit-transform: translateZ(0);
+}
+
+.comment-footer .toolbar-content {
+  height: 100% !important;
 }
 
 .radio-detail-content .detail-bg {
@@ -29791,7 +29848,7 @@ ion-header.custom-view::after {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  margin: 0 5px;
+  margin: 0 10px;
   position: relative;
 }
 
@@ -29812,6 +29869,22 @@ ion-header.custom-view::after {
   left: 8px;
   z-index: 1;
   color: #969696;
+}
+
+.search-input-container .clear-search {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  z-index: 1;
+  display: block;
+  border-radius: 100%;
+  color: #ffffff;
+  text-align: center;
+  background: #cac4c4;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  line-height: 13px;
 }
 
 .login-page {

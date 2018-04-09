@@ -3,6 +3,7 @@
  */
 import { Component,OnInit,ViewChild,AfterViewInit,ElementRef } from '@angular/core';
 import { HttpService } from '../../providers/httpService';
+import { RootViewCoverService } from '../../pages/discoverMusic/provider/eventEmitService';
 import { NavController,NavParams } from 'ionic-angular';
 import {IonicPage} from "ionic-angular";
 
@@ -25,7 +26,8 @@ export class PlayMusicPage implements OnInit,AfterViewInit{
     constructor(
         private http:HttpService,
         private navCtrl:NavController,
-        private navParams:NavParams
+        private navParams:NavParams,
+        private rootViewCoverService:RootViewCoverService
     ) {
 
     }
@@ -68,5 +70,14 @@ export class PlayMusicPage implements OnInit,AfterViewInit{
             this.musicData = this.musicList[previousIndex];
         }
         this.getMusicUrl();
+    }
+
+    showComment() {
+        let id = this.musicData.id;
+        let coverUrl = this.musicData.album.picUrl || './assets/imgs/sing.png';
+        let name = this.musicData.name;
+        let authorName = this.musicData.artists[0].name;
+        let obj = {coverUrl,name,authorName,id};
+        this.rootViewCoverService.globalRootViewCover.emit({component:'music-comment-page',params:{data:obj}});
     }
 }
