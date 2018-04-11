@@ -1,5 +1,13 @@
 # cloudMusic
 基于angular5，ionic3的网易云音乐客户端仿照版
+# 项目演示
+![](https://github.com/YDJSZY/cloudMusic/blob/master/src/images/cloudmusic.gif)  
+![](https://github.com/YDJSZY/cloudMusic/blob/master/src/images/cloudmusic1.gif)  
+![](https://github.com/YDJSZY/cloudMusic/blob/master/src/images/cloudmusic2.gif)  
+![](https://github.com/YDJSZY/cloudMusic/blob/master/src/images/cloudmusic3.gif)  
+![](https://github.com/YDJSZY/cloudMusic/blob/master/src/images/cloudmusic4.gif)  
+![](https://github.com/YDJSZY/cloudMusic/blob/master/src/images/cloudmusic5.gif)  
+![](https://github.com/YDJSZY/cloudMusic/blob/master/src/images/cloudmusic6.gif)
 # 运行步骤
 npm install -g ionic cordova   
 git clone https://github.com/YDJSZY/cloudMusic.git  
