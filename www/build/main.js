@@ -22,19 +22,19 @@ webpackEmptyAsyncContext.id = 112;
 
 var map = {
 	"../components/playMV/playMV.module": [
-		285,
+		286,
 		0
 	],
 	"../components/playMusic/playMusic.module": [
-		286,
+		285,
 		26
 	],
 	"../pages/account/account.module": [
-		288,
+		287,
 		25
 	],
 	"../pages/discoverMusic/children/music/allMusicType/allMusicType.module": [
-		287,
+		288,
 		24
 	],
 	"../pages/discoverMusic/children/music/everyDayRecommendMusic/everyDayRecommendMusic.module": [
@@ -46,47 +46,47 @@ var map = {
 		1
 	],
 	"../pages/discoverMusic/children/music/moreMusicList/moreMusicList.module": [
-		293,
+		291,
 		22
 	],
 	"../pages/discoverMusic/children/music/moreSinglePlay/moreSinglePlay.module": [
-		294,
+		299,
 		21
 	],
 	"../pages/discoverMusic/children/music/music.module": [
-		291,
+		292,
 		20
 	],
 	"../pages/discoverMusic/children/music/musicComment/musicComment.module": [
-		292,
+		293,
 		19
 	],
 	"../pages/discoverMusic/children/music/personalFm/personalFm.module": [
-		295,
+		294,
 		18
 	],
 	"../pages/discoverMusic/children/music/rankingList/rankingList.module": [
-		297,
+		295,
 		17
 	],
 	"../pages/discoverMusic/children/music/rankingListDetail/rankingListDetail.module": [
-		296,
+		297,
 		16
 	],
 	"../pages/discoverMusic/children/music/recommendMusicListDetail/recommendMusicListDetail.module": [
-		298,
+		296,
 		15
 	],
 	"../pages/discoverMusic/children/radio/playRadio/playRadio.module": [
-		299,
+		298,
 		14
 	],
 	"../pages/discoverMusic/children/radio/radio.module": [
-		301,
+		300,
 		13
 	],
 	"../pages/discoverMusic/children/radio/radioComment/radioComment.module": [
-		300,
+		301,
 		12
 	],
 	"../pages/discoverMusic/children/radio/radioDetail/radioDetail.module": [
@@ -98,11 +98,11 @@ var map = {
 		10
 	],
 	"../pages/discoverMusic/children/videos/videos.module": [
-		305,
+		304,
 		9
 	],
 	"../pages/discoverMusic/discoverMusic.module": [
-		304,
+		305,
 		8
 	],
 	"../pages/discoverMusic/search/search.module": [
@@ -114,15 +114,15 @@ var map = {
 		6
 	],
 	"../pages/login/telLogin/telLogin.module": [
-		310,
+		308,
 		5
 	],
 	"../pages/myMusic/myMusic.module": [
-		308,
+		309,
 		4
 	],
 	"../pages/myMusic/playRecord/playRecord.module": [
-		309,
+		310,
 		3
 	],
 	"../pages/tabs/tabs.module": [
@@ -170,7 +170,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var apifiex = "http://192.168.1.2:8101/";
+var apifiex = "http://192.168.10.179:8101/";
 var HttpService = (function () {
     function HttpService(http) {
         this.http = http;
@@ -184,10 +184,9 @@ var HttpService = (function () {
     HttpService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])() //标识一个类可以被注入器实例化
         ,
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], HttpService);
     return HttpService;
-    var _a;
 }());
 
 //# sourceMappingURL=httpService.js.map
@@ -335,32 +334,32 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_4__app__["a" /* MyApp */], { backButtonText: '', }, {
                     links: [
-                        { loadChildren: '../components/playMV/playMV.module#PlayMVModule', name: 'play-mv-page', segment: 'play-mv-page', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../components/playMusic/playMusic.module#PlayMusicModule', name: 'play-music-page', segment: 'playMusic', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/discoverMusic/children/music/allMusicType/allMusicType.module#AllMusicTypeModule', name: 'all-music-type-page', segment: 'allMusicType', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../components/playMV/playMV.module#PlayMVModule', name: 'play-mv-page', segment: 'play-mv-page', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/account/account.module#MusicModule', name: 'account-page', segment: 'account-page', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/music/allMusicType/allMusicType.module#AllMusicTypeModule', name: 'all-music-type-page', segment: 'allMusicType', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/music/everyDayRecommendMusic/everyDayRecommendMusic.module#EveryDayRecommendMusicModule', name: 'day-rcmd-music-page', segment: 'everyDayRecommendMusic', priority: 'low', defaultHistory: ['discover-music-page'] },
                         { loadChildren: '../pages/discoverMusic/children/music/highqualityMusicList/highqualityMusic.module#HighqualityMusicModule', name: 'highquality-music-page', segment: 'highqualityMusic', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/music/moreMusicList/moreMusicList.module#MoreMusicListPageModule', name: 'more-music-list', segment: 'more-music-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/music/music.module#MusicModule', name: 'd-music-page', segment: 'd-music-page', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/music/musicComment/musicComment.module#MusicCommentModule', name: 'music-comment-page', segment: 'music-comment-page', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/discoverMusic/children/music/moreMusicList/moreMusicList.module#MoreMusicListPageModule', name: 'more-music-list', segment: 'more-music-list', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/discoverMusic/children/music/moreSinglePlay/moreSinglePlay.module#MoreSinglePlayModule', name: 'more-single-play-page', segment: 'moreSinglePlay', priority: 'low', defaultHistory: ['discover-music-page'] },
                         { loadChildren: '../pages/discoverMusic/children/music/personalFm/personalFm.module#PersonalFmModule', name: 'personal-fm-page', segment: 'personalFm', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/discoverMusic/children/music/rankingListDetail/rankingListDetail.module#RankingListDetailModule', name: 'ranking-list-detail-page', segment: 'ranking-list-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/music/rankingList/rankingList.module#RankingListModule', name: 'ranking-list-page', segment: 'ranking-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/music/recommendMusicListDetail/recommendMusicListDetail.module#RecommendMusicListDetailModule', name: 'recd-music-list-page', segment: 'recommendMusicListDetail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/music/rankingListDetail/rankingListDetail.module#RankingListDetailModule', name: 'ranking-list-detail-page', segment: 'ranking-list-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/radio/playRadio/playRadio.module#PlayRadioModule', name: 'play-radio-page', segment: 'play-radio-page', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/discoverMusic/children/radio/radioComment/radioComment.module#RadioCommentModule', name: 'radio-comment-page', segment: 'radio-comment-page', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/music/moreSinglePlay/moreSinglePlay.module#MoreSinglePlayModule', name: 'more-single-play-page', segment: 'moreSinglePlay', priority: 'low', defaultHistory: ['discover-music-page'] },
                         { loadChildren: '../pages/discoverMusic/children/radio/radio.module#RadioModule', name: 'radio-page', segment: 'radio-page', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/children/radio/radioComment/radioComment.module#RadioCommentModule', name: 'radio-comment-page', segment: 'radio-comment-page', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/radio/radioDetail/radioDetail.module#RadioDetailModule', name: 'radio-detail-page', segment: 'radio-detail-page', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/radio/radioType/radioType.module#RadioTypeModule', name: 'radio-type-page', segment: 'radio-type-page', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/discoverMusic/discoverMusic.module#DiscoverMusicModule', name: 'discover-music-page', segment: 'discover-music-page', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/children/videos/videos.module#VideosModule', name: 'videos-page', segment: 'videos-page', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/discoverMusic/discoverMusic.module#DiscoverMusicModule', name: 'discover-music-page', segment: 'discover-music-page', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/discoverMusic/search/search.module#SearchModule', name: 'search-page', segment: 'search', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginModule', name: 'login-page', segment: 'login-page', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/telLogin/telLogin.module#TelLoginModule', name: 'tel-login', segment: 'telLogin', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/myMusic/myMusic.module#MyMusicModule', name: 'my-music', segment: 'myMusic', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/myMusic/playRecord/playRecord.module#PlayRecordModule', name: 'play-record', segment: 'playRecord', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/telLogin/telLogin.module#TelLoginModule', name: 'tel-login', segment: 'telLogin', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsModule', name: 'tabs-page', segment: 'tab', priority: 'low', defaultHistory: [] }
                     ]
                 })
@@ -586,7 +585,7 @@ var AudioPlayerComponent = (function () {
     ], AudioPlayerComponent.prototype, "changePlayStatus", void 0);
     AudioPlayerComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'audio-player',template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/components/audioPlayer/audioPlayer.html"*/'<div class="audio-container">\n    <audio #audioEle></audio>\n    <!--<div class="progress-line">\n        <div class="played-time">{{playedTime || \'00:00\'}}</div>\n        <div class="play-line-container">\n            <div class="play-line" #playLine id="playLine"></div>\n            <div class="played-length-line" #playedLine></div>\n            <div class="play-handle-dot" #playHandleDot >\n                <span class="dot"></span>\n            </div>\n        </div>\n        <div class="total-time">{{musicTotalTime}}</div>\n    </div>-->\n    <ion-range (ionBlur)="rangeBlurred($event)" (ionFocus)="rangeFocused($event)" [(ngModel)]="playProgress" color="danger" pin="true">\n        <ion-label range-left style="color: #ffffff;">{{playedTime || \'00:00\'}}</ion-label>\n        <ion-label range-right style="color: #ffffff;opacity: 0.6">{{musicTotalTime}}</ion-label>\n    </ion-range>\n    <div class="handle-panel">\n        <ion-icon name="ios-skip-backward-outline" (click)="changeMusic(\'previous\')"></ion-icon>\n        <div class="play-or-pause" (click)="switchPlayStatue()">\n            <ion-icon name="ios-play-outline" class="pause-icon" *ngIf="!isPlaying"></ion-icon>\n            <ion-icon name="ios-pause-outline" *ngIf="isPlaying"></ion-icon>\n        </div>\n        <ion-icon name="ios-skip-forward-outline" (click)="changeMusic(\'next\')"></ion-icon>\n    </div>\n</div>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/components/audioPlayer/audioPlayer.html"*/,
+            selector: 'audio-player',template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/components/audioPlayer/audioPlayer.html"*/'<div class="audio-container">\n    <audio #audioEle></audio>\n    <!--<div class="progress-line">\n        <div class="played-time">{{playedTime || \'00:00\'}}</div>\n        <div class="play-line-container">\n            <div class="play-line" #playLine id="playLine"></div>\n            <div class="played-length-line" #playedLine></div>\n            <div class="play-handle-dot" #playHandleDot >\n                <span class="dot"></span>\n            </div>\n        </div>\n        <div class="total-time">{{musicTotalTime}}</div>\n    </div>-->\n    <ion-range (ionBlur)="rangeBlurred($event)" (ionFocus)="rangeFocused($event)" [(ngModel)]="playProgress" color="danger" pin="true">\n        <ion-label range-left style="color: #ffffff;">{{playedTime || \'00:00\'}}</ion-label>\n        <ion-label range-right style="color: #ffffff;opacity: 0.6">{{musicTotalTime}}</ion-label>\n    </ion-range>\n    <div class="handle-panel">\n        <ion-icon name="ios-skip-backward-outline" (click)="changeMusic(\'previous\')"></ion-icon>\n        <div class="play-or-pause" (click)="switchPlayStatue()">\n            <ion-icon name="ios-play-outline" class="pause-icon" *ngIf="!isPlaying"></ion-icon>\n            <ion-icon name="ios-pause-outline" *ngIf="isPlaying"></ion-icon>\n        </div>\n        <ion-icon name="ios-skip-forward-outline" (click)="changeMusic(\'next\')"></ion-icon>\n    </div>\n</div>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/components/audioPlayer/audioPlayer.html"*/,
             styles: ['./audioPlayer.scss']
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"]])
@@ -633,7 +632,7 @@ var CommentComponent = (function () {
     ], CommentComponent.prototype, "commentData", void 0);
     CommentComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'comment',template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/components/comment/comment.html"*/'<div class="comment-container" *ngIf="commentData">\n    <div class="comment-body">\n        <div class="hot-comment" *ngIf="commentData.hotComments && commentData.hotComments.length">\n            <div class="header">\n                <span>精彩评论</span>\n            </div>\n            <div class="comment-block" *ngFor="let comment of commentData.hotComments">\n                <div class="avatar" style="width: 30px;height: 30px">\n                    <img [src]="comment.user.avatarUrl" />\n                </div>\n                <div class="comment-content">\n                    <div class="comment-des">\n                        <div class="c-left">\n                            <h6 class="comment-people">\n                                {{comment.user.nickname}}\n                            </h6>\n                            <p class="comment-date"></p>\n                        </div>\n                        <div class="c-right">\n                            <span class="like-count">{{comment.likedCount ? comment.likedCount : \'\'}}</span>\n                            <ion-icon name="ios-thumbs-up-outline"></ion-icon>\n                        </div>\n                    </div>\n                    <div class="comment-text">\n                        <span>{{comment.content}}</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class="new-comment" *ngIf="commentData.comments && commentData.comments.length">\n            <div class="header">\n                <span>最新评论({{commentData.comments.length}})</span>\n            </div>\n            <div class="comment-block" *ngFor="let comment of commentData.comments">\n                <div class="avatar" style="width: 30px;height: 30px">\n                    <img [src]="comment.user.avatarUrl" />\n                </div>\n                <div class="comment-content">\n                    <div class="comment-des">\n                        <div class="c-left">\n                            <h6 class="comment-people">\n                                {{comment.user.nickname}}\n                            </h6>\n                            <p class="comment-date"></p>\n                        </div>\n                        <div class="c-right">\n                            <span class="like-count">{{comment.likedCount ? comment.likedCount : \'\'}}</span>\n                            <ion-icon name="ios-thumbs-up-outline"></ion-icon>\n                        </div>\n                    </div>\n                    <div class="comment-text">\n                        <span>{{comment.content}}</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!--<div class="comment-footer">\n        <input placeholder="发表评论" />\n    </div>-->\n</div>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/components/comment/comment.html"*/,
+            selector: 'comment',template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/components/comment/comment.html"*/'<div class="comment-container" *ngIf="commentData">\n    <div class="comment-body">\n        <div class="hot-comment" *ngIf="commentData.hotComments && commentData.hotComments.length">\n            <div class="header">\n                <span>精彩评论</span>\n            </div>\n            <div class="comment-block" *ngFor="let comment of commentData.hotComments">\n                <div class="avatar" style="width: 30px;height: 30px">\n                    <img [src]="comment.user.avatarUrl" />\n                </div>\n                <div class="comment-content">\n                    <div class="comment-des">\n                        <div class="c-left">\n                            <h6 class="comment-people">\n                                {{comment.user.nickname}}\n                            </h6>\n                            <p class="comment-date"></p>\n                        </div>\n                        <div class="c-right">\n                            <span class="like-count">{{comment.likedCount ? comment.likedCount : \'\'}}</span>\n                            <ion-icon name="ios-thumbs-up-outline"></ion-icon>\n                        </div>\n                    </div>\n                    <div class="comment-text">\n                        <span>{{comment.content}}</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class="new-comment" *ngIf="commentData.comments && commentData.comments.length">\n            <div class="header">\n                <span>最新评论({{commentData.comments.length}})</span>\n            </div>\n            <div class="comment-block" *ngFor="let comment of commentData.comments">\n                <div class="avatar" style="width: 30px;height: 30px">\n                    <img [src]="comment.user.avatarUrl" />\n                </div>\n                <div class="comment-content">\n                    <div class="comment-des">\n                        <div class="c-left">\n                            <h6 class="comment-people">\n                                {{comment.user.nickname}}\n                            </h6>\n                            <p class="comment-date"></p>\n                        </div>\n                        <div class="c-right">\n                            <span class="like-count">{{comment.likedCount ? comment.likedCount : \'\'}}</span>\n                            <ion-icon name="ios-thumbs-up-outline"></ion-icon>\n                        </div>\n                    </div>\n                    <div class="comment-text">\n                        <span>{{comment.content}}</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!--<div class="comment-footer">\n        <input placeholder="发表评论" />\n    </div>-->\n</div>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/components/comment/comment.html"*/,
             styles: ['./comment.scss']
         }),
         __metadata("design:paramtypes", [])
@@ -672,7 +671,7 @@ var HeaderSearchComponent = (function () {
     };
     HeaderSearchComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: '[header-search]',template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/components/headerSearch/headerSearch.html"*/'<ion-toolbar>\n    <ion-buttons left>\n        <button ion-button icon-only>\n            <ion-icon name="ios-microphone-outline" style="font-size: 30px;color: #ffffff;"></ion-icon>\n        </button>\n    </ion-buttons>\n    <div center\n         style="background: #ffffff;text-align: center;flex:1;border-radius: 15px;color:#969696;margin: 0 15px;padding: 6px 0"\n         (click)="searchMusic()">\n        <ion-icon name="search" style="font-size: 18px"></ion-icon>\n        <span>搜索音乐, 视频, 电台</span>\n    </div>\n    <ion-buttons right>\n        <button ion-button icon-only color="royal">\n            <ion-icon style="font-size: 35px;color: #ffffff;" name="list"></ion-icon>\n        </button>\n    </ion-buttons>\n</ion-toolbar>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/components/headerSearch/headerSearch.html"*/
+            selector: '[header-search]',template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/components/headerSearch/headerSearch.html"*/'<ion-toolbar>\n    <ion-buttons left>\n        <button ion-button icon-only>\n            <ion-icon name="ios-microphone-outline" style="font-size: 30px;color: #ffffff;"></ion-icon>\n        </button>\n    </ion-buttons>\n    <div center\n         style="background: #ffffff;text-align: center;flex:1;border-radius: 15px;color:#969696;margin: 0 15px;padding: 6px 0"\n         (click)="searchMusic()">\n        <ion-icon name="search" style="font-size: 18px"></ion-icon>\n        <span>搜索音乐, 视频, 电台</span>\n    </div>\n    <ion-buttons right>\n        <button ion-button icon-only color="royal">\n            <ion-icon style="font-size: 35px;color: #ffffff;" name="list"></ion-icon>\n        </button>\n    </ion-buttons>\n</ion-toolbar>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/components/headerSearch/headerSearch.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */]])
     ], HeaderSearchComponent);
@@ -740,7 +739,7 @@ var MyApp = (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/app/app.html"*/'<!--<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>-->\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/luwenwei/Documents/GitHub/cloudMusic/src/app/app.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/luwenwe/githubProjects/cloudMusic/src/app/app.html"*/'<!--<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>-->\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/luwenwe/githubProjects/cloudMusic/src/app/app.html"*/,
             styles: ['./app.scss'],
             providers: [__WEBPACK_IMPORTED_MODULE_4__providers_httpService__["a" /* HttpService */]]
         }),
